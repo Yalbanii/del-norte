@@ -1,3 +1,6 @@
+body{
+    background-color: #F3F3F3;
+}
 /* Estilo base para secciones con imagen */
 section .row {
   margin-bottom: 3rem;
@@ -58,4 +61,7 @@ section.position-relative h1 {
   .hero-section .hero-content {
     padding: 1rem;
   }
+}
+.list-group-item{
+    background-color: #F3F3F3;
 }
