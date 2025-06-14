@@ -35,3 +35,8 @@ body {
 .nav-link.active {
     border-bottom: 2px solid #EACE9C;
 }
+
+.titleFooter {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #EACE9C;
+}
