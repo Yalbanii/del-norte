@@ -1,0 +1,46 @@
+/*Declaracion de variables globales */
+:root { 
+  --var--negro: #050505;
+  --var--negro2: #242125;
+  --var--rojo: #682A2F;
+  --var--carmin: #951E1A;
+  --var--verde: #87916F;
+  --var--crema: #EACE9C;
+  --var--blanco: #F3F3F3;
+}
+
+/*?Navbar
+/* Márgenes laterales */
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo{
+   width: 33%;
+}
+/* Animaciones en los links */
+.nav-anim {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-anim::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--var--carmin);
+  transition: width 0.3s ease;
+}
+
+.nav-anim:hover::after {
+  width: 100%;
+}
+
+.nav-anim:hover {
+  transform: translateY(-2px);
+  color: var(--var--blanco) !important;
+}
