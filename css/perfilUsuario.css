@@ -6,7 +6,7 @@ body {
 
 .campo-2-crudo-febreropor-alan {
   	position: absolute;
-  	top: 137px;
+  	top: 0px;
   	left: 0px;
   	border-radius: 0px 0px 150px 150px;
   	width: 1452px;
@@ -15,15 +15,15 @@ body {
 }
 .perfil-de-usuario-y-mis-compra-child {
   	position: absolute;
-  	top: -60px;
+  	top: 0px;
   	left: 0px;
   	width: 1452px;
-  	height: 683px;
+  	height: 487px;
 }
 .cerrar-sesion {
   	position: absolute;
-  	top: 1025px;
-  	left: calc(50% + 145px);
+  	top: 887px;
+  	left: calc(50% + 196px);
   	font-weight: 500;
   	font-family: Inter;
   	display: flex;
@@ -45,8 +45,8 @@ body {
 }
 .mi-cuenta-wrapper {
   	position: absolute;
-  	top: 248px;
-  	left: 114px;
+  	top: 59px;
+  	left: 7px;
   	width: 454px;
   	height: 78px;
   	font-size: 64px;
@@ -54,49 +54,62 @@ body {
 .group-child {
   	position: absolute;
   	top: 0px;
-  	left: calc(50% - 275px);
+  	left: calc(50% - 241.5px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: rgba(234, 206, 156, 0.9);
-  	width: 550px;
-  	height: 222px;
+  	width: 483px;
+  	height: 237.6px;
 }
 .historial-de-pedidos {
   	position: absolute;
-  	top: 136px;
-  	left: 15px;
+  	top: 145.58px;
+  	left: 13.17px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 501px;
+  	width: 440px;
+  	height: 41.7px;
 }
 .mis-pedidos {
   	position: absolute;
-  	top: 43px;
-  	left: 35px;
-  	font-size: 48px;
+  	top: 64px;
+  	left: 32px;
+  	font-size: 36px;
   	font-weight: 500;
   	color: #fff;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 454px;
+  	width: 398.7px;
+  	height: 62.1px;
 }
 .rectangle-parent {
   	position: absolute;
-  	top: 358px;
-  	left: calc(50% - 604px);
-  	width: 550px;
-  	height: 222px;
+  	top: 213px;
+  	left: calc(50% - 531px);
+  	width: 483px;
+  	height: 237.6px;
+  	font-size: 24px;
   	color: #000;
+}
+.group-item {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 241.5px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  	border-radius: 15px;
+  	background-color: rgba(234, 206, 156, 0.9);
+  	width: 483px;
+  	height: 239.1px;
 }
 .rectangle-wrapper {
   	position: absolute;
   	top: 0px;
-  	left: calc(50% - 275px);
-  	width: 550px;
-  	height: 222px;
+  	left: calc(50% - 241.5px);
+  	width: 483px;
+  	height: 239.1px;
 }
 .editar-direcciones-para {
   	position: absolute;
@@ -106,113 +119,122 @@ body {
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 501px;
+  	width: 440px;
+  	height: 42px;
 }
 .editar-direcciones-para-pedido-wrapper {
   	position: absolute;
-  	top: 136px;
-  	left: 23px;
-  	width: 501px;
-  	height: 39px;
+  	top: 146.5px;
+  	left: 20.2px;
+  	width: 440px;
+  	height: 42px;
 }
 .direcciones {
   	position: absolute;
-  	top: 43px;
-  	left: 33px;
-  	font-size: 48px;
+  	top: 64px;
+  	left: 27px;
+  	font-size: 36px;
   	font-weight: 500;
   	color: #fff;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 454px;
+  	width: 398.7px;
+  	height: 62.5px;
 }
 .group-parent {
   	position: absolute;
-  	top: 358px;
-  	left: calc(50% + 41px);
-  	width: 550px;
-  	height: 222px;
+  	top: 213px;
+  	left: calc(50% + 25px);
+  	width: 483px;
+  	height: 239.1px;
+  	font-size: 24px;
   	color: #000;
 }
 .group-inner {
   	position: absolute;
   	top: 0px;
-  	left: calc(50% - 275px);
+  	left: calc(50% - 239.5px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: rgba(234, 206, 156, 0.9);
-  	width: 550px;
-  	height: 263px;
+  	width: 479px;
+  	height: 255px;
 }
 .administrar-o-agregar {
   	position: absolute;
-  	top: 108px;
-  	left: 45px;
+  	top: 104.71px;
+  	left: 36.19px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 439px;
+  	width: 382.3px;
+  	height: 113.4px;
 }
 .mis-pagos {
   	position: absolute;
-  	top: 31px;
-  	left: 48px;
-  	font-size: 48px;
+  	top: 30.06px;
+  	left: 38.8px;
+  	font-size: 36px;
   	font-weight: 500;
   	color: #fff;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 454px;
+  	width: 395.4px;
+  	height: 56.2px;
 }
 .rectangle-group {
   	position: absolute;
-  	top: 623px;
-  	left: calc(50% - 609px);
-  	width: 550px;
-  	height: 263px;
+  	top: 480px;
+  	left: calc(50% + 29px);
+  	width: 479px;
+  	height: 255px;
+  	font-size: 24px;
   	color: #000;
 }
 .rectangle-div {
   	position: absolute;
   	top: 0px;
-  	left: calc(50% - 275px);
+  	left: calc(50% - 241.6px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: rgba(234, 206, 156, 0.9);
-  	width: 550px;
-  	height: 264px;
+  	width: 483.2px;
+  	height: 255px;
 }
 .cambiar-correo-electrnico {
   	position: absolute;
-  	top: 108px;
-  	left: 36px;
+  	top: 104.32px;
+  	left: 31.63px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 477px;
+  	width: 419.1px;
+  	height: 113px;
 }
 .seguridad {
   	position: absolute;
-  	top: 31px;
-  	left: 51px;
-  	font-size: 48px;
+  	top: 29.94px;
+  	left: 44.81px;
+  	font-size: 36px;
   	font-weight: 500;
   	color: #fff;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 454px;
+  	width: 398.9px;
+  	height: 56px;
 }
 .rectangle-container {
   	position: absolute;
-  	top: 623px;
-  	left: calc(50% + 41px);
-  	width: 550px;
-  	height: 264px;
+  	top: 480px;
+  	left: calc(50% - 531px);
+  	width: 483.2px;
+  	height: 255px;
+  	font-size: 24px;
   	color: #000;
 }
 .button1 {
@@ -222,8 +244,8 @@ body {
 }
 .button {
   	position: absolute;
-  	top: 919px;
-  	left: 761px;
+  	top: 781px;
+  	left: 812px;
   	border-radius: 8px;
   	background-color: #770000;
   	border: 1px solid #767676;
@@ -241,8 +263,8 @@ body {
 }
 .button2 {
   	position: absolute;
-  	top: 1031px;
-  	left: 761px;
+  	top: 893px;
+  	left: 812px;
   	border-radius: 8px;
   	background-color: #87916f;
   	border: 1px solid #303030;
@@ -262,7 +284,7 @@ body {
   	width: 100%;
   	position: relative;
   	background-color: #fff;
-  	height: 1550px;
+  	height: 1030px;
   	overflow: hidden;
   	text-align: center;
   	font-size: 32px;
@@ -270,3 +292,25 @@ body {
   	font-family: 'Libre Franklin';
 }
 
+
+
+/* Estilos para pantallas grandes (más de 1024px) */
+@media (min-width: 1024px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Estilos para pantallas medianas (entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Estilos para pantallas pequeñas (menos de 768px, como celulares) */
+@media (max-width: 767px) {
+  body {
+    background-color: lightcoral;
+  }
+}
