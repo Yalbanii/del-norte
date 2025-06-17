@@ -84,9 +84,9 @@
       <div class="col-lg-4">
         <div class="p-3 bg-white shadow rounded-4">
           <h3 class="text-center">Historial de pedidos</h3>
-          <input type="text" class="form-control mb-2" placeholder="Pedido xx/xx/2025">
-          <input type="text" class="form-control mb-3" placeholder="Pedido xx/xx/2025">
-          <button class="btn btn-danger w-100">Borrar historial</button>
+          <p class="form-control mb-2" >Pedido xx/xx/2025</p>
+          <p class="form-control mb-3" >Pedido xx/xx/2025</p>
+          <button class="btn btn-danger w-100" id="btn-delete-purchase-history">Borrar historial</button>
         </div>
       </div>
 
@@ -95,7 +95,8 @@
         <div class="p-3 bg-white shadow rounded-4">
           <h3 class="text-center">Métodos de pago</h3>
           <input type="text" class="form-control mb-3" placeholder="Tarjeta 1">
-          <button class="btn btn-danger w-100">Borrar métodos de pago guardados</button>
+          <button class="btn btn-success w-100" id="btn-add-payment">Agregar método de pago</button>
+          <button class="btn btn-danger w-100 mt-2" id="btn-delete-payment">Borrar métodos de pago guardados</button>
         </div>
       </div>
 
@@ -104,7 +105,8 @@
         <div class="p-3 bg-white shadow rounded-4">
           <h3 class="text-center">Direcciones guardadas</h3>
           <input type="text" class="form-control mb-3" placeholder="Dirección 1">
-          <button class="btn btn-danger w-100">Borrar direcciones guardadas</button>
+          <button class="btn btn-success w-100" id="btn-add-address">Agregar dirección de envío</button>
+          <button class="btn btn-danger w-100 mt-2" id="btn-delete-address">Borrar direcciones guardadas</button>
         </div>
       </div>
 
@@ -115,6 +117,7 @@
           <input type="password" class="form-control mb-2" placeholder="Contraseña actual">
           <input type="password" class="form-control mb-2" placeholder="Nueva contraseña">
           <input type="password" class="form-control mb-3" placeholder="Confirmar nueva contraseña">
+          <button class="btn btn-success w-100" id="btn-change-pass">Cambiar Contraseña</button>
         </div>
       </div>
 
