@@ -82,6 +82,15 @@
         </div>
 
         <div class="col-12 col-md-6 col-lg-5 p-5 shadow mb-5 login-form">
+          <!-- Círculo flotante con icono -->
+          <div class="icon-wrapper position-absolute top-0 start-50 translate-middle"
+            style="transform: translate(-50%, -50%); z-index: 10;">
+            <div class="rounded-circle d-flex justify-content-center align-items-center"
+              style="width: 80px; height: 80px; background-color: #8b2c25;">
+              <i class="fas fa-user fa-3x" style="color: #bdb7b7"></i>
+            </div>
+          </div>
+
           <form>
             <!-- Usuario -->
             <div class="mb-3">
@@ -102,26 +111,27 @@
               </div>
             </div>
 
-            <!-- Link olvidaste contraseña -->
-            <br>
-            <div class="mb-3 text-center">
-              <a href="#" class="text-decoration-none text-forgot fw-semibold">¿Olvidaste tu contraseña?</a>
-            </div>
-
             <!-- Botón Entrar -->
-            <div class="d-grid mb-3">
+            <br>
+            <div class="d-grid mb-1">
               <button type="submit" class="btn btn-primary">Entrar</button>
             </div>
           </form>
 
+          <!-- Link olvidaste contraseña -->
+          <div class="mb-3 text-center">
+            <a href="#" class="text-decoration-none text-forgot fw-semibold">¿Olvidaste tu contraseña?</a>
+          </div>
+
           <!-- Texto No tengo una cuenta -->
           <br>
-          <p class="text-center mb-2 text-white">No tengo una cuenta</p>
+          <p class="text-center mb-1" style="color: #87916F;">No tengo una cuenta</p>
 
           <!-- Botón Registro -->
           <div class="d-grid">
-            <button type="button" class="btn btn-outline-secondary btn-registro">Registro</button>
+            <a href="registro.html" class="btn btn-outline-secondary btn-registro">Registro</a>
           </div>
+
         </div>
       </div>
     </main>

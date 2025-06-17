@@ -69,6 +69,7 @@ body {
 
 /* Contenedor del formulario */
 .login-form {
+  position: relative;
   background-color: #242125;
   padding: 2rem;
   border-radius: 2rem;
