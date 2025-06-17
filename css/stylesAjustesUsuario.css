@@ -1,0 +1,41 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.ajustes-header {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.header-bg-img {
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
+  object-fit: cover;
+}
+
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.ajustes-section {
+  background-color: rgba(234, 206, 156, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
