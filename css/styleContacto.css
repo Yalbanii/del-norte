@@ -1,0 +1,434 @@
+ .a2f6b51b-f09f-4ef4-a9b1-122351-icon {
+  	position: absolute;
+  	top: -235px;
+  	left: -3px;
+  	border-radius: 0px 0px 150px 150px;
+  	width: 1451px;
+  	height: 1532.9px;
+  	object-fit: contain;
+}
+.contacto-child {
+  	position: absolute;
+  	top: 1862px;
+  	left: 0px;
+  	background-color: #050505;
+  	width: 1440px;
+  	height: 437px;
+}
+.ad-48fd-9bd7-b978d944fea3-remo-icon {
+  	position: absolute;
+  	top: 1862px;
+  	left: 39px;
+  	width: 342px;
+  	height: 195px;
+  	object-fit: cover;
+}
+.instagram-icon {
+  	position: absolute;
+  	top: 2059px;
+  	left: 165px;
+  	width: 90px;
+  	height: 90px;
+  	object-fit: cover;
+}
+.facebook-icon {
+  	position: absolute;
+  	top: 2059px;
+  	left: 61px;
+  	width: 90px;
+  	height: 90px;
+  	object-fit: cover;
+}
+.whatsapp-icon {
+  	position: absolute;
+  	top: 2059px;
+  	left: 269px;
+  	width: 90px;
+  	height: 90px;
+  	object-fit: cover;
+}
+.mapa-del-sitio {
+  	margin: 0;
+  	font-family: 'Franklin Gothic Medium';
+}
+.blank-line {
+  	margin: 0;
+  	color: #8b2c25;
+}
+.nosotros {
+  	margin-bottom: 0px;
+}
+.nosotros-contacto-preguntas-f {
+  	margin: 0;
+  	font-size: 24px;
+  	padding-left: 32px;
+  	color: #fff;
+}
+.mapa-del-sitio-container {
+  	position: absolute;
+  	top: 1901px;
+  	left: calc(50% - 278px);
+  	display: inline-block;
+  	width: 218px;
+  	height: 258px;
+  	color: #d8c3a5;
+}
+.contctanos {
+  	margin: 0;
+}
+.blank-line1 {
+  	margin: 0;
+  	font-size: 32px;
+  	color: #8b2c25;
+  	font-family: Inter;
+}
+.guadalajara-jalisco-mxico {
+  	margin: 0;
+  	font-size: 24px;
+  	color: #fff;
+}
+.contctanos-guadalajara-jalis-container {
+  	position: absolute;
+  	top: 1901px;
+  	left: calc(50% + 2px);
+  	display: inline-block;
+  	width: 346px;
+  	height: 258px;
+  	color: #d8c3a5;
+  	font-family: 'Franklin Gothic Medium';
+}
+.image-20-icon {
+  	position: absolute;
+  	top: 1985px;
+  	left: 1171px;
+  	width: 145px;
+  	height: 38px;
+  	object-fit: cover;
+}
+.contacto-item {
+  	position: absolute;
+  	top: 2214px;
+  	left: 0px;
+  	background-color: #d9d9d9;
+  	width: 1440px;
+  	height: 6px;
+}
+.copyright-2025 {
+  	position: absolute;
+  	top: 2242px;
+  	left: 619px;
+  	font-size: 24px;
+}
+.contacto-inner {
+  	position: absolute;
+  	top: 1655px;
+  	left: 950px;
+  	border-radius: 35px;
+  	background-color: #8b2c25;
+  	width: 411px;
+  	height: 137px;
+  	opacity: 0.78;
+}
+.image-icon {
+  	position: absolute;
+  	top: 1672px;
+  	left: 1215px;
+  	border-radius: 16px;
+  	width: 102px;
+  	height: 103px;
+  	object-fit: cover;
+}
+.mayoreo {
+  	position: absolute;
+  	top: 1683px;
+  	left: 1025px;
+  	font-size: 25px;
+  	display: flex;
+  	text-align: center;
+  	align-items: center;
+  	justify-content: center;
+  	width: 152px;
+  	height: 82px;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 35px;
+  	background-color: #8b2c25;
+  	width: 742px;
+  	height: 608px;
+  	opacity: 0.78;
+}
+.nombre {
+  	position: absolute;
+  	top: 45px;
+  	left: 59px;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 302px;
+  	height: 53px;
+}
+.correo-electrnico {
+  	position: absolute;
+  	top: 232px;
+  	left: 61px;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 303px;
+  	height: 52px;
+}
+.mensaje {
+  	position: absolute;
+  	top: 326px;
+  	left: 61px;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 303px;
+  	height: 51px;
+}
+.asunto {
+  	position: absolute;
+  	top: 139px;
+  	left: 59px;
+  	font-weight: 500;
+  	display: inline-block;
+  	width: 302px;
+  	height: 52px;
+}
+.group-item {
+  	position: absolute;
+  	top: 80px;
+  	left: 61px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #d8c3a5;
+  	width: 630px;
+  	height: 42px;
+  	opacity: 0.7;
+}
+.group-inner {
+  	position: absolute;
+  	top: 173px;
+  	left: 59px;
+  	border-radius: 20px;
+  	background-color: #d8c3a5;
+  	width: 628px;
+  	height: 42px;
+  	opacity: 0.7;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 265px;
+  	left: 59px;
+  	border-radius: 20px;
+  	background-color: #d8c3a5;
+  	width: 628px;
+  	height: 41px;
+  	opacity: 0.7;
+}
+.rectangle-icon {
+  	position: absolute;
+  	top: 535px;
+  	left: 317px;
+  	border-radius: 20px;
+  	width: 112px;
+  	height: 43px;
+}
+.enviar {
+  	position: absolute;
+  	top: 541px;
+  	left: 334px;
+  	font-size: 24px;
+  	font-weight: 500;
+  	color: #8b2c25;
+  	display: inline-block;
+  	width: 78px;
+  	height: 21px;
+}
+.group-child1 {
+  	position: absolute;
+  	top: 361px;
+  	left: 59px;
+  	border-radius: 20px;
+  	background-color: #d8c3a5;
+  	width: 628px;
+  	height: 148px;
+  	opacity: 0.7;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 763px;
+  	left: 349px;
+  	width: 742px;
+  	height: 608px;
+  	font-size: 25px;
+}
+.contacto2 {
+  	position: absolute;
+  	top: 445px;
+  	left: calc(50% - 459px);
+  	font-size: 150px;
+  	display: flex;
+  	color: #050505;
+  	text-align: center;
+  	align-items: center;
+  	justify-content: center;
+  	width: 918px;
+  	height: 236px;
+}
+.estamos-para-servirte {
+  	position: absolute;
+  	top: 679px;
+  	left: calc(50% - 188px);
+  	font-size: 35px;
+  	color: #242125;
+  	text-align: center;
+}
+.group-child2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	background-color: #050505;
+  	width: 1440px;
+  	height: 206px;
+}
+.image-2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 372px;
+  	height: 186px;
+}
+.group-child3 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #f3f3f3;
+  	width: 50px;
+  	height: 10.8px;
+}
+.group-child4 {
+  	position: absolute;
+  	top: 19.61px;
+  	left: 0px;
+  	background-color: #f3f3f3;
+  	width: 50px;
+  	height: 10.8px;
+}
+.group-child5 {
+  	position: absolute;
+  	top: 40.2px;
+  	left: 0px;
+  	background-color: #f3f3f3;
+  	width: 50px;
+  	height: 9.8px;
+}
+.rectangle-container {
+  	position: absolute;
+  	top: 68px;
+  	left: 1248px;
+  	width: 50px;
+  	height: 50px;
+}
+.inicio {
+  	position: absolute;
+  	top: 70px;
+  	left: 463px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 106px;
+  	height: 46px;
+}
+.nosotros1 {
+  	position: absolute;
+  	top: 74px;
+  	left: 678px;
+  	line-height: 25px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 178px;
+  	height: 39px;
+}
+.contacto3 {
+  	position: absolute;
+  	top: 69px;
+  	left: 972px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 176px;
+  	height: 49px;
+}
+.image-2-parent {
+  	position: absolute;
+  	top: 5px;
+  	left: 0px;
+  	width: 1298px;
+  	height: 186px;
+}
+.ad-48fd-9bd7-b978d944fea3-remo-icon1 {
+  	position: absolute;
+  	top: 2px;
+  	left: 34px;
+  	width: 357px;
+  	height: 203px;
+  	object-fit: cover;
+}
+.group-container {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 1460px;
+  	height: 206px;
+}
+.line-div {
+  	position: absolute;
+  	top: 73.5px;
+  	left: 617.5px;
+  	border-right: 1px solid #fff;
+  	box-sizing: border-box;
+  	width: 1px;
+  	height: 50px;
+}
+.group-child6 {
+  	position: absolute;
+  	top: 73.5px;
+  	left: 908.5px;
+  	border-right: 1px solid #fff;
+  	box-sizing: border-box;
+  	width: 1px;
+  	height: 50px;
+}
+.group-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: -20px;
+  	width: 1460px;
+  	height: 206px;
+  	text-align: center;
+  	color: #f3f3f3;
+}
+.image-32-icon {
+  	position: absolute;
+  	top: 2041px;
+  	left: 1171px;
+  	width: 157px;
+  	height: 82px;
+  	object-fit: cover;
+}
+.contacto {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	height: 2299px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 36px;
+  	color: #fff;
+  	font-family: Inter;
+}
+
+
