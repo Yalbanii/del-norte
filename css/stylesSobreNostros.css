@@ -43,7 +43,7 @@ p {
 .header-nosotros {
   margin-top: 0;
   padding: 0;
-  max-height: 360px;
+  max-height: 500px;
   width: 100%;
   object-fit: cover;
   border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
@@ -51,13 +51,21 @@ p {
   position: relative;
   z-index: 1;
 }
+.header-overlay {
+  position: absolute;
+  inset: 0; /* asegura que cubra todo el contenedor padre */
+  background: rgba(0, 0, 0, 0.4); /* fondo negro translúcido */
+  z-index: 2;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
 
 /* Texto sobre imagen destacada */
 .position-relative h1 {
   font-size: 4.5rem;
   font-weight: bold;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-  z-index: 2;
+  z-index: 3;
 }
 
 /* Secciones horizontales */
@@ -87,6 +95,7 @@ section img {
   max-width: 100%;
   height: auto;
 }
+
 
 /* Responsive: Alineación de contenido horizontal */
 @media (min-width: 768px) {
