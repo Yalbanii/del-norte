@@ -1,65 +1,101 @@
-body{
+/* Color de fondo general */
+body {
     background-color: #F3F3F3;
 }
-/* Estilo base para secciones con imagen */
-section .row {
-  margin-bottom: 3rem;
-}
 
-section img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-/* Ajustes para secciones con texto e imagen alineados horizontalmente */
-@media (min-width: 768px) {
-  .row.align-items-center {
-    display: flex;
-    align-items: center;
-  }
-}
-
-/* Imagen destacada "Nosotros" pegada al navbar */
+/* Imagen destacada de la sección "Nosotros" */
 .header-nosotros {
-  margin-top: 0;
-  max-height: 360px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0 0 50px 50px; /* solo redondea esquinas inferiores */
-  display: block;
+    margin-top: 0;
+    padding: 0;
+    max-height: 360px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
+    display: block;
+    position: relative;
+    z-index: 1;
 }
+
 /* Texto sobre la imagen destacada */
-section.position-relative h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+.position-relative h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
 }
 
-/* Responsive: dispositivos pequeños */
-@media (max-width: 767.98px) {
-  section.position-relative h1 {
-    font-size: 2rem;
-  }
-
-
-
-  footer {
-    text-align: center;
-  }
-
-  footer .social-icons img {
-    height: 24px;
-    margin-right: 10px;
-  }
-
-  .hero-section {
-    height: 250px;
-  }
-
-  .hero-section .hero-content {
-    padding: 1rem;
-  }
+/* Secciones horizontales */
+section .row {
+    margin-bottom: 3rem;
 }
-.list-group-item{
+
+/* Imágenes generales en secciones */
+section img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.right-img {
+  border-top-left-radius: 80px;
+  box-shadow: 0 6px 20px rgb(1, 1, 1); /* Sombra ligera */
+  max-width: 100%;
+  height: auto;
+}
+.left-img {
+  border-top-right-radius: 80px;
+  box-shadow: 0 6px 20px rgb(1, 1, 1); /* Sombra ligera */
+  max-width: 100%;
+  height: auto;
+}
+.valores-img {
+  box-shadow: 0 6px 20px rgb(1, 1, 1); /* Sombra ligera */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Alineación de contenido horizontal */
+@media (min-width: 768px) {
+    .row.align-items-center {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Estilo para lista de desarrolladores */
+.list-group-item {
     background-color: #F3F3F3;
+}
+
+/* Ajustes para vista móvil */
+@media (max-width: 767.98px) {
+    .position-relative h1 {
+        font-size: 2rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .social-icons img {
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    .hero-section {
+        height: 250px;
+    }
+
+    .hero-section .hero-content {
+        padding: 1rem;
+    }
+}
+/* Animaciones personalizadas */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
