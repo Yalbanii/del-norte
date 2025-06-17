@@ -1,100 +1,130 @@
-/* Color de fondo general */
+/* Fuente global */
 body {
-    background-color: #F3F3F3;
+  background-color: #F3F3F3;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem; /* Tamaño base del texto */
+  line-height: 1.6;
+}
+
+/* Estilo para encabezados */
+h1 {
+  font-size: 3rm;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+h5, h6 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Párrafos */
+p {
+  font-size: 1.4rem;
+}
+
+/* Lista de desarrolladores */
+.list-group-item {
+  font-size: 1.4rem;
+  background-color: #F3F3F3;
 }
 
 /* Imagen destacada de la sección "Nosotros" */
 .header-nosotros {
-    margin-top: 0;
-    padding: 0;
-    max-height: 360px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
-    display: block;
-    position: relative;
-    z-index: 1;
+  margin-top: 0;
+  padding: 0;
+  max-height: 360px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
+  display: block;
+  position: relative;
+  z-index: 1;
 }
 
-/* Texto sobre la imagen destacada */
+/* Texto sobre imagen destacada */
 .position-relative h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    z-index: 2;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
 
 /* Secciones horizontales */
 section .row {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
-/* Imágenes generales en secciones */
+/* Imágenes generales */
 section img {
-    max-width: 100%;
-    border-radius: 8px;
+  max-width: 100%;
+  border-radius: 8px;
 }
 .right-img {
   border-top-left-radius: 80px;
-  box-shadow: 0 6px 20px rgb(1, 1, 1); /* Sombra ligera */
+  box-shadow: 0 6px 20px rgb(1, 1, 1);
   max-width: 100%;
   height: auto;
 }
 .left-img {
   border-top-right-radius: 80px;
-  box-shadow: 0 6px 20px rgb(1, 1, 1); /* Sombra ligera */
+  box-shadow: 0 6px 20px rgb(1, 1, 1);
   max-width: 100%;
   height: auto;
 }
 .valores-img {
-  box-shadow: 0 6px 20px rgb(1, 1, 1); /* Sombra ligera */
+  box-shadow: 0 6px 20px rgb(1, 1, 1);
   max-width: 100%;
   height: auto;
 }
 
-/* Alineación de contenido horizontal */
+/* Responsive: Alineación de contenido horizontal */
 @media (min-width: 768px) {
-    .row.align-items-center {
-        display: flex;
-        align-items: center;
-    }
+  .row.align-items-center {
+    display: flex;
+    align-items: center;
+  }
 }
 
-/* Estilo para lista de desarrolladores */
-.list-group-item {
-    background-color: #F3F3F3;
-}
-
-/* Ajustes para vista móvil */
+/* Ajustes móviles */
 @media (max-width: 767.98px) {
-    .position-relative h1 {
-        font-size: 2rem;
-    }
+  .position-relative h1 {
+    font-size: 2rem;
+  }
 
-    footer {
-        text-align: center;
-    }
+  footer {
+    text-align: center;
+  }
 
-    footer .social-icons img {
-        height: 24px;
-        margin-right: 10px;
-    }
+  .hero-section {
+    height: 250px;
+  }
 
-    .hero-section {
-        height: 250px;
-    }
+  .hero-section .hero-content {
+    padding: 1rem;
+  }
 
-    .hero-section .hero-content {
-        padding: 1rem;
-    }
+  p {
+    font-size: 1rem;
+  }
 }
+
 /* Animaciones personalizadas */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
 .animate-fade-in {
   opacity: 1;
   transform: translateY(0);
