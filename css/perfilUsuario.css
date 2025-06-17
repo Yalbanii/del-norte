@@ -1,0 +1,272 @@
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
+.campo-2-crudo-febreropor-alan {
+  	position: absolute;
+  	top: 137px;
+  	left: 0px;
+  	border-radius: 0px 0px 150px 150px;
+  	width: 1452px;
+  	height: 488px;
+  	object-fit: cover;
+}
+.perfil-de-usuario-y-mis-compra-child {
+  	position: absolute;
+  	top: -60px;
+  	left: 0px;
+  	width: 1452px;
+  	height: 683px;
+}
+.cerrar-sesion {
+  	position: absolute;
+  	top: 1025px;
+  	left: calc(50% + 145px);
+  	font-weight: 500;
+  	font-family: Inter;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 312px;
+  	height: 37px;
+}
+.mi-cuenta {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 454px;
+  	text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+}
+.mi-cuenta-wrapper {
+  	position: absolute;
+  	top: 248px;
+  	left: 114px;
+  	width: 454px;
+  	height: 78px;
+  	font-size: 64px;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 275px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  	border-radius: 15px;
+  	background-color: rgba(234, 206, 156, 0.9);
+  	width: 550px;
+  	height: 222px;
+}
+.historial-de-pedidos {
+  	position: absolute;
+  	top: 136px;
+  	left: 15px;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 501px;
+}
+.mis-pedidos {
+  	position: absolute;
+  	top: 43px;
+  	left: 35px;
+  	font-size: 48px;
+  	font-weight: 500;
+  	color: #fff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 454px;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 358px;
+  	left: calc(50% - 604px);
+  	width: 550px;
+  	height: 222px;
+  	color: #000;
+}
+.rectangle-wrapper {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 275px);
+  	width: 550px;
+  	height: 222px;
+}
+.editar-direcciones-para {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 501px;
+}
+.editar-direcciones-para-pedido-wrapper {
+  	position: absolute;
+  	top: 136px;
+  	left: 23px;
+  	width: 501px;
+  	height: 39px;
+}
+.direcciones {
+  	position: absolute;
+  	top: 43px;
+  	left: 33px;
+  	font-size: 48px;
+  	font-weight: 500;
+  	color: #fff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 454px;
+}
+.group-parent {
+  	position: absolute;
+  	top: 358px;
+  	left: calc(50% + 41px);
+  	width: 550px;
+  	height: 222px;
+  	color: #000;
+}
+.group-inner {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 275px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  	border-radius: 15px;
+  	background-color: rgba(234, 206, 156, 0.9);
+  	width: 550px;
+  	height: 263px;
+}
+.administrar-o-agregar {
+  	position: absolute;
+  	top: 108px;
+  	left: 45px;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 439px;
+}
+.mis-pagos {
+  	position: absolute;
+  	top: 31px;
+  	left: 48px;
+  	font-size: 48px;
+  	font-weight: 500;
+  	color: #fff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 454px;
+}
+.rectangle-group {
+  	position: absolute;
+  	top: 623px;
+  	left: calc(50% - 609px);
+  	width: 550px;
+  	height: 263px;
+  	color: #000;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 275px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  	border-radius: 15px;
+  	background-color: rgba(234, 206, 156, 0.9);
+  	width: 550px;
+  	height: 264px;
+}
+.cambiar-correo-electrnico {
+  	position: absolute;
+  	top: 108px;
+  	left: 36px;
+  	font-weight: 500;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 477px;
+}
+.seguridad {
+  	position: absolute;
+  	top: 31px;
+  	left: 51px;
+  	font-size: 48px;
+  	font-weight: 500;
+  	color: #fff;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 454px;
+}
+.rectangle-container {
+  	position: absolute;
+  	top: 623px;
+  	left: calc(50% + 41px);
+  	width: 550px;
+  	height: 264px;
+  	color: #000;
+}
+.button1 {
+  	position: relative;
+  	line-height: 100%;
+  	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+.button {
+  	position: absolute;
+  	top: 919px;
+  	left: 761px;
+  	border-radius: 8px;
+  	background-color: #770000;
+  	border: 1px solid #767676;
+  	box-sizing: border-box;
+  	width: 550px;
+  	height: 78px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 12px;
+  	text-align: left;
+  	font-family: Inter;
+}
+.button2 {
+  	position: absolute;
+  	top: 1031px;
+  	left: 761px;
+  	border-radius: 8px;
+  	background-color: #87916f;
+  	border: 1px solid #303030;
+  	box-sizing: border-box;
+  	width: 550px;
+  	height: 78px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 12px;
+  	text-align: left;
+  	font-family: Inter;
+}
+.perfil-de-usuario-y-mis-compra {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	height: 1550px;
+  	overflow: hidden;
+  	text-align: center;
+  	font-size: 32px;
+  	color: #fff;
+  	font-family: 'Libre Franklin';
+}
+
