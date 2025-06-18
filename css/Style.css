@@ -21,9 +21,28 @@ body {
   color: #fff;
 }
 
-
 .navbar-toggler-icon {
   filter: invert(1); /* Blanco para fondo oscuro */
+}
+
+.describe {
+  font-size: 12px;
+  color: rgb(47, 46, 46)
+}
+
+.titleProduct {
+  font-family: "inter";
+  font-size: 20px;
+  color: #050505;
+}
+
+.fa-file {
+  color: rgb(247, 243, 5);
+  cursor: pointer;
+}
+
+.fa-file:hover {
+  color: #682A2F;
 }
 
 /* ?Modificando la tipografia de links */
