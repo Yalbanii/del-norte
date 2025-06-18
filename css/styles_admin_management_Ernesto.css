@@ -1,0 +1,77 @@
+*body{
+  background-color: #f3f3f3;
+  text-align: center;
+  
+}
+
+h1{
+  padding: 2%;
+}
+
+.btn-group .btn{
+  background-color: #f3f3f3;
+  border-color: #242125;
+  border-width: 2px;
+  margin: 5px;
+  border-radius: 15px;
+}
+img{
+  width: 100%;
+  background-color: transparent;
+}
+
+h2{
+  text-align: left;
+}
+p{
+  text-align: left;
+}
+
+
+.boton-ver-mas:hover{
+  background-color: #EACE9C;
+  opacity: 80%
+}
+
+
+.boton-editar:hover{
+  background-color: #87916F;
+  opacity: 80%;
+}
+
+
+
+.boton-eliminar:hover {
+  background-color: #951E1A;
+  opacity: 80%;
+}
+
+.catalogo{
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px #24212533;
+  background-color: #f3f3f3;
+}
+/*
+
+
+// Estilos para pantallas grandes (más de 1024px) /
+@media (min-width: 1024px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+// Estilos para pantallas medianas (entre 768px y 1023px) /
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+// Estilos para pantallas pequeñas (menos de 768px, como celulares) /
+@media (max-width: 767px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
