@@ -9,7 +9,7 @@ body {
   	top: 142px;
   	left: -23px;
   	border-radius: 0px 0px 150px 150px;
-  	width: 1487px;
+  	width: 1486.8px;
   	height: 763px;
   	object-fit: cover;
 }
@@ -24,8 +24,8 @@ body {
 }
 .informacin {
   	position: absolute;
-  	top: 337px;
-  	left: 69px;
+  	top: 237px;
+  	left: 90px;
   	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -33,43 +33,43 @@ body {
 }
 .group-child {
   	position: absolute;
-  	top: 1015.03px;
-  	left: calc(50% - 600px);
+  	top: 719px;
+  	left: calc(50% - 901.65px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: #eace9c;
-  	width: 1200px;
-  	height: 756.7px;
+  	width: 1284px;
+  	height: 636px;
 }
 .group-item {
   	position: absolute;
-  	top: 1913px;
-  	left: calc(50% - 600px);
+  	top: 1426px;
+  	left: calc(50% - 901.65px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: #242125;
-  	width: 1200px;
-  	height: 2240px;
+  	width: 1284px;
+  	height: 2151px;
 }
 .group-inner {
   	position: absolute;
-  	top: 1142.75px;
-  	left: calc(50% - 540px);
+  	top: 875px;
+  	left: calc(50% - 834.65px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: #fff;
-  	width: 1065px;
-  	height: 556px;
+  	width: 1139px;
+  	height: 426px;
 }
 .rectangle-div {
   	position: absolute;
-  	top: 2065px;
-  	left: calc(50% - 532px);
+  	top: 1543px;
+  	left: calc(50% - 834.65px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: #fff;
-  	width: 1065px;
-  	height: 2032px;
+  	width: 1139px;
+  	height: 1920px;
 }
 .zonas-que-cubren {
   	margin: 0;
@@ -83,13 +83,13 @@ body {
 }
 .zonas-que-cubren-container {
   	position: absolute;
-  	top: 1170px;
-  	left: 100px;
+  	top: 922px;
+  	left: 111px;
   	font-size: 32px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
-  	width: 986px;
+  	width: 1055px;
   	height: 243px;
 }
 .los-precios-mostrados {
@@ -101,122 +101,114 @@ body {
   	font-size: inherit;
   	padding-left: 43px;
 }
+.del-norte-se {
+  	margin: 0;
+  	white-space: pre-wrap;
+}
 .aceptacin-de-trminos-container {
   	position: absolute;
-  	top: 2160px;
-  	left: 92px;
+  	top: 1584px;
+  	left: 87px;
   	font-size: 32px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
-  	width: 986px;
+  	width: 1055px;
   	height: 1879px;
 }
 .group-child1 {
   	position: absolute;
   	top: 0px;
-  	left: calc(50% - 600px);
+  	left: calc(50% - 902.65px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: rgba(135, 145, 111, 0.8);
-  	width: 1200px;
-  	height: 916.1px;
+  	width: 1283.9px;
+  	height: 661px;
 }
 .faqs {
   	position: absolute;
   	top: 19px;
-  	left: 140px;
+  	left: 149.79px;
   	font-weight: 500;
   	text-align: center;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 922px;
+  	width: 986.5px;
   	height: 69.1px;
 }
 .politicas-de-envio {
   	position: absolute;
-  	top: 1057.28px;
-  	left: calc(50% - 339px);
+  	top: 763px;
+  	left: calc(50% - 653.65px);
   	font-weight: 500;
   	text-align: center;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 727px;
+  	width: 777.9px;
   	height: 68.2px;
 }
 .trminos-y-condiciones {
   	position: absolute;
-  	top: 1968px;
-  	left: calc(50% - 363px);
+  	top: 1450px;
+  	left: calc(50% - 626.65px);
   	font-weight: 500;
   	color: #fff;
   	text-align: center;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	width: 727px;
+  	width: 777.9px;
   	height: 68.2px;
 }
 .group-child2 {
   	position: absolute;
   	top: 103px;
-  	left: calc(50% - 540px);
+  	left: calc(50% - 834.17px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: #fff;
-  	width: 1065px;
-  	height: 308px;
+  	width: 574.6px;
+  	height: 512px;
 }
 .group-child3 {
   	position: absolute;
-  	top: 437px;
-  	left: calc(50% - 538px);
+  	top: 477px;
+  	left: calc(50% - 239.65px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: #fff;
-  	width: 1065px;
-  	height: 109.5px;
+  	width: 575px;
+  	height: 138px;
 }
 .group-child4 {
   	position: absolute;
-  	top: 575px;
-  	left: calc(50% - 540px);
+  	top: 103px;
+  	left: calc(50% - 233.65px);
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   	border-radius: 15px;
   	background-color: #fff;
-  	width: 1065px;
-  	height: 146px;
+  	width: 564px;
+  	height: 321px;
 }
-.group-child5 {
-  	position: absolute;
-  	top: 740px;
-  	left: calc(50% - 540px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #fff;
-  	width: 1065px;
-  	height: 114px;
-}
-.mayoreo-restaurantes-boutique {
+.restaurantes-boutiques-de-carn {
   	margin: 0;
   	font-family: inherit;
   	font-size: inherit;
   	padding-left: 32px;
-  	color: #242125;
 }
 .a-qu-tipo-container {
   	position: absolute;
-  	top: 109px;
-  	left: 83px;
+  	top: 154px;
+  	left: 115.55px;
   	font-size: 24px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
-  	width: 1033px;
-  	height: 290px;
-  	color: #8b2c25;
+  	width: 480.4px;
+  	height: 397px;
 }
 .si-contactarse-directo {
   	margin: 0;
@@ -224,39 +216,46 @@ body {
 }
 .realizan-facturas-si-container {
   	position: absolute;
-  	top: 433px;
-  	left: 84px;
+  	top: 492px;
+  	left: 700px;
   	font-size: 24px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
-  	width: 1033px;
+  	width: 1105.3px;
   	height: 107px;
   	color: #8b2c25;
 }
+.s-con-un-margen-de-2-horas-p {
+  	margin: 0;
+  	font-family: inherit;
+  	font-size: inherit;
+  	padding-left: 32px;
+  	color: #242125;
+}
 .el-cliente-elige-container {
   	position: absolute;
-  	top: 591px;
-  	left: 80px;
+  	top: 69px;
+  	left: 700px;
   	font-size: 24px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
-  	width: 1006px;
-  	height: 116px;
+  	width: 494.3px;
+  	height: 379px;
   	color: #8b2c25;
 }
 .rectangle-parent {
   	position: absolute;
-  	top: 715px;
-  	left: calc(50% - 600px);
-  	width: 1200px;
-  	height: 4153px;
+  	top: 441px;
+  	left: calc(50% - 630px);
+  	width: 1805.3px;
+  	height: 3577px;
   	text-align: left;
   	font-size: 48px;
   	color: #242125;
 }
-.group-child6 {
+.group-child5 {
   	position: absolute;
   	top: 54px;
   	left: 677px;
@@ -265,7 +264,7 @@ body {
   	width: 629px;
   	height: 59px;
 }
-.group-child7 {
+.group-child6 {
   	position: absolute;
   	top: 0px;
   	left: 0px;
@@ -307,7 +306,7 @@ body {
   	width: 218px;
   	height: 258px;
 }
-.blank-line4 {
+.blank-line7 {
   	margin: 0;
   	font-size: 32px;
   	color: #8b2c25;
@@ -335,7 +334,7 @@ body {
   	height: 38px;
   	object-fit: cover;
 }
-.group-child8 {
+.group-child7 {
   	position: absolute;
   	top: 352px;
   	left: 0px;
@@ -376,7 +375,7 @@ body {
 }
 .rectangle-group {
   	position: absolute;
-  	top: 5008px;
+  	top: 4150px;
   	left: 0px;
   	width: 1440px;
   	height: 437px;
@@ -384,7 +383,7 @@ body {
   	font-size: 36px;
   	color: #d8c3a5;
 }
-.group-child9 {
+.group-child8 {
   	position: absolute;
   	top: 0px;
   	left: 20px;
@@ -399,7 +398,7 @@ body {
   	width: 372px;
   	height: 127.8px;
 }
-.group-child10 {
+.group-child9 {
   	position: absolute;
   	top: 0px;
   	left: 0px;
@@ -407,7 +406,7 @@ body {
   	width: 50px;
   	height: 6.5px;
 }
-.group-child11 {
+.group-child10 {
   	position: absolute;
   	top: 11.76px;
   	left: 0px;
@@ -415,7 +414,7 @@ body {
   	width: 50px;
   	height: 6.5px;
 }
-.group-child12 {
+.group-child11 {
   	position: absolute;
   	top: 24.12px;
   	left: 0px;
@@ -492,7 +491,7 @@ body {
   	width: 1px;
   	height: 34.7px;
 }
-.group-child13 {
+.group-child12 {
   	position: absolute;
   	top: 50.34px;
   	left: 908.5px;
@@ -514,11 +513,31 @@ body {
   	width: 100%;
   	position: relative;
   	background-color: #fff;
-  	height: 5445px;
+  	height: 4587px;
   	overflow-x: auto;
   	text-align: center;
-  	font-size: 120px;
+  	font-size: 128px;
   	color: #fff;
   	font-family: Inter;
 }
 
+/* Estilos para pantallas grandes (más de 1024px) */
+@media (min-width: 1024px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Estilos para pantallas medianas (entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Estilos para pantallas pequeñas (menos de 768px, como celulares) */
+@media (max-width: 767px) {
+  body {
+    background-color: lightcoral;
+  }
+}

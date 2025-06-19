@@ -1,0 +1,156 @@
+/* Reset básico de márgenes y padding */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fondo del navbar */
+.navbar_background {
+  background-color: #1E1E1E;
+}
+
+/* Estilo de enlaces del navbar */
+.navbar-nav .nav-link {
+  color: #ccc;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+/* Icono del botón hamburguesa en blanco */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Contenedor con fondo */
+.image-background {
+  position: relative;
+  height: 100vh;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background:linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url('../assets/img/imagenInicioSesion.PNG');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Para que el contenido dentro del contenedor suba un poco y no esté pegado */
+.image-background .container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Contenedor con formulario y título */
+.image-background {
+  position: relative;
+  min-height: 50vh;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url('../assets/img/imagenInicioSesion.PNG');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  padding-bottom: 5rem;
+}
+
+
+/* Título */
+.login-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #f3f3f3;
+  font-size: clamp(3.5rem, 6vw, 5rem);
+}
+
+/* Contenedor del formulario */
+.login-form {
+  position: relative;
+  background-color: #242125;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto; /* centrar horizontalmente */
+}
+
+.form-control {
+  background-color: #f5efef;
+}
+
+.text-forgot {
+  color: #ad3e36;
+  text-decoration: underline !important;;
+}
+
+
+/* Estilo para botones */
+.btn-primary {
+  background-color: #8b2c25;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #a03228;
+  border: none;
+}
+
+.btn-registro {
+  background-color: #87916F;
+  border: none;
+  color: white;
+}
+
+.btn-registro:hover {
+  background-color: #9dad78;
+  border: none;
+}
+
+/* Tipografía de enlaces */
+.links {
+  font-size: 1.25rem; /* 20px */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilo para la pestaña activa */
+.nav-link.active {
+  border-bottom: 2px solid #EACE9C;
+}
+
+/* Títulos del footer */
+.titleFooter {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #EACE9C;
+}
+
+/* Enlaces del footer */
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Íconos sociales del footer */
+footer img {
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.1);
+}
+
+/* Textos del footer */
+footer p,
+footer small {
+  font-size: 0.9rem;
+  color: #ccc;
+}
