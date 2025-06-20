@@ -37,13 +37,20 @@ body {
 }
 
 .fa-file {
-  color: rgb(247, 243, 5);
+  color: #87916F;
   cursor: pointer;
 }
 
 .fa-file:hover {
   color: #682A2F;
 }
+
+.modal-content {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 
 /* ?Modificando la tipografia de links */
 .links {
