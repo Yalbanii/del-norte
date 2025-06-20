@@ -1,0 +1,9 @@
+.container-custom {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px; /* Limita el tamaño máximo para pantallas gigantes */
+}
+#carrito-icon {
+  background-color: transparent !important;
+  border: none;
+}
