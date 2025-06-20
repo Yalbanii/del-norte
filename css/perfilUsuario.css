@@ -1,271 +1,47 @@
-
 body {
   	margin: 20%;
   	line-height: normal;
+		 background-image: url("/assets/img/imagenPerfil.jpg"); /* Reemplaza con tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+position: static;
+  margin: 0; /* Elimina márgenes por defecto del body */
 }
 
-.campo-2-crudo-febreropor-alan {
-  	position-area: top;
-  	top: 0px;
-  	left: 0px;
-  	border-radius: 0px 0px 150px 150px;
-  	width: 100%;
-  	height: auto;
-  	object-fit: top;
+.container {
+margin: auto; /* Centra el contenido horizontalmente */
+padding: 20px; /* Espacio alrededor del contenido */
+text-align: justify-content;
+ width: auto; height:auto; outline: 10px;
+ border-radius: 10%
 }
 
-.mi-cuenta {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	font-weight: 120;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 454px;
-  	text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+.hero {
+padding: 20px; /* Espacio vertical grande para esta sección */
+text-align: right; /* Centra el contenido */
+margin-right: 20%;
+border-radius: 10%;
 }
+
+.hero-content {
+max-width: 800px; /* Ancho máximo del contenido del hero */
+margin: auto;
+border-radius: 50%
+}
+
 .mi-cuenta-wrapper {
   	position: absolute;
   	top: 59px;
-  	left: 7px;
+    left: 15%;
   	width: 454px;
   	height: 78px;
-  	font-size: 64px;
-		color:#770000;
+  	font-size: 48px;
+		color:#000000;
+		font-weight: 700;
 }
-.group-child {
-  	position: absolute;
-  	top: 0px;
-  	left: calc(50% - 241.5px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: rgba(234, 206, 156, 0.9);
-  	width: 483px;
-  	height: 237.6px;
-}
-.historial-de-pedidos {
-  	position: absolute;
-  	top: 145.58px;
-  	left: 13.17px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 440px;
-  	height: 41.7px;
-}
-.mis-pedidos {
-  	position: absolute;
-  	top: 64px;
-  	left: 32px;
-  	font-size: 36px;
-  	font-weight: 500;
-  	color: #fff;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 398.7px;
-  	height: 62.1px;
-}
-.rectangle-parent {
-  	position: absolute;
-  	top: 213px;
-  	left: calc(50% - 531px);
-  	width: 483px;
-  	height: 237.6px;
-  	font-size: 24px;
-  	color: #000;
-}
-.group-item {
-  	position: absolute;
-  	top: 0px;
-  	left: calc(50% - 241.5px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: rgba(234, 206, 156, 0.9);
-  	width: 483px;
-  	height: 239.1px;
-}
-.rectangle-wrapper {
-  	position: absolute;
-  	top: 0px;
-  	left: calc(50% - 241.5px);
-  	width: 483px;
-  	height: 239.1px;
-				   display: grid;
- 		grid-template-columns: repeat(auto-fit,minmax(288px, 1fr));	
-}
-.editar-direcciones-para {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 440px;
-  	height: 42px;
-}
-.editar-direcciones-para-pedido-wrapper {
-  	position: absolute;
-  	top: 146.5px;
-  	left: 20.2px;
-  	width: 440px;
-  	height: 42px;
-}
-.direcciones {
-  	position: absolute;
-  	top: 64px;
-  	left: 27px;
-  	font-size: 36px;
-  	font-weight: 500;
-  	color: #fff;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 398.7px;
-  	height: 62.5px;
-}
-.group-parent {
-  	position: absolute;
-  	top: 213px;
-  	left: calc(50% + 25px);
-  	width: 483px;
-  	height: 239.1px;
-  	font-size: 24px;
-  	color: #000;
-}
-.group-inner {
-  	position: absolute;
-  	top: 0px;
-  	left: calc(50% - 239.5px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: rgba(234, 206, 156, 0.9);
-  	width: 479px;
-  	height: 255px;
-}
-.administrar-o-agregar {
-  	position: absolute;
-  	top: 104.71px;
-  	left: 36.19px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 382.3px;
-  	height: 113.4px;
-}
-.mis-pagos {
-  	position: absolute;
-  	top: 30.06px;
-  	left: 38.8px;
-  	font-size: 36px;
-  	font-weight: 500;
-  	color: #fff;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 395.4px;
-  	height: 56.2px;
-}
-.rectangle-group {
-  	position: absolute;
-  	top: 480px;
-  	left: calc(50% + 29px);
-  	width: 479px;
-  	height: 255px;
-  	font-size: 24px;
-  	color: #000;
-}
-.rectangle-div {
-  	position: absolute;
-  	top: 0px;
-  	left: calc(50% - 241.6px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: rgba(234, 206, 156, 0.9);
-  	width: 483.2px;
-  	height: 255px;
-}
-.cambiar-correo-electrnico {
-  	position: absolute;
-  	top: 104.32px;
-  	left: 31.63px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 419.1px;
-  	height: 113px;
-}
-.seguridad {
-  	position: absolute;
-  	top: 29.94px;
-  	left: 44.81px;
-  	font-size: 36px;
-  	font-weight: 500;
-  	color: #fff;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 398.9px;
-  	height: 56px;
-}
-.rectangle-container {
-  	position: absolute;
-  	top: 480px;
-  	left: calc(50% - 531px);
-  	width: 483.2px;
-  	height: 255px;
-  	font-size: 24px;
-  	color: #000;
-}
-.button1 {
-  	position: center;
-  	line-height: 100%;
-  	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-}
-.button {
-  	position: absolute;
-  	top: 781px;
-		left: 30%;
-  	border-radius: 8px;
-  	background-color: #770000;
-  	border: 1px solid #767676;
-  	box-sizing: border-box;
-  	width: 550px;
-  	height: 78px;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 12px;
-  	text-align: center;
-  	font-family: Inter;
-		transition: background-color 0.3s ease;
-}
-.button2 {
-  	position: absolute;
-  	top: 893px;
-  	left: 30%;
-  	border-radius: 8px;
-  	background-color: #87916f;
-  	border: 1px solid #303030;
-  	box-sizing: border-box;
-  	width: 550px;
-  	height: 78px;
-  	display: flex;
-  	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-  	padding: 12px;
-  	text-align: center;
-  	font-family: Inter;
-		transition: background-color 0.3s ease;
-		
-}
+
+
 .perfil-de-usuario-y-mis-compra {
 		width: auto;
   	position: relative;
@@ -277,10 +53,87 @@ body {
   	color: #fff;
   	font-family: 'Libre Franklin';
 }
-
-a:hover {
-color: #26bbbb; /* Color del enlace al pasar el ratón */
+*/
+.profile-pic {
+width: 350px; /* Ancho de la foto de perfil */
+height: 200px; /* Alto de la foto de perfil */
+margin-bottom: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave para la foto */
+text-align: right;
+box-shadow: #201c14;
+border-radius: 50%;  /*  Para una imagen circular  */
 }
+
+.skill-item2 h3 {
+margin-top: 0;
+margin-bottom: 0px;
+color: #ffffff;
+}
+
+.skill-item2 {
+ 	background-color: rgba(234, 206, 156, 0.9);
+padding: 25px;
+  	border-radius: 15px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Sombra suave para las tarjetas */
+text-align: center;
+transition: transform 0.3s ease; /* Efecto de elevación al pasar el ratón */
+}
+
+.skill-item2:hover {
+transform: translateY(-5px); /* Eleva ligeramente la tarjeta al pasar el ratón */
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas que se ajustan al ancho de la pantalla */
+gap: 15px; /* Espacio entre las tarjetas de habilidades */
+margin-top: 10px;
+text-align: center;
+}
+
+.button1 {
+  	position: center;
+  	line-height: 100%;
+  	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+.button {
+  	position: absolute;
+    top:auto;
+        left: 40%;
+  	border-radius: 8px;
+  	background-color: #770000;
+  	border: 1px solid #000000;
+  	box-sizing: border-box;
+  	width: 300px;
+  	height: 70px;
+
+  	align-items: right;
+  	padding: 12px;
+  	text-align: center;
+  	font-family: Inter;
+		transition: background-color 0.3s ease;
+}
+.button2 {
+  	position: relative;
+    left: 40%;
+    top:auto;
+  	border-radius: 8px;
+  	background-color: #87916f;
+  	border: 1px solid #303030;
+  	box-sizing: border-box;
+  	width: 300px;
+  	height: 70px;
+  	align-items: left;
+  	padding: 12px;
+  	text-align: center;
+  	font-family: Inter; 
+		transition: background-color 0.3s ease;
+		
+}
+/*a:hover {
+color: #26bbbb; /* Color del enlace al pasar el ratón 
+
+*/
 .button:hover {
 background-color: #3a2c2c; /* Color de fondo del botón al pasar el ratón */
 color:#fff
