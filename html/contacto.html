@@ -74,48 +74,50 @@
   </section>
 
   <!-- ?Sección de cabezal -->
-  <section>
-    <h1>Estas en la pantalla de contacto</h1>
-    <div class="contacto">
-      <img class="a2f6b51b-f09f-4ef4-a9b1-122351-icon" alt="" src="a2f6b51b-f09f-4ef4-a9b1-122351cb29b3 1.png">
-
-
-
-      <img class="image-20-icon" alt="" src="image 20.png">
-      <div class="contacto-item">
-      </div>
-      <div class="copyright-2025">© Copyright 2025</div>
-      <div class="contacto-inner">
-      </div>
-      <img class="image-icon" alt="" src="image.png">
-      <b class="mayoreo">¿Mayoreo?</b>
-      <div class="rectangle-parent">
-        <div class="group-child">
-        </div>
-        <div class="nombre">Nombre:</div>
-        <div class="correo-electrnico">Correo electrónico:</div>
-        <div class="mensaje">Mensaje:</div>
-        <div class="asunto">Asunto:</div>
-        <div class="group-item">
-        </div>
-        <div class="group-inner">
-        </div>
-        <div class="rectangle-div">
-        </div>
-        <img class="rectangle-icon" alt="" src="Rectangle 46.svg">
-        <div class="enviar">Enviar</div>
-        <div class="group-child1">
-        </div>
-      </div>
-      <b class="contacto2">Contacto</b>
-      <b class="estamos-para-servirte">Estamos para servirte</b>
-
-      <img class="image-32-icon" alt="" src="image 32.png">
+  <!-- ?Sección de cabezal -->
+  <section class="position-relative">
+    <!-- Imagen de fondo opcional como en la sección "Nosotros" -->
+    <div class="bg-dark bg-opacity-50 text-white text-center py-5"
+      style="background: url('/assets/img/imagenAjustesUsuario.PNG') no-repeat center center / cover;">
+      <h1 class="display-4 fw-bold">Contáctanos</h1>
     </div>
 
-    <!-- Lineas de prueba HTML SABRINA-->
+    <!-- Formulario de contacto -->
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" placeholder="tunombre@email.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="asunto" class="form-label">Asunto</label>
+              <input type="text" class="form-control" id="asunto" placeholder="Escribe el asunto del mensaje" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5213318071724?text=Hola%2C%20estoy%20interesado%20en%20compras%20al%20mayoreo"
+      target="_blank" class="btn btn-success position-fixed bottom-0 end-0 m-4 shadow-lg rounded-circle"
+      style="z-index: 1000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+      <i class="fab fa-whatsapp fa-lg"></i>
+    </a>
   </section>
+
 
   <!-- ? Sección del footer -->
   <section>
@@ -155,7 +157,7 @@
           </div>
           <!-- Metodo de pago -->
           <div class="col-12 col-md-6 col-lg-3 mb-4">
-            <h6 class="text-center fw-bold border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Métodos de pago
+            <h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Métodos de pago
             </h6>
             <div class="d-flex flex-column align-items-center align-items-md-start gap-3 m-auto">
               <img src="/assets/img/mercadoPago.png" alt="Mercado Pago" style="height: 40px;">
