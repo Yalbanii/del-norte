@@ -1,42 +1,24 @@
 
 body {
-  	margin: 0;
+  	margin: 20%;
   	line-height: normal;
 }
 
 .campo-2-crudo-febreropor-alan {
-  	position: absolute;
+  	position-area: top;
   	top: 0px;
   	left: 0px;
   	border-radius: 0px 0px 150px 150px;
-  	width: 1452px;
-  	height: 488px;
-  	object-fit: cover;
+  	width: 100%;
+  	height: auto;
+  	object-fit: top;
 }
-.perfil-de-usuario-y-mis-compra-child {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 1452px;
-  	height: 487px;
-}
-.cerrar-sesion {
-  	position: absolute;
-  	top: 887px;
-  	left: calc(50% + 196px);
-  	font-weight: 500;
-  	font-family: Inter;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 312px;
-  	height: 37px;
-}
+
 .mi-cuenta {
   	position: absolute;
   	top: 0px;
   	left: 0px;
-  	font-weight: 500;
+  	font-weight: 120;
   	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -50,6 +32,7 @@ body {
   	width: 454px;
   	height: 78px;
   	font-size: 64px;
+		color:#770000;
 }
 .group-child {
   	position: absolute;
@@ -110,6 +93,8 @@ body {
   	left: calc(50% - 241.5px);
   	width: 483px;
   	height: 239.1px;
+				   display: grid;
+ 		grid-template-columns: repeat(auto-fit,minmax(288px, 1fr));	
 }
 .editar-direcciones-para {
   	position: absolute;
@@ -238,60 +223,72 @@ body {
   	color: #000;
 }
 .button1 {
-  	position: relative;
+  	position: center;
   	line-height: 100%;
   	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
 }
 .button {
   	position: absolute;
   	top: 781px;
-  	left: 812px;
+		left: 30%;
   	border-radius: 8px;
   	background-color: #770000;
   	border: 1px solid #767676;
   	box-sizing: border-box;
   	width: 550px;
   	height: 78px;
-  	overflow: hidden;
   	display: flex;
   	flex-direction: row;
   	align-items: center;
   	justify-content: center;
   	padding: 12px;
-  	text-align: left;
+  	text-align: center;
   	font-family: Inter;
+		transition: background-color 0.3s ease;
 }
 .button2 {
   	position: absolute;
   	top: 893px;
-  	left: 812px;
+  	left: 30%;
   	border-radius: 8px;
   	background-color: #87916f;
   	border: 1px solid #303030;
   	box-sizing: border-box;
   	width: 550px;
   	height: 78px;
-  	overflow: hidden;
   	display: flex;
   	flex-direction: row;
   	align-items: center;
   	justify-content: center;
   	padding: 12px;
-  	text-align: left;
+  	text-align: center;
   	font-family: Inter;
+		transition: background-color 0.3s ease;
+		
 }
 .perfil-de-usuario-y-mis-compra {
-  	width: 100%;
+		width: auto;
   	position: relative;
   	background-color: #fff;
   	height: 1030px;
   	overflow: hidden;
   	text-align: center;
-  	font-size: 32px;
+  	font-size: 28px;
   	color: #fff;
   	font-family: 'Libre Franklin';
 }
 
+a:hover {
+color: #26bbbb; /* Color del enlace al pasar el ratón */
+}
+.button:hover {
+background-color: #3a2c2c; /* Color de fondo del botón al pasar el ratón */
+color:#fff
+}
+.button2:hover {
+background-color: #2a3326; 
+color:#fff/* Color de fondo del botón al pasar el ratón */
+}
 
 
 /* Estilos para pantallas grandes (más de 1024px) */
