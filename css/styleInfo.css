@@ -1,12 +1,14 @@
 body {
   	margin: 0;
   	line-height: normal;
+								   display: grid;
+ 		grid-template-columns: repeat(auto-fit,minmax(288px, 1fr));	
 }
 
 
 .campo-2-crudo-febreropor-alan {
   	position: absolute;
-  	top: 142px;
+  	top: auto;
   	left: -23px;
   	border-radius: 0px 0px 150px 150px;
   	width: 1486.8px;
@@ -15,7 +17,7 @@ body {
 }
 .informacion-child {
   	position: absolute;
-  	top: 131px;
+  	top: auto;
   	left: -23px;
   	border-radius: 0px 0px 150px 150px;
   	background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
@@ -25,11 +27,12 @@ body {
 .informacin {
   	position: absolute;
   	top: 237px;
-  	left: 90px;
-  	display: flex;
+		left: 30%;
+  	display: absolute;
+		font-size: 80px;
   	align-items: center;
   	justify-content: center;
-  	width: 1292px;
+  	width: auto;
 }
 .group-child {
   	position: absolute;
@@ -101,20 +104,18 @@ body {
   	font-size: inherit;
   	padding-left: 43px;
 }
-.del-norte-se {
-  	margin: 0;
-  	white-space: pre-wrap;
-}
+
 .aceptacin-de-trminos-container {
   	position: absolute;
   	top: 1584px;
   	left: 87px;
-  	font-size: 32px;
+  	font-size: 22px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
   	width: 1055px;
   	height: 1879px;
+		padding: 10%;
 }
 .group-child1 {
   	position: absolute;
@@ -153,7 +154,7 @@ body {
 .trminos-y-condiciones {
   	position: absolute;
   	top: 1450px;
-  	left: calc(50% - 626.65px);
+  	left: 15%;
   	font-weight: 500;
   	color: #fff;
   	text-align: center;
@@ -218,7 +219,7 @@ body {
   	position: absolute;
   	top: 492px;
   	left: 700px;
-  	font-size: 24px;
+  	font-size: 20px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
@@ -235,9 +236,9 @@ body {
 }
 .el-cliente-elige-container {
   	position: absolute;
-  	top: 69px;
+  	top: 74px;
   	left: 700px;
-  	font-size: 24px;
+  	font-size: 20px;
   	font-weight: 500;
   	display: flex;
   	align-items: center;
