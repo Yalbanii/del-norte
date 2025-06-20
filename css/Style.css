@@ -79,7 +79,7 @@ max-height: 800px;
 
 #imagen-portada {
   width: 100%;
-  height: 800px;
+  height: 550px;
   object-fit: cover;
   display: block;
   z-index: 0;
@@ -97,14 +97,16 @@ max-height: 800px;
 }
 
 #h1 {
-position: absolute;
-  top: 65%;
-  left: 54%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  color:white ;
-  width: 56vh;
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
   z-index: 2;
-  max-width: 600px;
+  max-width: 90%;
 }
 
 
@@ -118,3 +120,31 @@ position: absolute;
 }
 #certificado {
   width: 280px;}
+
+.valor-cutlery {
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.valor-bestSeller {
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.valor-highFive{
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.valor-truck {
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
