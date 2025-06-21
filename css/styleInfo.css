@@ -14,8 +14,7 @@
   padding:15px;
   gap: 15px;
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  cursor: pointer;
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;   cursor: pointer;
   border: 1px solid #ccc;
 
 }
@@ -79,8 +78,7 @@ transform: translateY(-5px); /* Eleva ligeramente la tarjeta al pasar el ratón 
 /* Texto sobre imagen destacada */
 .position-relative h1 {
   font-size: 4.5rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 700;
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;   font-weight: 700;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
