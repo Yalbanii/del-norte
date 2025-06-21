@@ -1,12 +1,5 @@
 body {
   	margin: 20%;
-  	line-height: normal;
-		 background-image: url("/assets/img/imagenPerfil.jpg"); /* Reemplaza con tu imagen */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-position: static;
-  margin: 0; /* Elimina márgenes por defecto del body */
 }
 
 .container {
@@ -14,12 +7,13 @@ margin: auto; /* Centra el contenido horizontalmente */
 padding: 20px; /* Espacio alrededor del contenido */
 text-align: justify-content;
  width: auto; height:auto; outline: 10px;
- border-radius: 10%
+ border-radius: 10%;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .hero {
 padding: 20px; /* Espacio vertical grande para esta sección */
-text-align: right; /* Centra el contenido */
+text-align: justify; /* Centra el contenido */
 margin-right: 20%;
 border-radius: 10%;
 }
@@ -28,38 +22,23 @@ border-radius: 10%;
 max-width: 800px; /* Ancho máximo del contenido del hero */
 margin: auto;
 border-radius: 50%
+
 }
 
 .mi-cuenta-wrapper {
-  	position: absolute;
-  	top: 59px;
-    left: 15%;
+  	position: relative;
+  	top: 0px;
+    left: 5%;
   	width: 454px;
-  	height: 78px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  	height: 48px;
   	font-size: 48px;
-		color:#000000;
+		color:#640e0e;
 		font-weight: 700;
 }
 
-
-.perfil-de-usuario-y-mis-compra {
-		width: auto;
-  	position: relative;
-  	background-color: #fff;
-  	height: 1030px;
-  	overflow: hidden;
-  	text-align: center;
-  	font-size: 28px;
-  	color: #fff;
-  	font-family: 'Libre Franklin';
-}
-*/
 .profile-pic {
-width: 350px; /* Ancho de la foto de perfil */
-height: 200px; /* Alto de la foto de perfil */
-margin-bottom: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave para la foto */
-text-align: right;
 box-shadow: #201c14;
 border-radius: 50%;  /*  Para una imagen circular  */
 }
@@ -94,12 +73,14 @@ text-align: center;
 .button1 {
   	position: center;
   	line-height: 100%;
+		 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
 }
 .button {
   	position: absolute;
     top:auto;
         left: 40%;
+				 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   	border-radius: 8px;
   	background-color: #770000;
   	border: 1px solid #000000;
@@ -117,6 +98,7 @@ text-align: center;
   	position: relative;
     left: 40%;
     top:auto;
+		 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   	border-radius: 8px;
   	background-color: #87916f;
   	border: 1px solid #303030;
@@ -164,3 +146,32 @@ color:#fff/* Color de fondo del botón al pasar el ratón */
     background-color: lightcoral;
   }
 }
+/* Imagen destacada */
+.header-info {
+  margin-top: 0;
+  padding: 0;
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.header-overlay {
+  position: absolute;
+  inset: 0; /* asegura que cubra todo el contenedor padre */
+  background: rgba(0, 0, 0, 0.4); /* fondo negro translúcido */
+  z-index: 2;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+/* Texto sobre imagen destacada */
+.position-relative h1 {
+  font-size: 4.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+

@@ -1,525 +1,38 @@
-body {
-  	margin: 0;
-  	line-height: normal;
-								   display: grid;
- 		grid-template-columns: repeat(auto-fit,minmax(288px, 1fr));	
+
+.accordion {
+  width: 80%;
+  text-align: center;
+    margin-top: 0px;
+    margin-left: 10%;
+
 }
 
+.accordion-header {
+  background-color:rgba(50, 71, 54, 0.7);
+  color: #ffffff;
+  font-weight: 400;
+  padding:15px;
+  gap: 15px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  border: 1px solid #ccc;
 
-.campo-2-crudo-febreropor-alan {
-  	position: absolute;
-  	top: auto;
-  	left: -23px;
-  	border-radius: 0px 0px 150px 150px;
-  	width: 1486.8px;
-  	height: 763px;
-  	object-fit: cover;
 }
-.informacion-child {
-  	position: absolute;
-  	top: auto;
-  	left: -23px;
-  	border-radius: 0px 0px 150px 150px;
-  	background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  	width: 1487px;
-  	height: 774px;
-}
-.informacin {
-  	position: absolute;
-  	top: 237px;
-		left: 30%;
-  	display: absolute;
-		font-size: 80px;
-  	align-items: center;
-  	justify-content: center;
-  	width: auto;
-}
-.group-child {
-  	position: absolute;
-  	top: 719px;
-  	left: calc(50% - 901.65px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #eace9c;
-  	width: 1284px;
-  	height: 636px;
-}
-.group-item {
-  	position: absolute;
-  	top: 1426px;
-  	left: calc(50% - 901.65px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #242125;
-  	width: 1284px;
-  	height: 2151px;
-}
-.group-inner {
-  	position: absolute;
-  	top: 875px;
-  	left: calc(50% - 834.65px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #fff;
-  	width: 1139px;
-  	height: 426px;
-}
-.rectangle-div {
-  	position: absolute;
-  	top: 1543px;
-  	left: calc(50% - 834.65px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #fff;
-  	width: 1139px;
-  	height: 1920px;
-}
-.zonas-que-cubren {
-  	margin: 0;
-  	color: #8b2c25;
-}
-.para-compras-de {
-  	margin: 0;
-}
-.zonas-que-cubren-container1 {
-  	width: 100%;
-}
-.zonas-que-cubren-container {
-  	position: absolute;
-  	top: 922px;
-  	left: 111px;
-  	font-size: 32px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	width: 1055px;
-  	height: 243px;
-}
-.los-precios-mostrados {
-  	margin-bottom: 0px;
-}
-.los-precios-mostrados-en-el-si {
-  	margin: 0;
-  	font-family: inherit;
-  	font-size: inherit;
-  	padding-left: 43px;
+.accordion-header:hover {
+transform: translateY(-5px); /* Eleva ligeramente la tarjeta al pasar el ratón */
 }
 
-.aceptacin-de-trminos-container {
-  	position: absolute;
-  	top: 1584px;
-  	left: 87px;
-  	font-size: 22px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	width: 1055px;
-  	height: 1879px;
-		padding: 10%;
+.accordion-content {
+  padding: 10px;
+  border: 1px solid #070404;
+  border-top: none;
+  display: none; /* Ocultar inicialmente */
+  background-color: rgba(234, 206, 156, 0.3);
 }
-.group-child1 {
-  	position: absolute;
-  	top: 0px;
-  	left: calc(50% - 902.65px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: rgba(135, 145, 111, 0.8);
-  	width: 1283.9px;
-  	height: 661px;
-}
-.faqs {
-  	position: absolute;
-  	top: 19px;
-  	left: 149.79px;
-  	font-weight: 500;
-  	text-align: center;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 986.5px;
-  	height: 69.1px;
-}
-.politicas-de-envio {
-  	position: absolute;
-  	top: 763px;
-  	left: calc(50% - 653.65px);
-  	font-weight: 500;
-  	text-align: center;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 777.9px;
-  	height: 68.2px;
-}
-.trminos-y-condiciones {
-  	position: absolute;
-  	top: 1450px;
-  	left: 15%;
-  	font-weight: 500;
-  	color: #fff;
-  	text-align: center;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 777.9px;
-  	height: 68.2px;
-}
-.group-child2 {
-  	position: absolute;
-  	top: 103px;
-  	left: calc(50% - 834.17px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #fff;
-  	width: 574.6px;
-  	height: 512px;
-}
-.group-child3 {
-  	position: absolute;
-  	top: 477px;
-  	left: calc(50% - 239.65px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #fff;
-  	width: 575px;
-  	height: 138px;
-}
-.group-child4 {
-  	position: absolute;
-  	top: 103px;
-  	left: calc(50% - 233.65px);
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  	border-radius: 15px;
-  	background-color: #fff;
-  	width: 564px;
-  	height: 321px;
-}
-.restaurantes-boutiques-de-carn {
-  	margin: 0;
-  	font-family: inherit;
-  	font-size: inherit;
-  	padding-left: 32px;
-}
-.a-qu-tipo-container {
-  	position: absolute;
-  	top: 154px;
-  	left: 115.55px;
-  	font-size: 24px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	width: 480.4px;
-  	height: 397px;
-}
-.si-contactarse-directo {
-  	margin: 0;
-  	color: #242125;
-}
-.realizan-facturas-si-container {
-  	position: absolute;
-  	top: 492px;
-  	left: 700px;
-  	font-size: 20px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	width: 1105.3px;
-  	height: 107px;
-  	color: #8b2c25;
-}
-.s-con-un-margen-de-2-horas-p {
-  	margin: 0;
-  	font-family: inherit;
-  	font-size: inherit;
-  	padding-left: 32px;
-  	color: #242125;
-}
-.el-cliente-elige-container {
-  	position: absolute;
-  	top: 74px;
-  	left: 700px;
-  	font-size: 20px;
-  	font-weight: 500;
-  	display: flex;
-  	align-items: center;
-  	width: 494.3px;
-  	height: 379px;
-  	color: #8b2c25;
-}
-.rectangle-parent {
-  	position: absolute;
-  	top: 441px;
-  	left: calc(50% - 630px);
-  	width: 1805.3px;
-  	height: 3577px;
-  	text-align: left;
-  	font-size: 48px;
-  	color: #242125;
-}
-.group-child5 {
-  	position: absolute;
-  	top: 54px;
-  	left: 677px;
-  	border-radius: 60px;
-  	background-color: #d9d9d9;
-  	width: 629px;
-  	height: 59px;
-}
-.group-child6 {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	background-color: #050505;
-  	width: 1440px;
-  	height: 437px;
-}
-.ad-48fd-9bd7-b978d944fea3-remo-icon {
-  	position: absolute;
-  	top: 0px;
-  	left: 39px;
-  	width: 341.9px;
-  	height: 195px;
-  	object-fit: cover;
-}
-.whatsapp-icon {
-  	position: absolute;
-  	top: 197px;
-  	left: 269px;
-  	width: 90px;
-  	height: 90px;
-  	object-fit: cover;
-}
-.mapa-del-sitio {
-  	margin: 0;
-  	font-family: 'Franklin Gothic Medium';
-}
-.nosotros-contacto-preguntas-f {
-  	margin: 0;
-  	font-size: 24px;
-  	padding-left: 32px;
-  	color: #fff;
-}
-.mapa-del-sitio-container {
-  	position: absolute;
-  	top: 39px;
-  	left: calc(50% - 278px);
-  	display: inline-block;
-  	width: 218px;
-  	height: 258px;
-}
-.blank-line7 {
-  	margin: 0;
-  	font-size: 32px;
-  	color: #8b2c25;
-  	font-family: Inter;
-}
-.guadalajara-jalisco-mxico {
-  	margin: 0;
-  	font-size: 24px;
-  	color: #fff;
-}
-.contctanos-guadalajara-jalis-container {
-  	position: absolute;
-  	top: 39px;
-  	left: calc(50% + 2px);
-  	display: inline-block;
-  	width: 346px;
-  	height: 258px;
-  	font-family: 'Franklin Gothic Medium';
-}
-.image-20-icon {
-  	position: absolute;
-  	top: 123px;
-  	left: 1171px;
-  	width: 142.5px;
-  	height: 38px;
-  	object-fit: cover;
-}
-.group-child7 {
-  	position: absolute;
-  	top: 352px;
-  	left: 0px;
-  	background-color: #d9d9d9;
-  	width: 1440px;
-  	height: 6px;
-}
-.copyright-2025 {
-  	position: absolute;
-  	top: 380px;
-  	left: 619px;
-  	font-size: 24px;
-  	color: #fff;
-}
-.instagram-icon {
-  	position: absolute;
-  	top: 197px;
-  	left: 162px;
-  	width: 90px;
-  	height: 90px;
-  	object-fit: cover;
-}
-.facebook-icon {
-  	position: absolute;
-  	top: 197px;
-  	left: 58px;
-  	width: 90px;
-  	height: 90px;
-  	object-fit: cover;
-}
-.image-32-icon {
-  	position: absolute;
-  	top: 197px;
-  	left: 1165px;
-  	width: 157.4px;
-  	height: 82px;
-  	object-fit: cover;
-}
-.rectangle-group {
-  	position: absolute;
-  	top: 4150px;
-  	left: 0px;
-  	width: 1440px;
-  	height: 437px;
-  	text-align: left;
-  	font-size: 36px;
-  	color: #d8c3a5;
-}
-.group-child8 {
-  	position: absolute;
-  	top: 0px;
-  	left: 20px;
-  	background-color: #050505;
-  	width: 1440px;
-  	height: 141.5px;
-}
-.image-2 {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 372px;
-  	height: 127.8px;
-}
-.group-child9 {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	background-color: #f3f3f3;
-  	width: 50px;
-  	height: 6.5px;
-}
-.group-child10 {
-  	position: absolute;
-  	top: 11.76px;
-  	left: 0px;
-  	background-color: #f3f3f3;
-  	width: 50px;
-  	height: 6.5px;
-}
-.group-child11 {
-  	position: absolute;
-  	top: 24.12px;
-  	left: 0px;
-  	background-color: #f3f3f3;
-  	width: 50px;
-  	height: 5.9px;
-}
-.group-div {
-  	position: absolute;
-  	top: 48.56px;
-  	left: 1331px;
-  	width: 50px;
-  	height: 30px;
-}
-.inicio {
-  	position: absolute;
-  	top: 48.09px;
-  	left: 463px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 106px;
-  	height: 31.6px;
-}
-.nosotros1 {
-  	position: absolute;
-  	top: 50.84px;
-  	left: 678px;
-  	line-height: 25px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 178px;
-  	height: 26.8px;
-}
-.contacto1 {
-  	position: absolute;
-  	top: 47.41px;
-  	left: 972px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 176px;
-  	height: 33.7px;
-}
-.image-2-parent {
-  	position: absolute;
-  	top: 3.44px;
-  	left: 0px;
-  	width: 1381px;
-  	height: 127.8px;
-}
-.ad-48fd-9bd7-b978d944fea3-remo-icon1 {
-  	position: absolute;
-  	top: 19px;
-  	left: 89px;
-  	width: 247.4px;
-  	height: 97px;
-  	object-fit: cover;
-}
-.group-container {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 1460px;
-  	height: 141.5px;
-}
-.line-div {
-  	position: absolute;
-  	top: 50.34px;
-  	left: 617.5px;
-  	border-right: 1px solid #fff;
-  	box-sizing: border-box;
-  	width: 1px;
-  	height: 34.7px;
-}
-.group-child12 {
-  	position: absolute;
-  	top: 50.34px;
-  	left: 908.5px;
-  	border-right: 1px solid #fff;
-  	box-sizing: border-box;
-  	width: 1px;
-  	height: 34.7px;
-}
-.group-parent {
-  	position: absolute;
-  	top: 0px;
-  	left: -20px;
-  	width: 1460px;
-  	height: 141.5px;
-  	font-size: 30px;
-  	color: #f3f3f3;
-}
-.informacion {
-  	width: 100%;
-  	position: relative;
-  	background-color: #fff;
-  	height: 4587px;
-  	overflow-x: auto;
-  	text-align: center;
-  	font-size: 128px;
-  	color: #fff;
-  	font-family: Inter;
+
+.accordion-item.active .accordion-content {
+  display: block; /* Mostrar al activar */
 }
 
 /* Estilos para pantallas grandes (más de 1024px) */
@@ -542,3 +55,33 @@ body {
     background-color: lightcoral;
   }
 }
+
+/* Imagen destacada */
+.header-info {
+  margin-top: 0;
+  padding: 0;
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 0 50px 50px; /* Redondear solo parte inferior */
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.header-overlay {
+  position: absolute;
+  inset: 0; /* asegura que cubra todo el contenedor padre */
+  background: rgba(0, 0, 0, 0.4); /* fondo negro translúcido */
+  z-index: 2;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+/* Texto sobre imagen destacada */
+.position-relative h1 {
+  font-size: 4.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
