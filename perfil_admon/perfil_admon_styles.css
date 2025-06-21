@@ -1,0 +1,19 @@
+body{
+  background-color: rgb(116, 85, 187);
+  z-index: 1;
+  display: relative;
+}
+
+.circle {
+  width: 20vw;
+  height: 20vw;
+  background-color: teal;
+  border-radius: 50%;
+  margin: 0 auto;
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: black;
+  border-width: 50px;
+}
