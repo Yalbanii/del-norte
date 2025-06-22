@@ -19,28 +19,59 @@
 <body class="d-flex flex-column min-vh-100">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">
-        <img src="/assets/img/logoDelNorte.png" alt="Logotipo" style="width: 90px;" />
-      </a>
+  <!-- ? Sección del navbar -->
+  <section>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar_background">
+      <div class="container-fluid">
+        <!-- Botón hamburguesa para móviles -->
+        <button class="navbar-toggler d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span> </button>
+        <!-- Logo -->
+        <a class="navbar-brand mx-lg-0 mx-auto" href="../index.html"><img src="/assets/img/logoDelNorte.png"
+            alt="Logotipo de la empresa" style="width: 90px" />
+        </a>
+        <!-- Menú visible solo en pantallas grandes -->
+        <div class="collapse navbar-collapse d-none d-lg-flex ms-5">
+          <ul class="navbar-nav gap-3 links">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light active" href="sobreNosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Offcanvas lateral para móviles -->
+        <div class="offcanvas offcanvas-start text-bg-dark d-lg-none" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Cerrar"></button>
+          </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link text-white" href="/index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="sobreNosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link text-white active" href="contacto.html">Contacto</a></li>
-        </ul>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav links">
+              <li class="nav-item ">
+                <a class="nav-link text-light" aria-current="page" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light active w-25" href="sobreNosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
-
-
+    </nav>
+  </section>
   <main>
     <!-- Banner -->
     <section class="header-banner">
