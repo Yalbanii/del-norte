@@ -39,7 +39,7 @@ border-radius: 50%;  /*  Para una imagen circular  */
 margin-top: 0;
 margin-bottom: 0px;
 font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
-
+font-size: 3vh;
 color: #ffffff;
 }
 
@@ -71,26 +71,22 @@ font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sa
   	text-shadow: 1px 0 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
 }
 .button {
-  	position: relative;
     top:auto;
-        left: 40%;
 font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
   	border-radius: 8px;
   	background-color: #770000;
   	border: 1px solid #000000;
   	box-sizing: border-box;
   	width: 50vw;
+		 margin: 0 auto;
   	height: 70px;
 		max-width: 300px;
-  	align-items: right;
   	padding: 12px;
   	text-align: center;
-  	font-family: Inter;
 		transition: background-color 0.3s ease;
 }
 .button2 {
   	position: relative;
-    left: 40%;
     top:auto;
 font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
   	border-radius: 8px;
@@ -100,10 +96,8 @@ font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sa
   	width: 50vw;
 		max-width: 300px;
   	height: 70px;
-  	align-items: left;
   	padding: 12px;
   	text-align: center;
-  	font-family: Inter; 
 		transition: background-color 0.3s ease;
 		
 }
