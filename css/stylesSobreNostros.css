@@ -95,6 +95,11 @@ section img {
   max-width: 100%;
   height: auto;
 }
+.garantia-img {
+  filter: drop-shadow(0px 6px 20px rgb(1,1,1));
+  max-width: 100%;
+  height: auto;
+}
 
 
 /* Responsive: Alineación de contenido horizontal */
