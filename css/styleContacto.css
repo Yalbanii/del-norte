@@ -1,107 +1,38 @@
 /* ======== General Layout ======== */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fff;
-  color: #333;
+	font-family: 'Inter', sans-serif;
+	background-color: #F3F3F3;
+	color: #333;
+	
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+main {
+	flex: 1;
 }
+
 
 /* ======== Sección del encabezado ======== */
 .header-banner {
-  background: url('/assets/img/imagenAjustesUsuario.PNG') no-repeat center center/cover;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 1px 1px 3px black;
+	background: url('/assets/img/imagenAjustesUsuario.PNG') no-repeat center center/cover;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-shadow: 1px 1px 3px black;
 }
 
 .header-banner h1 {
-  font-size: 60px;
-  font-weight: bold;
+	font-size: 60px;
+	font-weight: bold;
 }
 
 /* ======== Formulario de contacto ======== */
 form {
-  background-color: #f8f9fa;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+	background-color: rgba(234, 206, 156, 0.85);
+	opacity: 80%;
+	padding: 30px;
+	border-radius: 12px;
+	font-family: 'Inter', sans-serif;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* ======== Botón de enviar ======== */
-form button {
-  background-color: #8b2c25;
-  border: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #6a1d18;
-}
-
-/* ======== Footer ======== */
-footer {
-  background-color: #050505;
-  color: white;
-}
-
-footer h6 {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-footer a {
-  color: white;
-  transition: color 0.2s;
-}
-
-footer a:hover {
-  color: #d8c3a5;
-}
-
-/* Ajustes para íconos sociales */
-footer .fa-facebook,
-footer .fa-instagram,
-footer .fa-whatsapp {
-  font-size: 24px;
-  transition: transform 0.2s;
-}
-
-footer .fa-facebook:hover,
-footer .fa-instagram:hover,
-footer .fa-whatsapp:hover {
-  transform: scale(1.1);
-}
-
-/* Medios de pago */
-footer img {
-  max-height: 50px;
-  object-fit: contain;
-}
-
-/* ======== Responsive fixes ======== */
-@media (max-width: 768px) {
-  .header-banner h1 {
-    font-size: 40px;
-  }
-
-  footer img {
-    max-height: 40px;
-  }
-
-  form {
-    padding: 20px;
-  }
-}
-/*Comentario para cambio PR
