@@ -109,7 +109,11 @@ max-height: 800px;
   max-width: 90%;
 }
 
-
+.valores-certificados p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 #valor5 {
   font-size: 50px;
   color: 242125;
@@ -136,7 +140,7 @@ max-height: 800px;
 }
 
 .valor-highFive{
-  height: 100px;
+  height: 80px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -148,3 +152,20 @@ max-height: 800px;
   display: block;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  #h1 {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+
+  #imagen-logo {
+    width: 40vh;
+  }
+}
+@media (max-width: 767px) {
+  #valores-certificados .col-6 {
+    margin-bottom: 2rem;
+  }
+}
+
