@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/editProduct.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2">
+        <div class="container-fluid px-4">
+
+            <a class="navbar-brand me-auto" href="#">
+                <img src="../assets/img/logoDelNorte.png" alt="Del Norte" class="logo ms-5">
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="elements collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link nav-anim text-white fw-bold fs-4" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-anim text-white fw-bold fs-4" href="#">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-anim text-white fw-bold fs-4" href="#">Mi cuenta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+     <div class="form-wrapper my-5">
+    <div class="form-title">Registrar Nuevo Producto</div>
+    <form>
+
+      
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre del producto</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ej. Gomitas de mango" />
+        </div>
+        <div class="col-md-6">
+          <label for="cantidad" class="form-label">Cantidad de piezas</label>
+          <input type="number" class="form-control" id="cantidad" placeholder="Ej. 50" />
+        </div>
+      </div>
+
+     
+      <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <textarea class="form-control" id="descripcion" rows="3" placeholder="Ej. Gomitas cubiertas con chile"></textarea>
+      </div>
+
+      
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="gramaje" class="form-label">Gramaje minímo (g)</label>
+          <input type="number" class="form-control" id="gramaje" placeholder="Ej. 100" />
+        </div>
+        <div class="col-md-4">
+          <label for="gramaje" class="form-label">Gramaje máximo (g)</label>
+          <input type="number" class="form-control" id="gramaje" placeholder="Ej. 100" />
+        </div>
+        <div class="col-md-4">
+          <label for="precio" class="form-label">Precio ($)</label>
+          <input type="number" class="form-control" id="precio" placeholder="Ej. 25.00" />
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="imagen" class="form-label">Imagen del producto</label>
+        <input type="file" class="form-control" id="imagen" accept="image/*" />
+      </div>
+
+
+      <div class="mb-3">
+        <label for="ficha" class="form-label">Ficha técnica (PDF, Word, etc.)</label>
+        <input type="file" class="form-control" id="ficha" accept=".pdf,.doc,.docx" />
+      </div>
+
+    
+      <button type="submit" class="btn btn-registrar w-100 mt-4">Registrar producto</button>
+    </form>
+  </div>
+
+</body>
+</html>
