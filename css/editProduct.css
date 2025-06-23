@@ -1,0 +1,106 @@
+  :root {
+      --var--negro: #050505;
+      --var--negro2: #242125;
+      --var--rojo: #682A2F;
+      --var--carmin: #951E1A;
+      --var--verde: #87916F;
+      --var--crema: #EACE9C;
+      --var--blanco: #F3F3F3;
+  }
+
+  /* Navbar */
+  .container {
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+
+   body {
+      background-image: url('https://ejemplo.com/tu-imagen-de-fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+  .logo {
+      width: 15%;
+  }
+
+  .nav-anim {
+      transition: all 0.3s ease;
+      position: relative;
+  }
+
+  .nav-anim::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--var--carmin);
+      transition: width 0.3s ease;
+  }
+
+  .nav-anim:hover::after {
+      width: 100%;
+  }
+
+  .nav-anim:hover {
+      transform: translateY(-2px);
+      color: var(--var--blanco) !important;
+  }
+
+
+    .form-wrapper {
+      position: relative;
+      background-color: #1f1f1f;
+      border: 3px solid #EACE9C;
+      border-radius: 15px;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 40px 40px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-wrapper .form-title {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #1f1f1f;
+      color: #EACE9C;
+      padding: 5px 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: 2px solid #EACE9C;
+      border-radius: 25px;
+      z-index: 1;
+    }
+
+    label {
+      color: #EACE9C;
+      font-weight: 500;
+    }
+
+    .btn-registrar {
+      background-color: #951E1A;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-registrar:hover {
+      background-color: #682A2F;
+    }
+
+    input[type="file"]::file-selector-button {
+      background-color: #87916F;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .form-control {
+      background-color: #fff;
+    }

@@ -1,0 +1,15 @@
+.cont {}
+
+.circle {
+    width: 20vw;
+    height: 20vw;
+    border: 3px solid black;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    
+}

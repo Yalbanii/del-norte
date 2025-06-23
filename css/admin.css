@@ -1,5 +1,4 @@
-/*Declaracion de variables globales */
-:root { 
+:root {
   --var--negro: #050505;
   --var--negro2: #242125;
   --var--rojo: #682A2F;
@@ -9,17 +8,16 @@
   --var--blanco: #F3F3F3;
 }
 
-/*?Navbar
-/* Márgenes laterales */
+/* Navbar */
 .container {
   padding-left: 50px;
   padding-right: 50px;
 }
 
-.logo{
-   width: 33%;
+.logo {
+  width: 20%;
 }
-/* Animaciones en los links */
+
 .nav-anim {
   transition: all 0.3s ease;
   position: relative;
@@ -43,4 +41,109 @@
 .nav-anim:hover {
   transform: translateY(-2px);
   color: var(--var--blanco) !important;
+}
+
+/* Botones */
+.btn-add {
+  background-color: var(--var--verde);
+  border-radius: 15px;
+  color: var(--var--blanco);
+}
+
+.btn-drop {
+  background-color: var(--var--verde);
+  margin-left: 1%;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Catálogo general */
+.catalogo {
+  background-color: var(--var--blanco);
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px #24212533;
+}
+
+/* Productos */
+.producto-card {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.producto-img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+h1 {
+  padding: 2%;
+}
+
+h2 {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
+img {
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Botones individuales */
+.btn-group .btn {
+  padding: 6px 10px;
+  font-size: 14px;
+  margin-right: 5px;
+  border-radius: 8px;
+}
+
+.btn-ver {
+  background-color: var(--var--crema);
+  color: black;
+}
+
+.btn-editar {
+  background-color: var(--var--verde);
+  color: white;
+}
+
+.btn-borrar {
+  background-color: var(--var--carmin);
+  color: white;
+}
+
+/* Hover personalizados */
+.boton-ver-mas:hover {
+  background-color: #EACE9C;
+  opacity: 80%;
+}
+
+.boton-editar:hover {
+  background-color: #87916F;
+  opacity: 80%;
+}
+
+.boton-eliminar:hover {
+  background-color: #951E1A;
+  opacity: 80%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1rem;
+  }
+
+  .btn-group {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
 }
