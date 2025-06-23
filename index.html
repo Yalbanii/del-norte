@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ?AOS Animate -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <!-- ? Animate CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body>
     <!-- ? Sección del navbar -->
@@ -71,10 +72,12 @@
         <!-- ? HERO / PORTADA -->
   <header class="portada">
     <img src="assets/img//imagenMision.JPG" alt="Fondo portada" class="img-fluid w-100" id="imagen-portada">
-     <img src="assets/img/logoDelNorte.png" id="imagen-logo">
-     <div>
-     <h1 id="h1">¡CON EL NORTE BIEN PUESTO!</h1>
-   </div>
+    <div class="logoContainer  px-5">
+     <img src="assets/img/logoDelNorte.png" class="animate__animated animate__lightSpeedInLeft">
+    </div>
+    <div class="h1-wrapper">
+     <h1 class="animate__animated animate__shakeX" id="h1">¡CON EL NORTE BIEN PUESTO!</h1>
+    </div>
     
   
     
@@ -84,7 +87,7 @@
   <section id="valores-certificados" class="container text-center my-5" >
     <div class="row g-4 justify-content-center">
       <div class="col-6 col-md-3">
-        <img src="assets/img/cutlery.png" class="valor-cutlery mb-3" data-aos="fade-down-right" data-aos-duration="500"/>
+        <img src="assets/img/cutlery.png" class="valor-cutlery mb-3" data-aos="fade-down" data-aos-duration="500"/>
         <p class="valores-certificados" data-aos="flip-right" data-aos-duration="500">Actuamos con transparencia en todas nuestras relaciones y procesos, creyendo en el valor de hacer las cosas bien.</p>
       </div>
       <div class="col-6 col-md-3">
@@ -96,7 +99,7 @@
         <p class="valores-certificados" data-aos="flip-down" data-aos-duration="500">Mantenemos controles estrictos de calidad e higiene en toda la cadena de suministro, buscando siempre superar las expectativas.</p>
       </div>
       <div class="col-6 col-md-3">
-        <img src="assets/img/truck.png" class="valor-truck mb-3" data-aos="fade-down-left" data-aos-duration="500"/>
+        <img src="assets/img/truck.png" class="valor-truck mb-3" data-aos="fade-up" data-aos-duration="500"/>
         <p class="valores-certificados" data-aos="flip-left" data-aos-duration="500">Entregas rápidas y seguras, nuestra prioridad es la frescura de la carne a la par de una entrega impecable.</p>
       </div>
     </div>
@@ -113,7 +116,7 @@
     <!-- ? Sección de productos -->
     <section>
       <div class="container my-5">
-        <h2 class="mb-4 text-center sub_title" data-aos="zoom-in-left" data-aos-duration="1000">Nuestra selección de carne</h2>
+        <h2 class="mb-4 text-center sub_title" data-aos="zoom-in-down" data-aos-duration="1000">Nuestra selección de carne</h2>
         <div class="d-flex gap-4 mb-3">
           <button class="btn-tab active" data-category="cordero" data-aos="zoom-in-down" data-aos-duration="1000">Cordero</button>
           <button class="btn-tab" data-category="res" data-aos="zoom-in-down" data-aos-duration="1200">Res</button>
