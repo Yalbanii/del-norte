@@ -269,7 +269,7 @@ max-height: 800px;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* capa oscura para contraste */
+  background: rgba(0, 0, 0, 0.4); 
 }
 
 .hero-header .container {
@@ -287,7 +287,7 @@ max-height: 800px;
     }
 
 
-/* 3) Contenedor 3D */
+/* Contenedor 3D */
 .card-container {
   perspective: 1200px;
 }
@@ -301,13 +301,13 @@ max-height: 800px;
   border-radius: 16px;
 }
 
-/* 5) Elevación e inclinación al pasar el ratón */
+/* Elevación e inclinación al pasar el ratón */
 .flip-card:hover {
   transform: translateY(-10px) rotateX(3deg) rotateY(3deg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-/* 6) Interior giratorio */
+/* Interior giratorio */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -319,7 +319,7 @@ max-height: 800px;
   transform: rotateY(180deg);
 }
 
-/* 7) Frente y trasera comparten tamaño y redondeado */
+/*Frente y trasera comparten tamaño y redondeado */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -331,7 +331,7 @@ max-height: 800px;
   box-shadow:  4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* — Frente */
+/*Frente */
 .flip-card-front {
   background: #fff;
   display: flex;
@@ -371,7 +371,7 @@ max-height: 800px;
   margin: 10px 10px;
 }
 
-/* — Trasera */
+/* Trasera */
 .flip-card-back {
   background-color: var(--verde-oscuro);
   color: #fff;
@@ -380,7 +380,7 @@ max-height: 800px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 2.5rem;  /* espacio para la leyenda */
+  padding-top: 2.5rem;  
   gap: 1rem;
   position: relative;
 }
