@@ -246,3 +246,166 @@ max-height: 800px;
   }
 }
 
+@media (min-width: 992px) {
+  .col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
+
+
+
+/**hsitoria equipo*/
+.hero-header {
+  height: 100vh;
+  background: url('img/tecnologia-fondo.png') center center/cover no-repeat;
+  background-color: #eaf6ff; /* por si no carga la imagen */
+  padding: 0 1rem;
+  position: relative;
+}
+
+/* opcional para mejor legibilidad del texto */
+.hero-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* capa oscura para contraste */
+}
+
+.hero-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+/*card*/
+  :root {
+      --rojo: #E84D5B;
+      --crema: #EAE2CF;
+      --verde-claro: #B4CCB9;
+      --verde-oscuro: #26979F;
+      --negro: #3B3B3B;
+    }
+
+
+/* 3) Contenedor 3D */
+.card-container {
+  perspective: 1200px;
+}
+
+/* 4) Tarjeta base con borde rojo */
+.flip-card {
+  width: 280px;
+  height: 460px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 16px;
+}
+
+/* 5) Elevación e inclinación al pasar el ratón */
+.flip-card:hover {
+  transform: translateY(-10px) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* 6) Interior giratorio */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 7) Frente y trasera comparten tamaño y redondeado */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow:  4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* — Frente */
+.flip-card-front {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.flip-card-front img {
+  width: 70%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.flip-card-front .card-body {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
+.card-name {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.card-position {
+  font-weight: 400;
+  color: var(--negro);
+  margin-bottom: 0.75rem;
+}
+.flip-card-front .card-body p.small {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.tech-icons img {
+  height: 30px;
+  margin: 10px 10px;
+}
+
+/* — Trasera */
+.flip-card-back {
+  background-color: var(--verde-oscuro);
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2.5rem;  /* espacio para la leyenda */
+  gap: 1rem;
+  position: relative;
+}
+/* Leyenda “Contáctame” */
+.flip-card-back .contact-legend {
+  position: absolute;
+  top: 0.75rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--crema);
+}
+/* Links verticales */
+.flip-card-back a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.flip-card-back a i {
+  font-size: 1.5rem;
+}
+.flip-card-back a:hover {
+  color: var(--crema);
+}
