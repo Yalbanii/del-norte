@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros | Del Norte</title>
-  <link rel="icon" sizes="64x64" href="/assets/img/2.png"/>
+  <link rel="icon" sizes="64x64" href="/assets/img/2.png" />
   <link rel="stylesheet" href="/css/stylesSobreNostros.css">
   <link rel="stylesheet" href="/css/Style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <!-- ?Font awesome 6.6.0 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
+
 <body>
 
+  <!-- Navbar -->
+  <!-- ? Sección del navbar -->
+  <section>
     <!-- Navbar -->
-    <!-- ? Sección del navbar -->
-    <section>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar_background">
-        <div class="container-fluid">
-          <!-- Botón hamburguesa para móviles -->
-          <button class="navbar-toggler d-lg-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-          <!-- Logo -->
-          <a class="navbar-brand mx-lg-0 mx-auto" href="/index.html"><img src="/assets/img/logoDelNorte.png" alt="Logotipo de la empresa" style="width: 90px"/>
-          </a>
-          <!-- Menú visible solo en pantallas grandes -->
-          <div class="collapse navbar-collapse d-none d-lg-flex ms-5">
-            <ul class="navbar-nav gap-3 links">
-              <li class="nav-item">
-                <a class="nav-link text-light"aria-current="page"href="/index.html">Inicio</a>
+    <nav class="navbar navbar-expand-lg navbar_background">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span> </button>
+      
+        <a class="navbar-brand mx-lg-0 mx-auto" href="/index.html"><img src="/assets/img/logoDelNorte.png"
+            alt="Logotipo de la empresa" style="width: 90px" />
+        </a>
+        
+        <div class="collapse navbar-collapse d-none d-lg-flex ms-5">
+          <ul class="navbar-nav gap-3 links">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="sobreNosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Offcanvas lateral para móviles -->
+        <div class="offcanvas offcanvas-start text-bg-dark d-lg-none" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Cerrar"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav links">
+              <li class="nav-item ">
+                <a class="nav-link text-light" aria-current="page" href="/index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="sobreNosotros.html">Nosotros</a>
+                <a class="nav-link text-light active w-25" href="sobreNosotros.html">Nosotros</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="contacto.html">Contacto</a>
               </li>
             </ul>
           </div>
-          <!-- Offcanvas lateral para móviles -->
-          <div class="offcanvas offcanvas-start text-bg-dark d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-            </div>
-
-            <div class="offcanvas-body">
-              <ul class="navbar-nav links">
-                <li class="nav-item ">
-                  <a class="nav-link text-light" aria-current="page" href="/index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light active w-25" href="sobreNosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="contacto.html">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </nav>
-    </section>
+      </div>
+    </nav>
+  </section>
 
-        <!-- Desarrolladores -->
-        <div class="row mb-5 align-items-center animate-on-scroll px-5">
+  <!-- Desarrolladores -->
+  <!---   <div class="row mb-5 align-items-center animate-on-scroll px-5">
           <div class="px-5">
             <h2 class="text-center">Desarrolladores web</h2>
             <ul class="list-group list-group-flush">
@@ -145,62 +156,667 @@
         </div>
 
     </div>
+    </section> --->
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros - Del Norte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+
+  <body>
+    <section class="position-relative text-white text-center d-flex align-items-center justify-content-center"
+      style="background-image: url('../assets/img/fondo2.jpg'); background-size: cover; background-position: center; height: 60vh;">
+
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(33, 37, 41, 0.65);"></div>
+
+      <div class="position-relative z-1 px-4" data-aos="fade-up" data-aos-delay="800">
+        <h1 class="fw-bold mb-4">Conoce al Equipo de Desarrolladores Del-Norte</h1>
+        <p class="lead mx-auto" style="max-width: 900px; ">
+          Somos un equipo de desarrollo apasionado por crear soluciones que marquen la diferencia. Valoramos las
+          necesidades del cliente y entregamos calidad, en tiempo y forma. Creemos que el trabajo en equipo es una
+          mezcla de personalidades, talentos y esencias con un mismo fin: lograr grandes resultados.
+        </p>
+      </div>
     </section>
+
+    <!-- Historia -->
+<section class="py-5 bg-light">
+  <div class="container-fluid">
+    <!-- TÍTULO -->
+    <h2 class="fw-bold text-center mb-5" data-aos="fade-down">Proyecto Del Norte</h2>
+
+    <div class="row justify-content-center align-items-center">
+      <!-- Carrusel: IZQUIERDA -->
+      <div class="col-lg-6 px-5 mb-4 mb-lg-0">
+        <div id="carruselDelNorte" class="carousel slide shadow rounded" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../assets/img/imagenHistoria.PNG" class="d-block w-100 img-fluid rounded" alt="img1">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/img/imagenNosotros.PNG" class="d-block w-100 img-fluid rounded" alt="img2">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/img/imagenMision.JPG" class="d-block w-100 img-fluid rounded" alt="img3">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/img/imgInformacion.PNG" class="d-block w-100 img-fluid rounded" alt="img4">
+            </div>
+          </div>
+          <!-- Controles del carrusel (opcionales) -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselDelNorte" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselDelNorte" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6 px-5" data-aos="fade-up" data-aos-delay="800">
+        <p class="lead text-center text-lg-start">
+          Del Norte es una boutique de carnes de alta calidad, nacida en Guadalajara con el propósito de acercar lo
+          mejor de la tradición cárnica local a más personas, a través de la venta en línea. No cuenta con tienda
+          física; toda la experiencia se vive de manera virtual, facilitando la compra tanto al mayoreo como al
+          menudeo.<br><br>
+          Este proyecto surge de la visión de su fundador, quien desea llevar la calidad y el prestigio de la carne
+          de Guadalajara al mundo digital, y posicionar la marca en nuevos mercados.<br><br>
+          Trabajamos de la mano con la marca Del Norte, desarrollando su presencia digital para que más personas
+          puedan disfrutar, con solo un clic, de la excelencia y variedad que ofrecen en cada corte.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Equipo -->
+    <section class="team-section" >
+      <div class="container-fluid">
+        <div style="max-width:1600px; margin:auto;">
+          <h2 class="text-center mb-5 mt-5">Equipo de desarrolladores</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 justify-content-center gx-2 gy-4">
+
+            <!--?YALBANI-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+
+                  <!-- Frente -->
+                  <div class="flip-card-front">
+                    <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                    <div class="card-body text-center">
+                      <h5>
+                        <span class="card-name">Valeria Ruiz</span><br>
+                        <span class="card-position">Desarrolladora Java Fullstack</span>
+                      </h5>
+                      <p class="small">
+                        Apasionada por crear soluciones tecnológicas para un mundo digital.
+                        Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                      </p>
+                      <div class="tech-icons d-flex justify-content-center mt-2">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                          alt="HTML">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                          alt="JS">
+                        <img src="https://images.icon-icons.com/3261/PNG/512/github_logo_icon_206752.png" alt="Git">
+                        <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Bootstrap">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Trasera -->
+                  <div class="flip-card-back">
+                    <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                      <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:ing.valeriaruiz5@email.com">
+                      <i class="fas fa-envelope"></i><span>Email</span>
+                    </a>
+                    <a href="https://github.com/valruizb05" target="_blank">
+                      <i class="fab fa-github"></i><span>GitHub</span>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!--?ERNESTO-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?FER-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?ALAN-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?JAQUI-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="500">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?JAN-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="600">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?DANIEL-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="700">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?VALE-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="800">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://www.svgrepo.com/show/303251/mysql-logo.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?JOSE-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="900">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--?ALEJANDRO-->
+            <div class="col d-flex justify-content-center" data-aos="fade-up" data-aos-delay="1000">
+              <div class="card-container">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+
+                    <!-- Frente -->
+                    <div class="flip-card-front">
+                      <img src="../assets/img/devs/vale.png" alt="Valeria Ruiz">
+                      <div class="card-body text-center">
+                        <h5>
+                          <span class="card-name">Valeria Ruiz</span><br>
+                          <span class="card-position">Desarrolladora Java Fullstack</span>
+                        </h5>
+                        <p class="small">
+                          Apasionada por crear soluciones tecnológicas para un mundo digital.
+                          Siempre aprendiendo nuevas herramientas para maximizar el impacto de mis proyectos.
+                        </p>
+                        <div class="tech-icons d-flex justify-content-center mt-2">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            alt="CSS">
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JS">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Trasera -->
+                    <div class="flip-card-back">
+                      <a href="https://www.linkedin.com/in/valeria-ruiz" target="_blank">
+                        <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                      </a>
+                      <a href="mailto:valeria@email.com">
+                        <i class="fas fa-envelope"></i><span>Email</span>
+                      </a>
+                      <a href="https://github.com/valeria" target="_blank">
+                        <i class="fab fa-github"></i><span>GitHub</span>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+    <footer class="text-center bg-dark text-white py-3">
+      <p>&copy; 2025 Del Norte. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+
+
 
   <!-- Footer -->
-   <!-- ? Sección del footer -->
-    <section>
-        <footer class="bg-black text-white pt-4 pb-2">
-            <div class="container">
-                <div class="row text-center text-md-start align-items-start">
-                
-                    <!-- Logo y redes sociales -->
-                    <div class="col-12 col-md-6 col-lg-3 mb-4 text-center">
-                        <img src="/assets/img/logoDelNorte.png" alt="Del Norte Logo" style="width: 150px;" class="mb-3 mx-auto d-block" />
-                        <div class="d-flex justify-content-center gap-4 fs-4">
-                            <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
+  <!-- ? Sección del footer -->
+  <section>
+    <footer class="bg-black text-white pt-4 pb-2">
+      <div class="container">
+        <div class="row text-center text-md-start align-items-start">
 
-                    <!-- Mapa del sitio -->
-                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                        <h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Mapa del sitio</h6>
-                        <ul class="list-unstyled ms-3">
-                        <li><a href="/index.html" class="text-white text-decoration-none d-block">• Inicio</a></li>
-                        <li><a href="/html/sobreNosotros.html" class="text-white text-decoration-none d-block">• Nosotros</a></li>
-                        <li><a href="/html/contacto.html" class="text-white text-decoration-none d-block">• Contacto</a></li>
-                        <li><a href="/html/inicioSesion.html" class="text-white text-decoration-none d-block">• Iniciar sesión</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Contacto -->
-                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                        <h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Contáctanos</h6>
-                        <p class="mb-1">Guadalajara, Jalisco. México.</p>
-                        <p class="mb-1">Tel. 33 1807 1724</p>
-                        <p class="mb-1">DelNorte.Gdl@gmail.com</p>
-                        <p class="mb-0">Lunes a Domingo 9 am a 6 pm</p>
-                    </div>
-                    <!-- Metodo de pago -->
-                    <div class="col-12 col-md-6 col-lg-3 mb-4">
-                    <h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Métodos de pago</h6>
-                        <div class="d-flex flex-column align-items-center align-items-md-start gap-3 m-auto">
-                            <img src="/assets/img/mercadoPago.png" alt="Mercado Pago" style="height: 40px;">
-                            <img src="/assets/img/Paypal.png" alt="Paypal" style="height: 60px;">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Línea inferior y copyright -->
-                <hr class="border-secondary mb-2" />
-                <p class="text-center mb-0 small">© Copyright 2025</p>
+          <!-- Logo y redes sociales -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4 text-center">
+            <img src="/assets/img/logoDelNorte.png" alt="Del Norte Logo" style="width: 150px;"
+              class="mb-3 mx-auto d-block" />
+            <div class="d-flex justify-content-center gap-4 fs-4">
+              <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
             </div>
-        </footer>
-    </section>
+          </div>
 
+          <!-- Mapa del sitio -->
+          <div class="col-12 col-sm-6 col-lg-3 mb-4">
+            <h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Mapa del sitio</h6>
+            <ul class="list-unstyled ms-3">
+              <li><a href="/index.html" class="text-white text-decoration-none d-block">• Inicio</a></li>
+              <li><a href="/html/sobreNosotros.html" class="text-white text-decoration-none d-block">• Nosotros</a></li>
+              <li><a href="/html/contacto.html" class="text-white text-decoration-none d-block">• Contacto</a></li>
+              <li><a href="/html/inicioSesion.html" class="text-white text-decoration-none d-block">• Iniciar sesión</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contacto -->
+          <div class="col-12 col-sm-6 col-lg-3 mb-4">
+            <h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Contáctanos</h6>
+            <p class="mb-1">Guadalajara, Jalisco. México.</p>
+            <p class="mb-1">Tel. 33 1807 1724</p>
+            <p class="mb-1">DelNorte.Gdl@gmail.com</p>
+            <p class="mb-0">Lunes a Domingo 9 am a 6 pm</p>
+          </div>
+          <!-- Metodo de pago -->
+          <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Métodos de pago</h6>
+            <div class="d-flex flex-column align-items-center align-items-md-start gap-3 m-auto">
+              <img src="/assets/img/mercadoPago.png" alt="Mercado Pago" style="height: 40px;">
+              <img src="/assets/img/Paypal.png" alt="Paypal" style="height: 60px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Línea inferior y copyright -->
+        <hr class="border-secondary mb-2" />
+        <p class="text-center mb-0 small">© Copyright 2025</p>
+      </div>
+    </footer>
+  </section>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/appSobreNostros.js"></script>
 </body>
+
 </html>
