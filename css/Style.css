@@ -289,7 +289,9 @@ max-height: 800px;
 
 /* Contenedor 3D */
 .card-container {
-  perspective: 1200px;
+  width: 100%;
+  max-width: 280px; /* limitar el ancho de la tarjeta */
+  margin: 20px auto;    /* centrar la tarjeta dentro de la columna */
 }
 
 /* 4) Tarjeta base con borde rojo */
@@ -341,6 +343,7 @@ max-height: 800px;
 }
 
 .flip-card-front img {
+  padding-top: 5px;
   width: 70%;
   height: 140px;
   object-fit: cover;
