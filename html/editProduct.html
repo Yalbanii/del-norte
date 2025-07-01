@@ -40,61 +40,60 @@
         </div>
     </nav>
 
-
      <div class="form-wrapper my-5">
     <div class="form-title">Registrar Nuevo Producto</div>
-    <form>
+    <form id="newItemForm">
 
-      
       <div class="row mb-3">
         <div class="col-md-6">
-          <label for="nombre" class="form-label">Nombre del producto</label>
-          <input type="text" class="form-control" id="nombre" placeholder="Ej. Gomitas de mango" />
+          <label for="newNombre" class="form-label">Nombre del producto</label>
+          <input type="text" class="form-control" id="newNombre" placeholder="Ej. Gomitas de mango" />
         </div>
         <div class="col-md-6">
-          <label for="cantidad" class="form-label">Cantidad de piezas</label>
-          <input type="number" class="form-control" id="cantidad" placeholder="Ej. 50" />
+          <label for="newCantidad" class="form-label">Cantidad de piezas</label>
+          <input type="number" class="form-control" id="newCantidad" placeholder="Ej. 50" />
         </div>
       </div>
 
      
       <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" id="descripcion" rows="3" placeholder="Ej. Gomitas cubiertas con chile"></textarea>
+        <label for="newDescripcion" class="form-label">Descripción</label>
+        <textarea class="form-control" id="newDescripcion" rows="3" placeholder="Ej. Gomitas cubiertas con chile"></textarea>
       </div>
 
       
       <div class="row mb-3">
         <div class="col-md-4">
-          <label for="gramaje" class="form-label">Gramaje minímo (g)</label>
-          <input type="number" class="form-control" id="gramaje" placeholder="Ej. 100" />
+          <label for="newGramajeMin" class="form-label">Gramaje minímo (g)</label>
+          <input type="number" class="form-control" id="newGramajeMin" placeholder="Ej. 100" />
         </div>
         <div class="col-md-4">
-          <label for="gramaje" class="form-label">Gramaje máximo (g)</label>
-          <input type="number" class="form-control" id="gramaje" placeholder="Ej. 100" />
+          <label for="newGramajeMax" class="form-label">Gramaje máximo (g)</label>
+          <input type="number" class="form-control" id="newGramajeMax" placeholder="Ej. 100" />
         </div>
         <div class="col-md-4">
-          <label for="precio" class="form-label">Precio ($)</label>
-          <input type="number" class="form-control" id="precio" placeholder="Ej. 25.00" />
+          <label for="newPrecio" class="form-label">Precio ($)</label>
+          <input type="number" class="form-control" id="newPrecio" placeholder="Ej. 25.00" />
         </div>
       </div>
 
 
       <div class="mb-3">
-        <label for="imagen" class="form-label">Imagen del producto</label>
-        <input type="file" class="form-control" id="imagen" accept="image/*" />
+        <label for="newImagen" class="form-label">Imagen del producto</label>
+        <input type="file" class="form-control" id="newImagen" accept="image/*" />
       </div>
 
 
       <div class="mb-3">
-        <label for="ficha" class="form-label">Ficha técnica (PDF, Word, etc.)</label>
-        <input type="file" class="form-control" id="ficha" accept=".pdf,.doc,.docx" />
+        <label for="newFicha" class="form-label">Ficha técnica (PDF, Word, etc.)</label>
+        <input type="file" class="form-control" id="newFicha" accept=".pdf,.doc,.docx" />
       </div>
 
     
       <button type="submit" class="btn btn-registrar w-100 mt-4">Registrar producto</button>
     </form>
   </div>
-
+  <script src="/js/itemsController.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
