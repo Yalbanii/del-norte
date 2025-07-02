@@ -14,12 +14,12 @@
     </button>
 
     <!-- Logo -->
-    <a class="navbar-brand mx-lg-0 mx-auto" href="/index.html"
+    <a class="navbar-brand mx-lg-0 mx-auto " href="/index.html"
       ><img
         src="/assets/img/logoDelNorte.png"
         alt="Logotipo de la empresa"
         style="width: 90px"
-        class="logo_nav"
+        class="logo_nav nav-link"
       />
     </a>
 
@@ -27,20 +27,47 @@
     <div class="collapse navbar-collapse d-none d-lg-flex ms-5">
       <ul class="navbar-nav gap-3 links">
         <li class="nav-item">
-          <a
-            class="nav-link text-light"
-            aria-current="page"
-            href="/index.html"
-            >Inicio</a
-          >
+          <a class="nav-link text-light" aria-current="page" href="/index.html">
+            <i class="fa-solid fa-house me-2"></i>Inicio
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/html/sobreNosotros.html"
-            >Nosotros</a
-          >
+          <a class="nav-link text-light" href="/html/sobreNosotros.html">
+            <i class="fa-solid fa-users me-2"></i>Nosotros
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="/html/contacto.html">Contacto</a>
+          <a class="nav-link text-light" href="/html/contacto.html">
+            <i class="fa-solid fa-envelope me-2"></i>Contacto
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/html/inicioSesion.html">
+            <i class="fa-solid fa-user me-2"></i>Iniciar sesión
+          </a>
+        </li>
+        <li class="nav-item position-relative">
+          <a href="/html/carrito.html" class="nav-link text-light">
+            <i class="fa-solid fa-cart-shopping me-2"></i>Carrito
+            <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger"
+                  style="transform: translate(-45%, -20%) scale(0.9);">
+              3
+              <span class="visually-hidden">productos en el carrito</span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link text-light dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user me-2"></i>Usuario
+             <i class="fa-solid fa-caret-down ms-1"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/html/ajustesUsuario.html">Perfil de usuario</a></li>
+            <li><a class="dropdown-item" href="/mi_cuenta/mi_cuenta.html">Mi cuenta</a></li>
+            <li><a class="dropdown-item" href="/html/adminManagement.html">Cuenta Administrador</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/index.html">Cerrar Sesión</a></li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -65,22 +92,34 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav links">
           <li class="nav-item">
-            <a
-              class="nav-link text-light ms-3"
-              aria-current="page"
-              href="/index.html"
-              >Inicio</a
-            >
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/index.html">
+              <i class="fa-solid fa-house me-2"></i>Inicio
+            </a>
           </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link text-light" href="/html/sobreNosotros.html"
-              >Nosotros</a
-            >
+          <li class="nav-item">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/sobreNosotros.html">
+              <i class="fa-solid fa-users me-2"></i>Nosotros
+            </a>
           </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link text-light" href="/html/contacto.html"
-              >Contacto</a
-            >
+          <li class="nav-item">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/contacto.html">
+              <i class="fa-solid fa-envelope me-2"></i>Contacto
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/inicioSesion.html">
+              <i class="fa-solid fa-user me-2"></i>Iniciar sesión
+            </a>
+          </li>
+          <li class="nav-item position-relative w-auto">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center m-auto" href="/html/carrito.html">
+              <i class="fa-solid fa-cart-shopping me-2"></i>Carrito
+              <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger"
+                    style="transform: translate(-45%, -20%) scale(0.9);">
+                3
+                <span class="visually-hidden">productos en el carrito</span>
+              </span>
+            </a>
           </li>
         </ul>
       </div>

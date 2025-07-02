@@ -23,10 +23,23 @@ function loadFooter() {
     })
 }
 
+// ? Navbar admin
+
+function loadNavbarAdmin() {
+    fetch("/components/navbar_admin.html").then(response => response.text()).then(data => {
+        const destinyElement = document.querySelector("#navbarAdmin");
+        if(destinyElement){
+            destinyElement.innerHTML = data;
+        }
+    }).catch(error => {
+        console.log("Error al cargar el navbar: ", error);
+    });
+}
+
 // * Mandar a llamar las funciones
 document.addEventListener("DOMContentLoaded", loadNavbar);
 document.addEventListener("DOMContentLoaded", loadFooter);
-
+document.addEventListener("DOMContentLoaded", loadNavbarAdmin);
 
 // ? Colocar la clase active
 /*
