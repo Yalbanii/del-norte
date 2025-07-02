@@ -73,9 +73,47 @@
   <div class="ajustes-header">
     <img src="/assets/img/imagenAjustesUsuario.PNG" alt="fondo" class="header-bg-img">
     <div class="header-overlay"></div>
-    <h1 class="header-title">Ajustes</h1>
+    <h1 class="header-title">Perfil de Usuario</h1>
   </div>
 
+
+  <!-- Perfil de usuario -->
+
+ <div class="hero">
+     		<div class="mi-cuenta-wrapper"> Bienvenid@
+               <img class=profile.pic; src="/assets/img/profile-icon-ejemplo.jpg" alt="Foto de perfil"; style="width: 60px; height: 60px;">  
+            </div>       
+        </div>          
+     <div class="container">
+            <div class="skills-grid">
+                <div class="skill-item2">
+                     <a href="#pedidos"> 
+                    <button type="button" class="btn"><h3>Mis Pedidos</h3></button></a>
+                    <p>Historial de pedidos</p>
+                </div>
+                <div class="skill-item2">
+                     <a href="#direcciones"> 
+                    <button type="button" class="btn"><h3>Direcciones</h3></button></a>
+                    <p>Editar direcciones para pedidos</p>
+                </div>
+                <div class="skill-item2">
+                     <a href="#seguridad"> 
+                    <button type="button" class="btn"><h3>Seguridad</h3></button></a>
+                    <p>Cambiar correo electrónico, contraseña o número de teléfono móvil. </p>
+                </div>
+                 <div class="skill-item2">
+                    <a href="#pagos"> 
+                    <button type="button" class="btn"><h3>Mis Pagos </h3></button></a>
+                    <p>Administrar o agregar métodos de pago y ver tus transacciones.</p>
+                </div>
+                </div>
+        </div>
+    </section>
+  <br>   </div>
+      		<button type="reset" class="button">CERRAR SESIÓN</button>
+                 <br>
+        <hr>
+    <h1 class="ajustes-sub">Ajustes</h1>
   <!-- Contenedor de ajustes -->
   <div class="container ajustes-section my-5 py-4 px-3 rounded-4">
     <div class="row g-4">
@@ -83,7 +121,7 @@
       <!-- Historial -->
       <div class="col-lg-4">
         <div class="p-3 bg-white shadow rounded-4">
-          <h3 class="text-center">Historial de pedidos</h3>
+          <h3 id="pedidos" class="text-center">Historial de pedidos</h3>
           <p class="form-control mb-2" >Pedido xx/xx/2025</p>
           <p class="form-control mb-3" >Pedido xx/xx/2025</p>
           <button class="btn btn-danger w-100" id="btn-delete-purchase-history">Borrar historial</button>
@@ -93,9 +131,9 @@
       <!-- Métodos de pago -->
       <div class="col-lg-4">
         <div class="p-3 bg-white shadow rounded-4">
-          <h3 class="text-center">Métodos de pago</h3>
+          <h3  id="pagos" class="text-center">Métodos de pago</h3>
           <p class="form-control mb-3" >Tarjeta 1</p>
-          <button class="btn btn-success w-100" id="btn-add-payment">Agregar método de pago</button>
+          <button class="button2" id="btn-add-payment">Agregar método de pago</button>
           <button class="btn btn-danger w-100 mt-2" id="btn-delete-payment">Borrar métodos de pago guardados</button>
         </div>
       </div>
@@ -103,9 +141,9 @@
       <!-- Direcciones -->
       <div class="col-lg-4">
         <div class="p-3 bg-white shadow rounded-4">
-          <h3 class="text-center">Direcciones guardadas</h3>
+          <h3  id="direcciones" class="text-center">Direcciones guardadas</h3>
           <p class="form-control mb-3" >Dirección 1</p>
-          <button class="btn btn-success w-100" id="btn-add-address">Agregar dirección de envío</button>
+          <button class="button2" id="btn-add-address">Agregar dirección de envío</button>
           <button class="btn btn-danger w-100 mt-2" id="btn-delete-address">Borrar direcciones guardadas</button>
         </div>
       </div>
@@ -113,11 +151,11 @@
       <!-- Contraseña -->
       <div class="col-lg-6">
         <div class="p-3 bg-white shadow rounded-4">
-          <h3 class="text-center">Contraseña</h3>
+          <h3  id="seguridad" class="text-center">Contraseña</h3>
           <input type="password" class="form-control mb-2" placeholder="Contraseña actual">
           <input type="password" class="form-control mb-2" placeholder="Nueva contraseña">
           <input type="password" class="form-control mb-3" placeholder="Confirmar nueva contraseña">
-          <button class="btn btn-success w-100" id="btn-change-pass">Cambiar Contraseña</button>
+          <button class="button2" id="btn-change-pass">Cambiar Contraseña</button>
         </div>
       </div>
 
@@ -133,7 +171,7 @@
 
       <!-- Guardar -->
       <div class="col-12 text-end">
-        <button class="btn btn-success px-5 py-2">Guardar cambios</button>
+        <button class="button1">Guardar cambios</button>
       </div>
     </div>
   </div>
