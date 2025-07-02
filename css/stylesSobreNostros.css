@@ -29,7 +29,7 @@ h5, h6 {
 }
 
 /* Párrafos */
-p {
+.paragraphs {
   font-size: 1.4rem;
 }
 
@@ -128,7 +128,7 @@ section img {
     padding: 1rem;
   }
 
-  p {
+  .paragraphs {
     font-size: 1rem;
   }
 }

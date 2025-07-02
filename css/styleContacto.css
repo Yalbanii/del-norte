@@ -36,3 +36,11 @@ form {
 	font-family: 'Inter', sans-serif;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Estilo para los mensajes de error  */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}

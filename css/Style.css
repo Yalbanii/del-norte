@@ -5,43 +5,6 @@ body {
     padding: 0;
 }
 
-/* *Darle color al navbar*/
-.navbar_background {
-    background-color: #1E1E1E;
-}
-
-/* *Personalizar links del navbar (hover opcional) */
-.navbar-nav .nav-link {
-  color: #ccc;
-  transition: color 0.2s;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: #fff;
-}
-
-.navbar-toggler-icon {
-  filter: invert(1); /* Blanco para fondo oscuro */
-}
-
-
-/* ?Modificando la tipografia de links */
-.links {
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.nav-link.active {
-    border-bottom: 2px solid #EACE9C;
-}
-
-.titleFooter {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #EACE9C;
-}
-
-
 /* =================== PORTADA =================== */
 /* =================== PORTADA =================== */
 .portada {
@@ -269,7 +232,7 @@ max-height: 800px;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* capa oscura para contraste */
+  background: rgba(0, 0, 0, 0.4); 
 }
 
 .hero-header .container {
@@ -287,9 +250,11 @@ max-height: 800px;
     }
 
 
-/* 3) Contenedor 3D */
+/* Contenedor 3D */
 .card-container {
-  perspective: 1200px;
+  width: 100%;
+  max-width: 280px; /* limitar el ancho de la tarjeta */
+  margin: 20px auto;    /* centrar la tarjeta dentro de la columna */
 }
 
 /* 4) Tarjeta base con borde rojo */
@@ -301,13 +266,13 @@ max-height: 800px;
   border-radius: 16px;
 }
 
-/* 5) Elevación e inclinación al pasar el ratón */
+/* Elevación e inclinación al pasar el ratón */
 .flip-card:hover {
   transform: translateY(-10px) rotateX(3deg) rotateY(3deg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-/* 6) Interior giratorio */
+/* Interior giratorio */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -319,7 +284,7 @@ max-height: 800px;
   transform: rotateY(180deg);
 }
 
-/* 7) Frente y trasera comparten tamaño y redondeado */
+/*Frente y trasera comparten tamaño y redondeado */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -331,7 +296,7 @@ max-height: 800px;
   box-shadow:  4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* — Frente */
+/*Frente */
 .flip-card-front {
   background: #fff;
   display: flex;
@@ -341,6 +306,7 @@ max-height: 800px;
 }
 
 .flip-card-front img {
+  padding-top: 5px;
   width: 70%;
   height: 140px;
   object-fit: cover;
@@ -371,7 +337,7 @@ max-height: 800px;
   margin: 10px 10px;
 }
 
-/* — Trasera */
+/* Trasera */
 .flip-card-back {
   background-color: var(--verde-oscuro);
   color: #fff;
@@ -380,7 +346,7 @@ max-height: 800px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 2.5rem;  /* espacio para la leyenda */
+  padding-top: 2.5rem;  
   gap: 1rem;
   position: relative;
 }

@@ -40,3 +40,138 @@ body {
   background-color: rgba(234, 206, 156, 0.85);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+
+
+/*PERFIL USUARIO*/
+.ajustes-sub{
+  font-family: 'Inter', sans-serif;
+  color: #770000;
+  font-weight: bold;
+    text-align: center;
+      position: static;
+}
+
+.container {
+margin: auto; /* Centra el contenido horizontalmente */
+padding: 20px; /* Espacio alrededor del contenido */
+text-align: justify-content;
+ width: auto; height:auto; outline: 10px;
+ border-radius: 10%;
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+}
+
+.hero {
+padding: 0px; /* Espacio vertical grande para esta sección */
+text-align: justify; /* Centra el contenido */
+border-radius: 10%;
+}
+
+.hero-content {
+margin: auto;
+border-radius: 50%
+}
+
+.mi-cuenta-wrapper {
+  	position: relative;
+  	top: 0px;
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+  	font-size: 48px;
+		color:#640e0e;
+		font-weight: 700;
+  	text-align: center;
+}
+
+.profile-pic {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave para la foto */
+box-shadow: #201c14;
+border-radius: 50%;  /*  Para una imagen circular  */
+}
+
+.skill-item2 h3 {
+margin-top: 0;
+margin-bottom: 0px;
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+font-size: 3vh;
+color: #ffffff;
+}
+
+.skill-item2 {
+ 	background-color: rgba(234, 206, 156, 0.9);
+padding: 25px;
+  	border-radius: 15px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Sombra suave para las tarjetas */
+text-align: center;
+transition: transform 0.3s ease; /* Efecto de elevación al pasar el ratón */
+}
+
+.skill-item2:hover {
+transform: translateY(-5px); /* Eleva ligeramente la tarjeta al pasar el ratón */
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas que se ajustan al ancho de la pantalla */
+gap: 15px; /* Espacio entre las tarjetas de habilidades */
+margin-top: 0px;
+text-align: center;
+}
+
+.button1 {
+  	position: center;
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+  	border-radius: 8px;
+  	background-color: #5c5a5a;
+  	border: 1px solid #000000;
+    color: #fff;
+  	width: 50vw;
+  	height: 70px;
+		max-width: 300px;
+  	padding: 12px;
+  	text-align: center;
+		transition: background-color 0.3s ease;
+}
+.button1:hover {
+color: #3a2c2c; /* Color de fondo del botón al pasar el ratón */
+background-color:#98af79
+}
+
+.button {
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+  	border-radius: 8px;
+  	background-color: #770000;
+  	border: 1px solid #000000;
+  	width: 40vw;
+    height: 70px;
+  	padding: 12px;
+    position: relative;
+    margin-inline: 30%;
+  justify-content: center;
+  align-items: center;
+		transition: background-color 0.3s ease;
+}
+.button2 {
+font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif; 
+  	border-radius: 8px;
+  	background-color: #87916f;
+  	border: 1px solid #303030;
+  	height: 40px;
+    width: 100%;
+  	padding: 8px;
+    text-align: center;
+		transition: background-color 0.3s ease;
+		
+}
+/*a:hover {
+color: #26bbbb; /* Color del enlace al pasar el ratón 
+
+*/
+
+.button:hover {
+background-color: #3a2c2c; /* Color de fondo del botón al pasar el ratón */
+color:#fff
+}
+.button2:hover {
+background-color: #b1cea4; 
+color:#fff/* Color de fondo del botón al pasar el ratón */
+}
