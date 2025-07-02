@@ -19,63 +19,22 @@
 	<!-- Estilos personalizados -->
 	<link rel="stylesheet" href="../css/registro.css" />
 	<link rel="stylesheet" href="../css/components.css">
+	
+	<!-- ?Font awesome 6.6.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ?AOS Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ? Animate CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	 <script src="../js/components.js"></script>
 </head>
 
 <body class="bg-light text-dark d-flex flex-column min-vh-100">
 
 	<!-- Navbar -->
 	<section class="image-background">
-		<section>
-			<nav class="navbar navbar-expand-lg navbar_background">
-				<div class="container-fluid">
-					<button class="navbar-toggler d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<a class="navbar-brand mx-lg-0 mx-auto" href="../index.html">
-						<img src="../assets/img/logoDelNorte.png" alt="Logotipo de la empresa" style="width: 90px" />
-					</a>
-
-					<div class="collapse navbar-collapse d-none d-lg-flex ms-5">
-						<ul class="navbar-nav gap-3 links">
-							<li class="nav-item">
-								<a class="nav-link text-light active" aria-current="page"
-									href="../index.html">Inicio</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-light" href="../html/sobreNosotros.html">Nosotros</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-light" href="../html/contacto.html">Contacto</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="offcanvas offcanvas-start text-bg-dark d-lg-none" tabindex="-1" id="offcanvasNavbar"
-						aria-labelledby="offcanvasNavbarLabel">
-						<div class="offcanvas-header">
-							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-								aria-label="Cerrar"></button>
-						</div>
-						<div class="offcanvas-body">
-							<ul class="navbar-nav links">
-								<li class="nav-item">
-									<a class="nav-link text-light" href="../index.html">Inicio</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link text-light" href="../html/sobreNosotros.html">Nosotros</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link text-light" href="../html/contacto.html">Contacto</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</nav>
+		<section id="navbar">
+			
 		</section>
 
 		<!-- Registro -->
@@ -233,64 +192,20 @@
 		</main>
 
 		<!-- Footer -->
-		<section>
-			<footer class="bg-black text-white pt-4 pb-2">
-				<div class="container">
-					<div class="row text-center text-md-start align-items-start">
-						<div class="col-12 col-md-6 col-lg-3 mb-4 text-center">
-							<img src="../assets/img/logoDelNorte.png" alt="Del Norte Logo" style="width: 150px;"
-								class="mb-3 mx-auto d-block" />
-							<div class="d-flex justify-content-center gap-4 fs-4">
-								<a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
-								<a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-								<a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
-							</div>
-						</div>
-
-						<div class="col-12 col-sm-6 col-lg-3 mb-4">
-							<h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Mapa
-								del sitio</h6>
-							<ul class="list-unstyled ms-3">
-								<li><a href="../index.html" class="text-white text-decoration-none d-block">• Inicio</a>
-								</li>
-								<li><a href="../html/sobreNosotros.html"
-										class="text-white text-decoration-none d-block">• Nosotros</a>
-								</li>
-								<li><a href="../html/contacto.html" class="text-white text-decoration-none d-block">•
-										Contacto</a></li>
-								<li><a href="#" class="text-white text-decoration-none d-block">• Iniciar sesión</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-12 col-sm-6 col-lg-3 mb-4">
-							<h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">
-								Contáctanos</h6>
-							<p class="mb-1">Guadalajara, Jalisco. México.</p>
-							<p class="mb-1">Tel. 33 1807 1724</p>
-							<p class="mb-1">DelNorte.Gdl@gmail.com</p>
-							<p class="mb-0">Lunes a Domingo 9 am a 6 pm</p>
-						</div>
-
-						<div class="col-12 col-md-6 col-lg-3 mb-4">
-							<h6 class="text-center border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Métodos
-								de pago</h6>
-							<div class="d-flex flex-column align-items-center align-items-md-start gap-3 m-auto">
-								<img src="../assets/img/mercadoPago.png" alt="Mercado Pago" style="height: 40px;">
-								<img src="../assets/img/Paypal.png" alt="Paypal" style="height: 60px;">
-							</div>
-						</div>
-					</div>
-
-					<hr class="border-secondary mb-2" />
-					<p class="text-center mb-0 small">© Copyright 2025</p>
-				</div>
-			</footer>
+		<section id="footer">
+			
 		</section>
 	</section>
 
 	<!-- Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+	<script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

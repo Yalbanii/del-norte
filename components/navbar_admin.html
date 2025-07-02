@@ -1,0 +1,95 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar_background">
+  <div class="container-fluid">
+    <!-- Botón hamburguesa para móviles -->
+    <button
+      class="navbar-toggler d-lg-none me-2"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Logo -->
+    <a class="navbar-brand mx-lg-0 mx-auto" href="/index.html">
+      <img
+        src="/assets/img/logoDelNorte.png"
+        alt="Logotipo de la empresa"
+        style="width: 90px"
+        class="logo_nav nav-link"
+      />
+    </a>
+
+    <!-- Menú para pantallas grandes -->
+    <div class="collapse navbar-collapse d-none d-lg-flex ms-5">
+      <ul class="navbar-nav gap-3 links">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/html/ajustesUsuario.html">
+            <i class="fa-solid fa-user-cog me-2"></i>Cuenta
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/html/editProduct.html">
+            <i class="fa-solid fa-box-open me-2"></i>Productos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/html/contacto.html">
+            <i class="fa-solid fa-address-book me-2"></i>Clientes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="/index.html">
+            <i class="fa-solid fa-right-from-bracket me-2"></i>Cerrar Sesión
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Offcanvas para móviles -->
+    <div
+      class="offcanvas offcanvas-start navbar_background d-lg-none"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-light m-auto" id="offcanvasNavbarLabel">Del Norte</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white m-0"
+          data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav links">
+          <li class="nav-item">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/ajustesUsuario.html">
+              <i class="fa-solid fa-user-cog me-2"></i>Cuenta
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/editProduct.html">
+              <i class="fa-solid fa-box-open me-2"></i>Productos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/contacto.html">
+              <i class="fa-solid fa-address-book me-2"></i>Clientes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/index.html">
+              <i class="fa-solid fa-right-from-bracket me-2"></i>Cerrar Sesión
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
