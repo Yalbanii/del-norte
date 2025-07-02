@@ -1,14 +1,14 @@
-//Inicializar en 0
-const itemsController = new ItemsController(0);
+// Inicializar y cargar desde localStorage
+const itemsController = new ItemsController();
+itemsController.loadItemsFromLocalStorage();
 
 const newItemForm = document.querySelector('#newItemForm');
 
-// Add an 'onsubmit' event listener
+// Evento submit del formulario
 newItemForm.addEventListener('submit', (event) => {
-    // Prevent default action
     event.preventDefault();
 
-    // Select the inputs
+    // Obtener los campos del formulario
     const newNombre = document.querySelector('#newNombre');
     const newCantidad = document.querySelector('#newCantidad');
     const newDescripcion = document.querySelector('#newDescripcion');
@@ -18,25 +18,29 @@ newItemForm.addEventListener('submit', (event) => {
     const newImagen = document.querySelector('#newImagen');
     const newFicha = document.querySelector('#newFicha');
 
-    const nombre = newNombre.value;
-    const cantidad = newCantidad.value;
-    const descripcion = newDescripcion.value;
-    const gramajeMin = newGramajeMin.value;
-    const gramajeMax = newGramajeMax.value;
-    const precio = newPrecio.value;
-    const imagen = newImagen.value;
-    const ficha = newFicha.value;
+    // Obtener valores
+    const nombre = newNombre.value.trim();
+    const cantidad = parseInt(newCantidad.value);
+    const descripcion = newDescripcion.value.trim();
+    const gramajeMin = parseInt(newGramajeMin.value);
+    const gramajeMax = parseInt(newGramajeMax.value);
+    const precio = parseFloat(newPrecio.value);
+    const imagen = newImagen.value.split("\\").pop(); 
+    const ficha = newFicha.value.split("\\").pop();
 
-    // Add the task to the task manager
+    // Registrar producto
     itemsController.addItem(nombre, cantidad, descripcion, gramajeMin, gramajeMax, precio, imagen, ficha);
 
-    // Clear the form
-   newNombre.value = '';
-   newCantidad.value = '';
-   newDescripcion.value = '';
-   newGramajeMin.value = '';
-   newGramajeMax.value = '';
-   newPrecio.value = '';
-   newImagen.value = '';
-   newFicha.value = '';
+    // Limpiar formulario
+    newNombre.value = '';
+    newCantidad.value = '';
+    newDescripcion.value = '';
+    newGramajeMin.value = '';
+    newGramajeMax.value = '';
+    newPrecio.value = '';
+    newImagen.value = '';
+    newFicha.value = '';
+
+    // Confirmación
+    alert("Producto registrado y guardado en localStorage.");
 });
