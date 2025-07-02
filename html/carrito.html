@@ -6,6 +6,7 @@
   <title>Carrito de Compras</title>
   <!-- link de boostrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- link de CSS-->
   <link rel="stylesheet" href="../css/Style.css">
   <link rel="stylesheet" href="../css/styles_carrito.css">
@@ -21,9 +22,8 @@
 <body>
 <!--! este es el navbar -->
    <!-- ? Sección del navbar -->
-    <section id="navbar">
-      
-    </section>
+
+    <section id="navbar"> </section>
 
     
   <main class="container my-5">
@@ -39,32 +39,32 @@
 
 <hr>
 
-  <!-- Encabezado del carrito -->
-  <div class="card p-3 mb-3 bg-light fw-bold">
-    <div class="row text-center align-items-center">
+  <!-- Encabezado del carrito, ya responsive -->
+<div class="card p-3 mb-3 bg-light fw-bold d-none d-md-block">
+  <div class="row text-center align-items-center">
 
-      <!-- Producto -->
-      <div class="col-12 col-md-2">
-        <p class="mb-0">Producto</p>
-      </div>
-
-      <!-- Descripción -->
-      <div class="col-12 col-md-5">
-        <p class="mb-0">Descripción</p>
-      </div>
-
-      <!-- Cantidad -->
-      <div class="col-12 col-md-3">
-        <p class="mb-0">Cantidad</p>
-      </div>
-
-      <!-- Subtotal -->
-      <div class="col-12 col-md-2">
-        <p class="mb-0">Precio</p>
-      </div>
-
+    <!-- Producto -->
+    <div class="col-12 col-md-2">
+      <p class="mb-0">Producto</p>
     </div>
+
+    <!-- Descripción -->
+    <div class="col-12 col-md-5">
+      <p class="mb-0">Descripción</p>
+    </div>
+
+    <!-- Cantidad -->
+    <div class="col-12 col-md-3">
+      <p class="mb-0">Cantidad</p>
+    </div>
+
+    <!-- Subtotal -->
+    <div class="col-12 col-md-2">
+      <p class="mb-0">Precio</p>
+    </div>
+
   </div>
+</div>
 
   <!-- Contenedor para las tarjetas de productos -->
    <div class="container-custom"></div>
@@ -166,7 +166,7 @@
       <input type="text" class="form-control" name="nombre" required>
     </div>
     <div class="mb-3">
-      <label class="form-label">Apellidos</label>
+      <label class="form-label">Apellido(s)</label>
       <input type="text" class="form-control" name="apellidos" required>
     </div>
     <div class="mb-3">
@@ -189,7 +189,7 @@
     <label class="form-label">Ciudad</label>
     <select class="form-select" name="ciudad" required>
       <option value="">Selecciona una Ciudad</option>
-      <!-- Opciones que agregarás después -->
+      <!-- Opciones que agregaremos después -->
     </select>
   </div>
 
@@ -197,7 +197,7 @@
     <label class="form-label">Estado</label>
     <select class="form-select" name="estado" required>
       <option value="">Selecciona un Estado</option>
-      <!-- Opciones que agregarás después -->
+      <!-- Opciones que agregar después -->
     </select>
   </div>
 </div>
@@ -264,15 +264,13 @@
   </button>
 </section>
 
-</section>
 <br>
 </main>
 <!-- ! Sección del footer -->
-    <section id="footer">
-        
-    </section>
+    <section id="footer"> </section>
 
-
+<!-- otros scripts -->
+ 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
