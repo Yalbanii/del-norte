@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear / Editar Producto</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" sizes="64x64" href="/assets/img/2.png" />
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="../css/editProduct.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+</head>
+
+<body>
+  <!-- Navbar dinámico -->
+  <section id="navbarAdmin"></section>
+
+  <div class="container my-5">
+    <div class="form-wrapper">
+      <h2 class="form-title mb-4">Editar producto</h2>
+      <form id="newItemForm" class="needs-validation" novalidate>
+        <!-- Nombre -->
+        <div class="mb-3">
+          <label for="newNombre" class="form-label">Nombre del producto</label>
+          <input type="text" id="newNombre" class="form-control" required>
+          <div class="invalid-feedback">El nombre es obligatorio.</div>
+        </div>
+        <!-- Cantidad -->
+        <div class="mb-3">
+          <label for="newCantidad" class="form-label">Cantidad</label>
+          <input type="number" id="newCantidad" class="form-control" min="1" required>
+          <div class="invalid-feedback">La cantidad debe ser al menos 1.</div>
+        </div>
+        <!-- Descripción -->
+        <div class="mb-3">
+          <label for="newDescripcion" class="form-label">Descripción</label>
+          <textarea id="newDescripcion" class="form-control" rows="3" required></textarea>
+          <div class="invalid-feedback">La descripción es obligatoria.</div>
+        </div>
+        <!-- Gramaje y precio -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <label for="newGramajeMin" class="form-label">Gramaje mínimo (g)</label>
+            <input type="number" id="newGramajeMin" class="form-control" min="1" required>
+            <div class="invalid-feedback">Mínimo 1 g.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="newGramajeMax" class="form-label">Gramaje máximo (g)</label>
+            <input type="number" id="newGramajeMax" class="form-control" min="1" required>
+            <div class="invalid-feedback">Mínimo 1 g.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="newPrecio" class="form-label">Precio ($)</label>
+            <input type="number" id="newPrecio" class="form-control" min="0.01" step="0.01" required>
+            <div class="invalid-feedback">Precio mínimo $0.01.</div>
+          </div>
+        </div>
+        <!-- Imagen opcional -->
+        <div class="mb-3">
+          <label for="newImagen" class="form-label">Imagen (opcional)</label>
+          <input type="file" id="newImagen" class="form-control" accept="image/*">
+        </div>
+        <!-- Ficha técnica opcional -->
+        <div class="mb-3">
+          <label for="newFicha" class="form-label">Ficha técnica (opcional)</label>
+          <input type="file" id="newFicha" class="form-control" accept=".pdf,.doc,.docx">
+        </div>
+
+        <!-- Botones Guardar y Eliminar -->
+        <div class="d-flex justify-content-between ">
+          <button type="submit" class="btn btn-primary ">Guardar</button>
+          <!-- Este botón debe existir para que deleteBtn no sea null -->
+          <!----<button type="button" id="btnEliminar" class="btn btn-danger">
+            Eliminar producto
+          </button>-->
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer dinámico -->
+  <section id="footer"></section>
+  <script src="app.js"></script>
+  <script src="/js/components.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Tu script de edición (nombre EXACTO) -->
+  <script src="/js/editproduct.js"></script>
+</body>
+
+</html>
