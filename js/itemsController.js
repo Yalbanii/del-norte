@@ -1,35 +1,45 @@
-
 class ItemsController {
     constructor(currentId = 0) {
         this.items = [];
         this.currentId = currentId;
-  }
+    }
 
-    //Metodo addItem
+    // Método para agregar nuevo producto
     addItem(nombre, cantidad, descripcion, gramajeMin, gramajeMax, precio, imagen, ficha) {
         const item = {
             id: this.currentId++,
-            nombre: nombre,
-            cantidad: cantidad,
-            descripcion: descripcion,
-            gramajeMin: gramajeMin,
-            gramajeMax: gramajeMax,
-            precio: precio,
-            imagen: imagen,
-            ficha: ficha,
+            nombre,
+            cantidad,
+            descripcion,
+            gramajeMin,
+            gramajeMax,
+            precio,
+            imagen,
+            ficha,
         };
 
         this.items.push(item);
+        this.saveItemsToLocalStorage(); // Guardar en localStorage
         console.log(item);
     }
-     loadItemsFromLocalStorage() {
-        const storageItems = localStorage.getItem("items")
+
+    // Guardar los items en el almacenamiento local
+    saveItemsToLocalStorage() {
+        localStorage.setItem("items", JSON.stringify(this.items));
+        localStorage.setItem("currentId", this.currentId.toString());
+    }
+
+    // Cargar los items desde el almacenamiento local
+    loadItemsFromLocalStorage() {
+        const storageItems = localStorage.getItem("items");
+        const storedId = localStorage.getItem("currentId");
+
         if (storageItems) {
-            const items = JSON.parse(storageItems)
-            for (var i = 0, size = items.length; i < size; i++) {
-                const item = items[i];
-                this.items.push(item);
-            }
+            this.items = JSON.parse(storageItems);
+        }
+
+        if (storedId) {
+            this.currentId = parseInt(storedId);
         }
     }
   }

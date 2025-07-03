@@ -1,0 +1,151 @@
+/* *Color de fondo navbar y footer */
+.navbar_background, .footer_background {
+    background-color: #1E1E1E !important;
+}
+
+/* *Estilo base para links */
+.navbar-nav .nav-link {
+  color: #ccc;
+  position: relative;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  padding-bottom: 5px;
+  z-index: 1;
+}
+
+/* *Subrayado animado desde el centro */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: #EACE9C;
+  transition: width 0.4s ease, left 0.4s ease;
+  z-index: -1;
+}
+
+/* *Hover y active con animaciones llamativas */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 0 10px #EACE9C;
+}
+
+/* *Subrayado se expande desde el centro */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* *Color activo override */
+.nav-link.active {
+    color: #EACE9C !important;
+}
+
+/* *Tipografía */
+.links {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilo general del dropdown */
+.dropdown-menu {
+  background-color: #2A2A2A !important;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  min-width: 200px;
+  margin-top: 12px; /* separarlo del botón */
+  padding: 0.5rem 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ítems del dropdown */
+.dropdown-menu .dropdown-item {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+/* Hover en ítems */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #EACE9C;
+  color: #1E1E1E;
+  font-weight: bold;
+}
+
+/* Separador */
+.dropdown-divider {
+  margin: 0.3rem 0;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: none; /* Oculta el ícono predeterminado de flecha */
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* *Hamburguesa blanca */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* *Footer */
+.titleFooter {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #EACE9C;
+}
+
+/* Animación hover para links del footer */
+.footer-links a {
+  position: relative;
+  color: #fff;
+  padding-left: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #EACE9C;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #EACE9C;
+  transform: translateX(5px); /* movimiento hacia la derecha */
+}
+
+.footer-links a:hover::before {
+  width: 80%; /* subrayado animado */
+}
