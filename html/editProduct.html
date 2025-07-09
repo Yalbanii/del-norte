@@ -1,100 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/editProduct.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/editProduct.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="icon" sizes="64x64" href="/assets/img/2.png" />
+  <!-- ?Font awesome 6.6.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ?AOS Animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- ? Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <Script src="../js/components.js"></Script>
+  <title>Document</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2">
-        <div class="container-fluid px-4">
+  <section id="navbarAdmin"></section>
 
-            <a class="navbar-brand me-auto" href="#">
-                <img src="../assets/img/logoDelNorte.png" alt="Del Norte" class="logo ms-5">
-            </a>
+  <div class="container my-5">
+    <div class="form-wrapper">
+      <h2 class="form-title mb-4">Registrar Nuevo Producto</h2>
+      <form id="newItemForm" class="needs-validation" novalidate>
 
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <div class="elements collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-4">
-                    <li class="nav-item">
-                        <a class="nav-link nav-anim text-white fw-bold fs-4" href="#">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-anim text-white fw-bold fs-4" href="#">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-anim text-white fw-bold fs-4" href="#">Mi cuenta</a>
-                    </li>
-                </ul>
+        <!-- Nombre y Cantidad -->
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="newNombre" class="form-label">Nombre del producto</label>
+            <input type="text" id="newNombre" class="form-control" placeholder="Ej. Gomitas de mango" required>
+            <div class="invalid-feedback">
+              Debes ingresar el nombre del producto.
             </div>
+          </div>
+          <div class="col-md-6">
+            <label for="newCantidad" class="form-label">Cantidad de piezas</label>
+            <input type="number" id="newCantidad" class="form-control" placeholder="Ej. 50" required min="1">
+            <div class="invalid-feedback">
+              Ingresa una cantidad válida (mínimo 1).
+            </div>
+          </div>
         </div>
-    </nav>
 
-     <div class="form-wrapper my-5">
-    <div class="form-title">Registrar Nuevo Producto</div>
-    <form id="newItemForm">
-
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="newNombre" class="form-label">Nombre del producto</label>
-          <input type="text" class="form-control" id="newNombre" placeholder="Ej. Gomitas de mango" />
+        <!-- Descripción -->
+        <div class="mb-3">
+          <label for="newDescripcion" class="form-label">Descripción</label>
+          <textarea id="newDescripcion" class="form-control" rows="3" placeholder="Ej. Gomitas cubiertas con chile" required></textarea>
+          <div class="invalid-feedback">
+            Proporciona una descripción del producto.
+          </div>
         </div>
-        <div class="col-md-6">
-          <label for="newCantidad" class="form-label">Cantidad de piezas</label>
-          <input type="number" class="form-control" id="newCantidad" placeholder="Ej. 50" />
+
+        <!-- Gramaje mínimo, máximo y precio -->
+        <div class="row g-3 mb-3">
+          <div class="col-md-4">
+            <label for="newGramajeMin" class="form-label">Gramaje mínimo (g)</label>
+            <input type="number" id="newGramajeMin" class="form-control" placeholder="Ej. 100" required min="1">
+            <div class="invalid-feedback">
+              El gramaje mínimo debe ser al menos 1 g.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="newGramajeMax" class="form-label">Gramaje máximo (g)</label>
+            <input type="number" id="newGramajeMax" class="form-control" placeholder="Ej. 200" required min="1">
+            <div class="invalid-feedback">
+              El gramaje máximo debe ser al menos 1 g.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="newPrecio" class="form-label">Precio ($)</label>
+            <input type="number" id="newPrecio" class="form-control" placeholder="Ej. 25.00" required min="0.01" step="0.01">
+            <div class="invalid-feedback">
+              Ingresa un precio válido (mínimo $0.01).
+            </div>
+          </div>
         </div>
-      </div>
 
-     
-      <div class="mb-3">
-        <label for="newDescripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" id="newDescripcion" rows="3" placeholder="Ej. Gomitas cubiertas con chile"></textarea>
-      </div>
-
-      
-      <div class="row mb-3">
-        <div class="col-md-4">
-          <label for="newGramajeMin" class="form-label">Gramaje minímo (g)</label>
-          <input type="number" class="form-control" id="newGramajeMin" placeholder="Ej. 100" />
+        <!-- Imagen -->
+        <div class="mb-3">
+          <label for="newImagen" class="form-label">Imagen del producto</label>
+          <input type="file" id="newImagen" class="form-control" accept="image/*" required>
+          <div class="invalid-feedback">
+            Selecciona una imagen para el producto.
+          </div>
         </div>
-        <div class="col-md-4">
-          <label for="newGramajeMax" class="form-label">Gramaje máximo (g)</label>
-          <input type="number" class="form-control" id="newGramajeMax" placeholder="Ej. 100" />
+
+        <!-- Ficha técnica -->
+        <div class="mb-3">
+          <label for="newFicha" class="form-label">Ficha técnica (PDF, Word, etc.)</label>
+          <input type="file" id="newFicha" class="form-control" accept=".pdf,.doc,.docx" required>
+          <div class="invalid-feedback">
+            Sube la ficha técnica en formato PDF o Word.
+          </div>
         </div>
-        <div class="col-md-4">
-          <label for="newPrecio" class="form-label">Precio ($)</label>
-          <input type="number" class="form-control" id="newPrecio" placeholder="Ej. 25.00" />
-        </div>
-      </div>
 
-
-      <div class="mb-3">
-        <label for="newImagen" class="form-label">Imagen del producto</label>
-        <input type="file" class="form-control" id="newImagen" accept="image/*" />
-      </div>
-
-
-      <div class="mb-3">
-        <label for="newFicha" class="form-label">Ficha técnica (PDF, Word, etc.)</label>
-        <input type="file" class="form-control" id="newFicha" accept=".pdf,.doc,.docx" />
-      </div>
-
-    
-      <button type="submit" class="btn btn-registrar w-100 mt-4">Registrar producto</button>
-    </form>
+        <button type="submit" class="btn btn-registrar w-100 mt-4">Registrar producto</button>
+      </form>
+    </div>
   </div>
+
+  <section id="footer"></section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Primero validation.js -->
+  <script src="/js/editProdutc.js"></script>
+  <!-- Luego tu itemsController.js -->
   <script src="/js/itemsController.js"></script>
-    <script src="/js/index.js"></script>
+  <!-- Y al final index.js u otros -->
+  <script src="/js/index.js"></script>
+
 </body>
 </html>

@@ -115,19 +115,9 @@ section img {
   .position-relative h1 {
     font-size: 2rem;
   }
-
   footer {
     text-align: center;
   }
-
-  .hero-section {
-    height: 250px;
-  }
-
-  .hero-section .hero-content {
-    padding: 1rem;
-  }
-
   .paragraphs {
     font-size: 1rem;
   }
