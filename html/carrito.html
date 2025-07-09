@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="../css/Style.css">
   <link rel="stylesheet" href="../css/styles_carrito.css">
   <link rel="stylesheet" href="../css/components.css">
+  <!-- link a JS carrito -->
+  <script defer src="../js/carrito.js"></script>
+
 </head>
 <body>
 <!--! este es el navbar -->
@@ -85,14 +88,21 @@
     <!--! termina el navbar-->
 
     <!-- ! Desde aquí son las secciones de la página Carrito de compras -->
+     
+    <!--* boton provisional para la exposicion -->
+
+<!-- Botón para agregar producto aleatorio -->
+<div class="text-end mb-3">
+  <button id="agregar-random" class="btn btn-success">Agrega producto al azar</button>
+</div>
+<!-- * aqui termina el boton provisional -->
 
     <!--!Carrito de compras  -->
-    <div class="container-custom">
+    
+<div class="container-custom">
 <section class="mb-5">
   <h2 class="text-center mb-4">Carrito</h2>
-
 <hr>
-
   <!-- Encabezado del carrito, ya responsive -->
 <div class="card p-3 mb-3 bg-light fw-bold d-none d-md-block">
   <div class="row text-center align-items-center">
@@ -120,10 +130,9 @@
   </div>
 </div>
 
-  <!-- Contenedor para las tarjetas de productos -->
-   <div class="container-custom"></div>
+  <!--!  Contenedor para las tarjetas de productos -->
+ 
   <div id="cart-items" class="d-flex flex-column gap-4">
-
     <!-- Tarjeta de producto de ejemplo -->
     <div class="card p-3">
       <div class="row align-items-center">
@@ -135,8 +144,8 @@
 
         <!-- Descripcion-->
         <div class="col-12 col-md-5 mt-3 mt-md-0">
-          <h6 class="mb-1">Birria de res</h6>
-          <p class="mb-1 text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati est mollitia minus molestias quas! Quod autem aspernatur deleniti libero dolore consequuntur illum dolor cupiditate saepe assumenda provident, minus, modi praesentium.</p>
+          <h6 class="mb-1">Nombre del producto</h6>
+          <p class="mb-1 text-muted">Descripción del producto.</p>
           
         </div>
 
@@ -150,7 +159,7 @@
           <button class="btn btn-link text-danger mt-2">Quitar</button>
         </div>
 
-        <!-- Total -->
+        <!-- Total por item -->
         <div class="col-12 col-md-2 text-center mt-3 mt-md-0">
           <p class="fw-bold">$150.00</p>
         </div>
@@ -166,8 +175,7 @@
   </div>
 </section>
 </div>
-
-
+</div>
 <!--! Gasto estimado de envío -->
 <div class="container-custom">
 <section class="mb-5">
@@ -178,21 +186,21 @@
     <div class="row align-items-end">
       <div class="col-md-3">
         <label for="estado-estimado" class="form-label">Estado</label>
-        <select id="estado-estimado" class="form-select" required>
+        <select id="estado-estimado" class="form-select">
           <option value="">Selecciona un estado</option>
           <!-- Opciones -->
         </select>
       </div>
       <div class="col-md-3">
         <label for="ciudad-estimada" class="form-label">Ciudad</label>
-        <select id="ciudad-estimada" class="form-select" required>
+        <select id="ciudad-estimada" class="form-select">
           <option value="">Selecciona una ciudad</option>
           <!-- Opciones -->
         </select>
       </div>
       <div class="col-md-3">
         <label for="cp-estimado" class="form-label">Código Postal</label>
-        <select id="cp-estimado" class="form-select" required>
+        <select id="cp-estimado" class="form-select">
           <option value="">Selecciona un CP</option>
           <!-- Opciones -->
         </select>
@@ -210,126 +218,149 @@
 
 <!--! Información de entrega -->
 <div class="container-custom">
-<section class="mb-5">
-  <h2 class="text text-center">Información de Entrega</h2>
-  <br>
-  <hr>
-  <form id="shipping-form">
-    <div class="mb-3">
-      <label class="form-label">Nombre(s)</label>
-      <input type="text" class="form-control" name="nombre" required>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Apellido(s)</label>
-      <input type="text" class="form-control" name="apellidos" required>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Calle y número (exterior e interior, si aplica)</label>
-      <input type="text" class="form-control" name="direccion" required>
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Casa, apartamento, etc. (opcional)</label>
-      <input type="text" class="form-control" name="complemento" />
-    </div>
-
-    <!-- Fila con Código Postal, Ciudad y Estado -->
-    <div class="row">
-  <div class="col-md-4 mb-3">
-    <label class="form-label">Código postal</label>
-    <input type="text" class="form-control" name="codigo_postal" required>
-  </div>
-
-  <div class="col-md-4 mb-3">
-    <label class="form-label">Ciudad</label>
-    <select class="form-select" name="ciudad" required>
-      <option value="">Selecciona una Ciudad</option>
-      <!-- Opciones que agregaremos después -->
-    </select>
-  </div>
-
-  <div class="col-md-4 mb-3">
-    <label class="form-label">Estado</label>
-    <select class="form-select" name="estado" required>
-      <option value="">Selecciona un Estado</option>
-      <!-- Opciones que agregar después -->
-    </select>
-  </div>
-</div>
-
-    <div class="col-md-4 mb-3">
-      <label class="form-label">Teléfono</label>
-      <input type="text" class="form-control" name="telefono" required>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-label">Instrucciones adicionales para la entrega</label>
-        <input type="text" class="form-control" name="instruciones-adicionales" required>
+  <section class="mb-5">
+    <h2 class="text text-center">Información de Entrega</h2>
+    <br>
+    <hr>
+    <form id="shipping-form">
+      <div class="mb-3">
+        <label class="form-label">Nombre(s)</label>
+        <input type="text" class="form-control" name="nombre" required placeholder="Ingresa uno o más nombres">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Apellido(s)</label>
+        <input type="text" class="form-control" name="apellidos" required placeholder="Ingresa tu apellido o apellidos">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Calle y número (exterior e interior, si aplica)</label>
+        <input type="text" class="form-control" name="direccion" required placeholder="Ingresa el nombre de la calle y el número ext/int">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Casa, apartamento, etc. (opcional)</label>
+        <input type="text" class="form-control" name="complemento" placeholder="Ej: Departamento 3B, Casa azul, Piso 2">
       </div>
 
-  </form>
-</section>
+      <!-- Fila con Código Postal, Ciudad y Estado -->
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Código postal</label>
+          <input type="text" class="form-control" name="codigo_postal" required placeholder="Ej: 44100">
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Ciudad</label>
+          <select class="form-select" name="ciudad" required>
+            <option value="">Selecciona una Ciudad</option>
+            <!-- Opciones que agregaremos después -->
+          </select>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Estado</label>
+          <select class="form-select" name="estado" required>
+            <option value="">Selecciona un Estado</option>
+            <!-- Opciones que agregar después -->
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label class="form-label">Teléfono</label>
+        <input type="text" class="form-control" name="telefono" required placeholder="Debe tener 10 digitos">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Instrucciones adicionales para la entrega</label>
+        <input type="text" class="form-control" name="instruciones-adicionales" placeholder="Ingresa detalles adicionales para ayudar con tu entrega">
+      </div>
+
+    </form>
+  </section>
 </div>
+
 
 <!--! Información de pago -->
 <div class="container-custom">
-
-<section class="mb-5">
-  <h2 class="text-center">Información de Pago</h2>
-  <hr>
-  <br>
-  <form id="payment-form">
-    <div class="mb-3">
-      <label class="form-label">Número de tarjeta</label>
-      <input type="text" class="form-control" name="tarjeta" required>
-    </div>
-    <!-- nombre del titular -->
- <div class="mb-3">
-      <label class="form-label">Nombre del titular</label>
-      <input type="text" class="form-control" name="titular" required>
-    </div>
-
-    <!-- Fila con vencimiento y CVV -->
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <label class="form-label">Fecha de vencimiento</label>
-        <input type="month" class="form-control" name="expiracion" required>
+  <section class="mb-5">
+    <h2 class="text-center">Información de Pago</h2>
+    <hr>
+    <br>
+    <form id="payment-form">
+      <div class="mb-3">
+        <label class="form-label" for="tarjeta">Número de tarjeta</label>
+        <input type="text" 
+               id="tarjeta" 
+               class="form-control" 
+               name="tarjeta" 
+               required 
+               maxlength="16" 
+               inputmode="numeric" 
+               pattern="\d{16}" 
+               placeholder="Ingresa los 16 dígitos de tu tarjeta">
       </div>
-      <div class="col-md-6 mb-3">
-        <label class="form-label">CVV</label>
-        <input type="text" class="form-control" name="cvv" required>
+
+      <div class="mb-3">
+        <label class="form-label" for="titular">Nombre del titular</label>
+        <input type="text" 
+               id="titular" 
+               class="form-control" 
+               name="titular" 
+               required
+               placeholder="Ingresa el nombre del titular exactamente como viene en la tarjeta">
       </div>
-    </div>
-    
-   <div class="mb-3">
-  <label class="form-label">Cupón de descuento</label>
-  <div class="input-group">
-    <input type="text" class="form-control" name="cupon" placeholder="Ingresa tu cupón">
-    <button class="btn btn-outline-secondary" type="button" id="btn-aplicar-cupon">
-      Aplicar
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label" for="expiracion">Fecha de vencimiento</label>
+          <input type="month" 
+                 id="expiracion" 
+                 class="form-control" 
+                 name="expiracion" 
+                 required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label" for="cvv">CVV</label>
+          <input type="text" 
+                 id="cvv" 
+                 class="form-control" 
+                 name="cvv" 
+                 maxlength="4" 
+                 required
+                 placeholder="El CVV debe tener entre 3 y 4 dígitos">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="cupon">Cupón de descuento</label>
+        <div class="input-group">
+          <input type="text" 
+                 id="cupon" 
+                 class="form-control" 
+                 name="cupon" 
+                 placeholder="Ingresa tu cupón">
+          <button class="btn btn-outline-secondary" type="button" id="btn-aplicar-cupon">Aplicar</button>
+        </div>
+      </div>
+    </form>
+
+    <!--! Botón de confirmar pago -->
+    <button type="submit" form="payment-form" class="btn btn-success d-block mx-auto mt-3">
+      Confirmar pago
     </button>
-  </div>
+  </section>
 </div>
-
-  </form>
-</div>
-  <!--! Botón de confirmar pago-->
-  <button type="submit" form="payment-form" class="btn btn-success d-block mx-auto mt-3">
-    Confirmar pago
-  </button>
-</section>
-
 <br>
 </main>
 <!-- ! Sección del footer -->
-    <section>
-        <footer class="bg-black text-white pt-4 pb-2">
+  <section>
+  <footer class="bg-black text-white pt-4 pb-2">
   <div class="footer-content">
 
                 <div class="row text-center text-md-start align-items-start">
                 
                     <!-- Logo y redes sociales -->
                     <div class="col-12 col-md-6 col-lg-3 mb-4 text-center">
-                        <img src="assets/img/logoDelNorte.png" alt="Del Norte Logo" style="width: 150px;" class="mb-3 mx-auto d-block" />
+                        <img src="/assets/img/logoDelNorte.png" alt="Del Norte Logo" style="width: 150px;" class="mb-3 mx-auto d-block" />
                         <div class="d-flex justify-content-center gap-4 fs-4">
                             <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
@@ -360,8 +391,8 @@
                     <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <h6 class="text-center fw-bold border-bottom border-light pb-2 mb-3 w-75 m-auto titleFooter">Métodos de pago</h6>
                         <div class="d-flex flex-column align-items-center align-items-md-start gap-3 m-auto">
-                            <img src="assets/img/mercadoPago.png" alt="Mercado Pago" style="height: 40px;">
-                            <img src="assets/img/Paypal.png" alt="Paypal" style="height: 60px;">
+                            <img src="/assets/img/mercadoPago.png" alt="Mercado Pago" style="height: 40px;">
+                            <img src="/assets/img/Paypal.png" alt="Paypal" style="height: 60px;">
                         </div>
                     </div>
                 </div>
