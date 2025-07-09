@@ -149,3 +149,30 @@
 .footer-links a:hover::before {
   width: 80%; /* subrayado animado */
 }
+
+.footer-inline-link {
+  color: #EACE9C;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-inline-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #EACE9C;
+  transition: width 0.3s ease;
+}
+
+.footer-inline-link:hover {
+  color: #fff;
+}
+
+.footer-inline-link:hover::after {
+  width: 100%;
+}

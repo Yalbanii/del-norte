@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".container .row-cols-2");
 
   const mapping = {
-    "Cordero": 0,
-    "Res": 1,
-    "Procesados": 2,
+    "Cordero": 1,
+    "Res": 2,
+    "Procesados": 3,
   };
 
   buttons.forEach((button) => {
@@ -20,12 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index === targetIndex) {
           section.classList.remove("hidden", "fade-out");
           section.classList.add("fade-in");
+
+          setTimeout(() => {
+            AOS.refresh();
+          }, 200);
+
         } else {
           section.classList.remove("fade-in");
           section.classList.add("fade-out");
           setTimeout(() => {
             section.classList.add("hidden");
-          }, 400);
+          }, 200);
         }
       });
     });
