@@ -43,12 +43,12 @@
             </div>
           </div>
 
-          <form>
+          <form class="formulario-sesion" id="form-sesion">
             <!-- Usuario -->
             <div class="mb-3">
               <label for="inputUsuario" class="form-label fw-semibold text-white">Usuario</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="inputUsuario" placeholder="Ingrese su usuario" required>
+                <input type="text" class="form-control" id="inputUsuario" placeholder="Ingrese su usuario" name="usuario">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
               </div>
             </div>
@@ -57,8 +57,7 @@
             <div class="mb-3">
               <label for="inputPassword" class="form-label fw-semibold text-white">Contraseña</label>
               <div class="input-group">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Ingrese su contraseña"
-                  required>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Ingrese su contraseña" name="password" required>
                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
               </div>
             </div>
@@ -97,11 +96,12 @@
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"></script>
-    <script
+  <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
       integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
       crossorigin="anonymous"></script>
-
+  
+  <script src="../js/inicioSesion.js"></script>
 
 </body>
 
