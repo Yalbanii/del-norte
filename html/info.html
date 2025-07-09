@@ -16,14 +16,15 @@
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <!--elementos de bootstrap que mande a llamar-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-	
-	<!-- ?Font awesome 6.6.0 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- ?AOS Animate -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- ? Animate CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	 <script src="../js/components.js"></script>
+
+  <!-- ?Font awesome 6.6.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ?AOS Animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- ? Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="../js/components.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,8 @@
     <div class="container-fluid my-5 px-0">
 
       <div class="accordion">
-        <div class="accordion-item">
+        <!-- FAQ's -->
+        <div class="accordion-item" id="faqs">
           <summary class="accordion-header">▼ FAQ’s </summary>
           <div class="accordion-content">
             <strong>¿A qué tipo de clientes está dirigido el sitio? </strong> <br>
@@ -62,7 +64,8 @@
             Pedido despues de la 1pm: mínimo estimado al siguiente día.
           </div>
         </div>
-        <div class="accordion-item">
+        <!-- Políticas de envío -->
+        <div class="accordion-item" id="envio">
           <summary class="accordion-header">▼ Políticas de envío </summary>
           <div class="accordion-content">
             <strong>Zonas que cubren actualmente para las entregas:</strong><br>
@@ -70,11 +73,12 @@
             Para compras mayoristas sí habría envíos nacionales.
           </div>
         </div>
-        <div class="accordion-item">
+        <!-- Términos y Condiciones -->
+        <div class="accordion-item" id="terminos">
           <summary class="accordion-header">▼ Términos y Condiciones</summary>
           <div class="accordion-content">
             <p> 1. Aceptación de Términos y Condiciones: <br>
-              Al realizar un pedido a través de ´Del Norte´, el cliente acepta estos términos y condiciones. <br> <br>
+              Al realizar un pedido a través de ‘Del Norte’, el cliente acepta estos términos y condiciones. <br> <br>
               2. Información de Contacto: <br>
               Para cualquier consulta, contactar directamente por el Whatsapp oficial. <br><br>
               3. Compra y Pago: <br>
@@ -112,6 +116,8 @@
       </div>
   </section>
   <section id="footer"></section>
+  
+  <script src="../js/info.js"></script>
 </body>
 
 </html>
