@@ -6,6 +6,15 @@ formElement.addEventListener("submit", (event) => {
 
   // Obtener datos del formulario
   const loginData = Object.fromEntries([...new FormData(formElement)]);
+
+  // Validar campos vacíos (nombre de usuario y contraseña)
+  if (!loginData.email?.trim() || !loginData.password?.trim()) {
+    mensaje.style.color = "red";
+    mensaje.textContent = "Por favor, ingresa correo y contraseña.";
+    return;
+  }
+
+  // Obtener datos almacenados localmente para ese correo
   const localData = JSON.parse(localStorage.getItem(loginData.email));
 
   // Validar credenciales
