@@ -46,9 +46,9 @@
           <form class="formulario-sesion" id="form-sesion">
             <!-- Usuario -->
             <div class="mb-3">
-              <label for="inputUsuario" class="form-label fw-semibold text-white">Usuario</label>
+              <label for="inputUsuario" class="form-label fw-semibold text-white">Usuario (correo)</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="inputUsuario" placeholder="Ingrese su usuario" name="usuario">
+                <input type="email" class="form-control" id="inputUsuario" placeholder="Ingrese su usuario (correo)" name="email">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
               </div>
             </div>
@@ -61,6 +61,9 @@
                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
               </div>
             </div>
+
+            <!-- Alerta -->
+            <div id="mensaje" style="color: red; margin-bottom: 1rem;"></div>
 
             <!-- Botón Entrar -->
             <br>

@@ -1,43 +1,28 @@
-const form = document.getElementById("form-sesion");
+const formElement = document.querySelector("form");
+const mensaje = document.getElementById("mensaje");
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault(); // Evita que se recargue la página
+formElement.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-  const usuario = document.getElementById("inputUsuario").value.trim();
-  const password = document.getElementById("inputPassword").value.trim();
+  // Obtener datos del formulario
+  const loginData = Object.fromEntries([...new FormData(formElement)]);
+  const localData = JSON.parse(localStorage.getItem(loginData.email));
 
-  if (!usuario || !password) {
-    alert("Por favor, complete ambos campos.");
-    return;
-  }
+  // Validar credenciales
+  if (
+    localData &&
+    loginData.email === localData.email &&
+    loginData.password === localData.password
+  ) {
+    mensaje.style.color = "green";
+    mensaje.textContent = `Bienvenid@ ${localData.nombre}. Redirigiendo...`;
 
-  // Mostrar en consola-------------borrar al ya estar la base de datos
-  console.log("Usuario:", usuario);
-  console.log("Contraseña:", password);
-
-  try {
-    // const response = await fetch("http://localhost:3000/api/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   body: JSON.stringify({ usuario, password })
-    // });
-
-    // const data = await response.json();
-
-    // if (response.ok) {
-    //   // Login correcto
-    //   alert("Bienvenido, " + data.nombre + "!");
-    //   // Redirige, por ejemplo:
-    //   window.location.href = "panel.html";
-    // } else {
-    //   // Credenciales incorrectas
-    //   alert(data.mensaje || "Credenciales incorrectas");
-    // }
-
-  } catch (error) {
-    console.error("Error al iniciar sesión:", error);
-    alert("Error de conexión con el servidor");
+    // Redirigir tras 2 segundos
+    setTimeout(() => {
+      window.location.href = "../html/ajustesUsuario.html";
+    }, 2000);
+  } else {
+    mensaje.style.color = "red";
+    mensaje.textContent = "Correo o contraseña incorrectos.";
   }
 });
