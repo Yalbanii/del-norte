@@ -18,6 +18,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- ? Animate CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+       <!-- link a JS carrito -->
+  <script defer src="../js/carrito.js"></script>
+     
 </head>
 <body>
 <!--! este es el navbar -->
@@ -46,7 +50,7 @@
 <section class="mb-5">
   <h2 class="text-center mb-4">Carrito</h2>
 <hr>
-  <!-- Encabezado del carrito, ya responsive -->
+  <!-- Encabezado del carrito, que ahora es responsive (desaparece en pantallas pequeñas) gracias a d-non y d-md-block -->
 <div class="card p-3 mb-3 bg-light fw-bold d-none d-md-block">
   <div class="row text-center align-items-center">
 
@@ -125,7 +129,7 @@
   <h2 class="text-center">Gasto estimado de envío</h2>
   <hr>
   <br>
-  <form id="estimacion-envio-form">
+  <form id="estimacion-envio-form" class="p-4 border rounded mb-4">
     <div class="row align-items-end">
       <div class="col-md-3">
         <label for="estado-estimado" class="form-label">Estado</label>
@@ -165,7 +169,7 @@
     <h2 class="text text-center">Información de Entrega</h2>
     <br>
     <hr>
-    <form id="shipping-form">
+    <form id="shipping-form" class="p-4 border rounded mb-4">
       <div class="mb-3">
         <label class="form-label">Nombre(s)</label>
         <input type="text" class="form-control" name="nombre" required placeholder="Ingresa uno o más nombres">
@@ -228,7 +232,8 @@
     <h2 class="text-center">Información de Pago</h2>
     <hr>
     <br>
-    <form id="payment-form">
+    <form id="payment-form" class="p-4 border rounded mb-4">
+
       <div class="mb-3">
         <label class="form-label" for="tarjeta">Número de tarjeta</label>
         <input type="text" 
