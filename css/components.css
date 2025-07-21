@@ -1,3 +1,13 @@
+:root {
+  --var--negro: #050505;
+  --var--negro2: #242125;
+  --var--rojo: #682A2F;
+  --var--carmin: #951E1A;
+  --var--verde: #87916F;
+  --var--crema: #EACE9C;
+  --var--blanco: #F3F3F3;
+}
+
 /* *Color de fondo navbar y footer */
 .navbar_background, .footer_background {
     background-color: #1E1E1E !important;
