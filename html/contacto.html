@@ -15,8 +15,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Fuente Inter -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
-
-  
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -24,57 +22,54 @@
   <!-- Navbar -->
   <section id="navbar"></section>
 
+  <main class="flex-grow-1">
+    <!-- Banner sólo imagen -->
+    <section class="header-banner"></section>
 
-  <main>
-    <!-- Banner -->
-    <section class="header-banner">
-      <h1>Contáctanos</h1>
-    </section>
-
-
-    <!-- Notas: Imagen de fondo-->
-    <!-- Formulario -->
-    <section class="container my-5 contact-background">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <form id="contact-form">
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" placeholder="Tu nombre completo" id="nombre" name="nombre">
-              <small class="error-message" id="error-nombre"></small>
+    <!-- Contacto: flota sobre el banner pero es parte del flujo -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="form-card">
+              <div class="form-header">Contáctanos</div>
+              <form id="contact-form" class="custom-form">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo" />
+                  <small class="error-message" id="error-nombre"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="correo" name="correo" placeholder="ejemplo@email.com" />
+                  <small class="error-message" id="error-correo"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono"
+                    placeholder="Ingresa tu número de teléfono" />
+                  <small class="error-message" id="error-telefono"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="asunto" class="form-label">Asunto</label>
+                  <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto del mensaje" />
+                  <small class="error-message" id="error-asunto"></small>
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
+                    placeholder="Escribe tu mensaje..."></textarea>
+                  <small class="error-message" id="error-mensaje"></small>
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Enviar</button>
+              </form>
             </div>
-            <div class="mb-3">
-              <label for="correo" class="form-label">Correo electrónico</label>
-              <input type="text" class="form-control" placeholder="ejemplo@email.com" id="correo" name="correo">
-              <small class="error-message" id="error-correo"></small>
-            </div>
-            <div class="mb-3">
-              <label for="telefono" class="form-label">Teléfono</label>
-              <input type="text" class="form-control" placeholder="Ingresa tu número de telefono: xxxxxxxxxxx" id="telefono" name="telefono">
-              <small class="error-message" id="error-telefono"></small>
-            </div>
-            <div class="mb-3">
-              <label for="asunto" class="form-label">Asunto</label>
-              <input type="text" class="form-control" placeholder="Asunto del mensaje" id="asunto" name="asunto">
-              <small class="error-message" id="error-asunto"></small>
-            </div>
-            <div class="mb-3">
-              <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" placeholder="Escribe tu mensaje..." id="mensaje" name="mensaje" rows="5"></textarea>
-              <small class="error-message" id="error-mensaje"></small>
-              <!-- 
-                La etiqueta <small> con la clase "error-message" se utiliza para mostrar mensajes de error personalizados 
-                debajo de cada campo del formulario cuando el usuario no completa correctamente la información. 
-                Su contenido es manipulado desde JavaScript para informar qué campo necesita corregirse.
-              -->
-            </div>
-            <button type="submit" class="btn btn-danger">Enviar</button>
-          </form>
-
+          </div>
         </div>
       </div>
     </section>
   </main>
+
   <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/5213318071724?text=Hola%2C%20estoy%20interesado%20en%20compras%20al%20mayoreo" target="_blank"
     class="btn btn-success position-fixed bottom-0 end-0 m-4 shadow-lg rounded-circle"
