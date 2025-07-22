@@ -4,6 +4,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const cartItems = document.getElementById("cart-items");
   const subtotalElement = document.getElementById("cart-total");
+  //esto es para el botón de muestra
   const botonRandom = document.getElementById("agregar-random");
 
   // Lista de productos 
@@ -29,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     renderizarCarrito();
   }
 
-  // Guardar en localStorage
+  // se guarda en localStorage
   function guardarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
 
-  // Renderizar carrito en HTML
+  // renderizar el carrito en HTML 
   function renderizarCarrito() {
     cartItems.innerHTML = "";
     carrito.forEach(producto => {
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarSubtotal();
   }
 
-  // Actualizar subtotal total
+  // aquí se actualiza el subtotal "total" (antes de gastos de envio y cupon)
   function actualizarSubtotal() {
     let total = 0;
     carrito.forEach(p => {
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     subtotalElement.textContent = `$${total.toFixed(2)}`;
   }
 
-  // Manejo de cantidad y quitar producto
+  // agregar y quitar productos
   cartItems.addEventListener("click", e => {
     if (e.target.tagName === "BUTTON") {
       const card = e.target.closest(".card");
@@ -101,22 +102,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  //* Botón: agregar producto aleatorio
+  //* Botón provisional para nuestra presentación para agregar producto aleatorio
   botonRandom.addEventListener("click", () => {
     const random = productosEjemplo[Math.floor(Math.random() * productosEjemplo.length)];
     agregarAlCarrito(random);
   });
 
-  // Inicializar carrito desde localStorage
+  // Inicialización de carrito desde localStorage
   renderizarCarrito();
 });
 
 //! GASTO ESTIMADO DE ENVIO 
-
+// Lista de los estados
   const estados = {
     "Jalisco": {
-      "Guadalajara": ["44100", "44110", "44120"],
-      "Zapopan": ["45100", "45110"]
+      "Guadalajara": ["44100", "44130", "44150"],
+      "Zapopan": ["45010", "45138", "45019"]
     },
     "CDMX": {
       "Coyoacán": ["04000", "04100"],
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ciudadSelect = document.getElementById("ciudad-estimada");
   const cpSelect = document.getElementById("cp-estimado");
 
-  // Llenar estados al cargar
+  // aqui se consiguen los estados
   Object.keys(estados).forEach(estado => {
     const option = document.createElement("option");
     option.value = estado;
@@ -136,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     estadoSelect.appendChild(option);
   });
 
-  // Cambiar ciudades según estado
+  // para cambiar la ciudad dependiendo del estado seleccionado
   estadoSelect.addEventListener("change", () => {
     const estado = estadoSelect.value;
     ciudadSelect.innerHTML = '<option value="">Selecciona una ciudad</option>';
@@ -152,9 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Cambiar CP según ciudad
+  // cambiar el codigo postal segun la ciudad seleccionada
   ciudadSelect.addEventListener("change", () => {
-    const estado = estadoSelect.value;
+    const estado = estadoSelect.value; 
     const ciudad = ciudadSelect.value;
     cpSelect.innerHTML = '<option value="">Selecciona un CP</option>';
 
@@ -169,18 +170,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 // ! Validación de información de pago 
-
+//conseguimos el elemento por id
 document.getElementById('payment-form').addEventListener('submit', function (e) {
-  e.preventDefault(); // Evita el envío si hay errores
+  e.preventDefault(); // impedir envio si es que hay errores en el formulario de pago
 
   const tarjeta = this.elements['tarjeta'].value.trim();
   const titular = this.elements['titular'].value.trim();
   const expiracion = this.elements['expiracion'].value;
   const cvv = this.elements['cvv'].value.trim();
 
+  //a este array se agregan los errores:
+
   const errores = [];
 
-  // Función para validar número de tarjeta usando algoritmo de Luhn
+  // esta es una funcion para validar número de tarjeta usando algoritmo de Luhn
   function validarTarjetaLuhn(numero) {
     let suma = 0;
     let alternar = false;
@@ -200,17 +203,17 @@ document.getElementById('payment-form').addEventListener('submit', function (e) 
     return suma % 10 === 0;
   }
 
-  // Validación de número de tarjeta
+  // validar num de tarjeta de número de tarjeta
   if (!/^\d{16}$/.test(tarjeta) || !validarTarjetaLuhn(tarjeta)) {
     errores.push('El número de tarjeta no es válido.');
   }
 
-  // Validación de nombre del titular
+  // aqui validamos el nombre del titular, que no esté vacío
   if (titular === '') {
     errores.push('El nombre del titular es obligatorio.');
   }
 
-  // Validación de fecha de expiración
+  // validamos la fecha de expiración, que no esté vacía y usamos la clase predefinida Date para validar
   if (!expiracion) {
     errores.push('La fecha de vencimiento es obligatoria.');
   } else {
@@ -233,9 +236,9 @@ document.getElementById('payment-form').addEventListener('submit', function (e) 
     alert('Errores en el formulario de pago:\n- ' + errores.join('\n- '));
     return;
   }
-
+// pago exitoso yesmón bro
   alert('¡Pago procesado con éxito!');
-  // Aquí puedes guardar en localStorage o redirigir si lo deseas
+  // aqui deberiamos agregar algo para redirigir a una pagina con exito
 });
 
 //! fin de validación de información de pago 
