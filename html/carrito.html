@@ -129,37 +129,38 @@
   <h2 class="text-center">Gasto estimado de envío</h2>
   <hr>
   <br>
-  <form id="estimacion-envio-form" class="p-4 border rounded mb-4">
-    <div class="row align-items-end">
-      <div class="col-md-3">
-        <label for="estado-estimado" class="form-label">Estado</label>
-        <select id="estado-estimado" class="form-select">
-          <option value="">Selecciona un estado</option>
-          <!-- Opciones -->
-        </select>
-      </div>
-      <div class="col-md-3">
-        <label for="ciudad-estimada" class="form-label">Ciudad</label>
-        <select id="ciudad-estimada" class="form-select">
-          <option value="">Selecciona una ciudad</option>
-          <!-- Opciones -->
-        </select>
-      </div>
-      <div class="col-md-3">
-        <label for="cp-estimado" class="form-label">Código Postal</label>
-        <select id="cp-estimado" class="form-select">
-          <option value="">Selecciona un CP</option>
-          <!-- Opciones -->
-        </select>
-      </div>
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-primary mt-2">Estimación</button>
-      </div>
+  
+  <form id="estimacion-envio-form" class="formulario-con-color">
+  <div class="row align-items-end">
+    <div class="col-md-3 mb-3">
+      <label for="estado-estimado" class="form-label">Estado</label>
+      <select id="estado-estimado" class="form-select">
+        <option value="">Selecciona un estado</option>
+        <!-- Opciones -->
+      </select>
     </div>
+    <div class="col-md-3 mb-3">
+      <label for="ciudad-estimada" class="form-label">Ciudad</label>
+      <select id="ciudad-estimada" class="form-select">
+        <option value="">Selecciona una ciudad</option>
+        <!-- Opciones -->
+      </select>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="cp-estimado" class="form-label">Código Postal</label>
+      <select id="cp-estimado" class="form-select">
+        <option value="">Selecciona un CP</option>
+        <!-- Opciones -->
+      </select>
+    </div>
+    <div class="col-md-3 text-end mb-3">
+      <button type="submit" class="btn btn-confirmar w-100">Obtener estimación</button>
+    </div>
+  </div>
+  <hr />
+  <p class="text-center fw-bold" id="resultado-estimacion">Costo estimado: $0.00</p>
+</form>
 
-    <hr />
-    <p class="text-center fw-bold" id="resultado-estimacion">Costo estimado: $0.00</p>
-  </form>
 </section>
 </div>
 
@@ -169,7 +170,8 @@
     <h2 class="text text-center">Información de Entrega</h2>
     <br>
     <hr>
-    <form id="shipping-form" class="p-4 border rounded mb-4">
+    <form id="shipping-form" class="formulario-con-color">
+
       <div class="mb-3">
         <label class="form-label">Nombre(s)</label>
         <input type="text" class="form-control" name="nombre" required placeholder="Ingresa uno o más nombres">
@@ -220,8 +222,7 @@
         <label class="form-label">Instrucciones adicionales para la entrega</label>
         <input type="text" class="form-control" name="instruciones-adicionales" placeholder="Ingresa detalles adicionales para ayudar con tu entrega">
       </div>
-
-    </form>
+</form>
   </section>
 </div>
 
@@ -232,7 +233,7 @@
     <h2 class="text-center">Información de Pago</h2>
     <hr>
     <br>
-    <form id="payment-form" class="p-4 border rounded mb-4">
+    <form id="payment-form" class="formulario-con-color mb-4">
 
       <div class="mb-3">
         <label class="form-label" for="tarjeta">Número de tarjeta</label>
@@ -292,7 +293,8 @@
     </form>
 
     <!--! Botón de confirmar pago -->
-    <button type="submit" form="payment-form" class="btn btn-success d-block mx-auto mt-3">
+    <button type="submit" form="payment-form" class="btn btn-confirmar d-block mx-auto mt-3">
+
       Confirmar pago
     </button>
   </section>

@@ -12,3 +12,77 @@
   margin: 0 auto;
   width: 90%;
 }
+
+/*! Para el formulario  de pago */
+.formulario-con-color {
+  background-color: #F3F3F3;
+  border: 2px solid #682A2F;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/*! Esto es para los botones */ 
+
+.btn-confirmar {
+  background-color: #951E1A;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-confirmar:hover {
+  background-color: #682A2F;
+}
+
+/*! enfoque visual al interactuar con campos */
+.form-control:focus {
+  border-color: #951E1A;
+  box-shadow: 0 0 0 0.25rem rgba(149, 30, 26, 0.25);
+}
+
+/*! linea decorativa debajod e Info de pago */
+h2.text-center::after {
+  content: '';
+  display: block;
+  width: 60px;
+  margin: 10px auto 0;
+  border-bottom: 4px solid #951E1A;
+}
+
+/*! para todos los formularios */
+
+.formulario-con-color {
+  background-color: #F3F3F3;
+  border: 2px solid #682A2F;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+h2.text-center::after {
+  content: '';
+  display: block;
+  width: 60px;
+  margin: 10px auto 0;
+  border-bottom: 4px solid #951E1A;
+}
+
+.btn-confirmar {
+  background-color: #951E1A;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-confirmar:hover {
+  background-color: #682A2F;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #951E1A;
+  box-shadow: 0 0 0 0.25rem rgba(149, 30, 26, 0.25);
+}
