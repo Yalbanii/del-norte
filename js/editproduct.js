@@ -1,6 +1,13 @@
+'use strict';
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('productsContainer');
-    let productos = JSON.parse(localStorage.getItem('items') || '[]');
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('btnSearch');
+    const categoryItems = document.querySelectorAll('#categoryDropdown .dropdown-item');
+    let currentCategoria = '';
+    let productos = [];
+    const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    const isEditor = currentUser.rol === 'editor';
 
     // 1) Función para renderizar todas las tarjetas
     function renderProductos() {
@@ -10,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        productos.forEach((p, idx) => {
+        productos.forEach((p) => {
             const card = document.createElement('div');
-            card.className = 'producto-card row align-items-center border rounded mb-3 p-3';
+            card.className = 'row align-items-center mb-3 p-3 cart-item-card form-card';
             card.innerHTML = `
         <div class="col-4 col-md-2">
-          <img src="${p.imagenURL || '/assets_admin_management/pierna.png'}"
+          <img src="${p.urlImagen ? '../' + p.urlImagen : '/assets_admin_management/pierna.png'}"
                alt="${p.nombre}"
                class="img-fluid border rounded">
         </div>
@@ -25,154 +32,238 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="col-12 col-md-3 text-md-end mt-2 mt-md-0">
           <div class="btn-group" role="group">
-            <button class="btn btn-ver"    data-idx="${idx}"><i class="fa fa-eye"></i></button>
-            <button class="btn btn-editar" data-idx="${idx}"><i class="fa fa-pencil"></i></button>
-            <button class="btn btn-borrar" data-idx="${idx}"><i class="fa fa-trash"></i></button>
+            <button class="btn btn-ver"    data-id="${p.id}"><i class="fa fa-eye"></i></button>
+            <button class="btn btn-editar" data-id="${p.id}"><i class="fa fa-pencil"></i></button>
+            <button class="btn btn-borrar" data-id="${p.id}"><i class="fa fa-trash"></i></button>
           </div>
         </div>
       `;
+            if(isEditor){
+                const del = card.querySelector('.btn-borrar');
+                del.remove();
+            }
             container.appendChild(card);
         });
     }
+
+    // Cargar productos desde el backend
+    function buildQuery(){
+        const params = new URLSearchParams();
+        const term = searchInput ? searchInput.value.trim() : '';
+        if(term){
+            params.append('q', term);
+        }
+        if(currentCategoria){
+            params.append('categoria', currentCategoria);
+        }
+        const qs = params.toString();
+        return qs ? `?${qs}` : '';
+    }
+
+    function loadProductos() {
+        fetch(`${API_BASE_URL}/api/productos${buildQuery()}`)
+            .then(r => r.json())
+            .then(data => {
+                productos = data;
+                renderProductos();
+            })
+            .catch(err => {
+                console.error('Error al cargar productos', err);
+                container.innerHTML = '<p class="text-center">Error al cargar productos.</p>';
+            });
+    }
+
+    searchBtn?.addEventListener('click', () => loadProductos());
+    searchInput?.addEventListener('keyup', e => {
+        if(e.key === 'Enter') loadProductos();
+    });
+    categoryItems.forEach(it => {
+        it.addEventListener('click', () => {
+            currentCategoria = it.dataset.cat || '';
+            const dropBtn = document.getElementById('categoryDropdownBtn');
+            if(dropBtn){
+                dropBtn.textContent = it.textContent;
+            }
+            loadProductos();
+        });
+    });
 
     // 2) Listener único para ver / editar / borrar
     container.addEventListener('click', e => {
         const btn = e.target.closest('button');
         if (!btn) return;
-        const idx = Number(btn.dataset.idx);
+        const id = btn.dataset.id;
 
         if (btn.classList.contains('btn-borrar')) {
-            // BORRAR producto
-            if (confirm(`¿Eliminar "${productos[idx].nombre}"?`)) {
-                productos.splice(idx, 1);
-                localStorage.setItem('items', JSON.stringify(productos));
-                renderProductos();
+            if(isEditor) return;
+            if (confirm('¿Eliminar este producto?')) {
+                fetch(`${API_BASE_URL}/api/productos/${id}`, { method: 'DELETE' })
+                    .then(() => loadProductos());
             }
         }
         else if (btn.classList.contains('btn-editar')) {
-            // REDIRIGIR a la página de edición
-            window.location.href = `editarProducto.html?id=${idx}`;
+            window.location.href = `editarProducto.html?id=${id}`;
         }
         else if (btn.classList.contains('btn-ver')) {
-            // REDIRIGIR a la página de detalle
-            window.location.href = `verproducto.html?id=${idx}`;
+            window.location.href = `verproducto.html?id=${id}`;
         }
     });
 
     // 3) Render inicial
-    renderProductos();
+    loadProductos();
 });
 
 // js/editarProducto.js
 document.addEventListener('DOMContentLoaded', () => {
-    // Referencias al form y campos
     const form = document.getElementById('newItemForm');
+    if (!form) return;
+
     const nombreInput = document.getElementById('newNombre');
     const cantidadInput = document.getElementById('newCantidad');
     const descInput = document.getElementById('newDescripcion');
-    const gramMinInput = document.getElementById('newGramajeMin');
-    const gramMaxInput = document.getElementById('newGramajeMax');
     const precioInput = document.getElementById('newPrecio');
-    const imgInput = document.getElementById('newImagen');
+    const categoriaSelect = document.getElementById('newCategoria');
+    const imagenInput = document.getElementById('newImagen');
     const fichaInput = document.getElementById('newFicha');
+    const currentImg = document.getElementById('currentImagen');
+    const currentFicha = document.getElementById('currentFicha');
+    const previewImg = document.getElementById('previewImagen');
+    const previewFicha = document.getElementById('previewFicha');
     const btnEliminar = document.getElementById('btnEliminar');
 
-    // Leo parámetro ?id= del query string
+    let currentProducto = null;
+
     const params = new URLSearchParams(window.location.search);
     const idParam = params.get('id');
+    const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    const isEditor = currentUser.rol === 'editor';
 
-    // Cargo array de localStorage
-    let productos = JSON.parse(localStorage.getItem('items') || '[]');
-    let editingIndex = -1;
-
-    // Si hay id => modo EDICIÓN
-    if (idParam !== null) {
-        editingIndex = parseInt(idParam, 10);
-        if (isNaN(editingIndex) || editingIndex < 0 || editingIndex >= productos.length) {
-            alert('Producto no existe.');
-            return window.location.href = 'productos.html';
-        }
-        const prod = productos[editingIndex];
-        // Prefill campos de texto/número
-        nombreInput.value = prod.nombre || '';
-        cantidadInput.value = prod.cantidad || '';
-        descInput.value = prod.descripcion || '';
-        gramMinInput.value = prod.gramajeMin || '';
-        gramMaxInput.value = prod.gramajeMax || '';
-        precioInput.value = prod.precio || '';
-        // no prellenamos <input type="file">
-        btnEliminar.style.display = 'inline-block';
+    if (idParam) {
+        fetch(`${API_BASE_URL}/api/productos/${idParam}`)
+            .then(r => r.json())
+            .then(p => {
+                currentProducto = p;
+                nombreInput.value = p.nombre || '';
+                cantidadInput.value = p.stock || '';
+                descInput.value = p.descripcion || '';
+                precioInput.value = p.precio || '';
+                categoriaSelect.value = p.categoriaId || '';
+                if (p.urlImagen) {
+                    currentImg.src = '../' + p.urlImagen;
+                } else {
+                    currentImg.src = '/assets_admin_management/pierna.png';
+                }
+                if (p.urlFichaTecnica) {
+                    currentFicha.textContent = p.urlFichaTecnica;
+                    currentFicha.href = '../' + p.urlFichaTecnica;
+                } else {
+                    currentFicha.textContent = 'Sin ficha técnica';
+                    currentFicha.removeAttribute('href');
+                }
+                btnEliminar.style.display = isEditor ? 'none' : 'inline-block';
+            })
+            .catch(() => {
+                alert('Producto no encontrado');
+                window.location.href = '/html/adminManagement.html';
+            });
     } else {
-        // Modo CREAR
         btnEliminar.style.display = 'none';
     }
 
-    // Función para guardar (nuevo o editado)
-    function finishSave(nuevoObj) {
-        if (editingIndex >= 0) productos[editingIndex] = nuevoObj;
-        else productos.push(nuevoObj);
-        localStorage.setItem('items', JSON.stringify(productos));
-        window.location.href = '/html/adminManagement.html';
-    }
+    imagenInput.addEventListener('change', () => {
+        const file = imagenInput.files[0];
+        if (file) {
+            previewImg.src = URL.createObjectURL(file);
+            previewImg.style.display = 'block';
+        } else {
+            previewImg.style.display = 'none';
+        }
+    });
 
-    // SUBMIT: crear o actualizar
-    form.addEventListener('submit', e => {
+    fichaInput.addEventListener('change', () => {
+        const file = fichaInput.files[0];
+        previewFicha.textContent = file ? file.name : '';
+    });
+
+    form.addEventListener('submit', async e => {
         e.preventDefault();
         if (!form.checkValidity()) {
             form.classList.add('was-validated');
             return;
         }
 
-        const base = {
+        let imagenPath = currentProducto ? currentProducto.urlImagen : '';
+        if (imagenInput.files[0]) {
+            const fd = new FormData();
+            fd.append('file', imagenInput.files[0]);
+            const resImg = await fetch(`${API_BASE_URL}/api/uploads/productos`, {
+                method: 'POST',
+                body: fd
+            });
+            if (resImg.ok) {
+                const data = await resImg.json();
+                imagenPath = data.path;
+            }
+        }
+        let fichaPath = currentProducto ? currentProducto.urlFichaTecnica : '';
+        if (fichaInput.files[0]) {
+            const fdFicha = new FormData();
+            fdFicha.append('file', fichaInput.files[0]);
+            const resFicha = await fetch(`${API_BASE_URL}/api/uploads/fichas`, {
+                method: 'POST',
+                body: fdFicha
+            });
+            if (resFicha.ok) {
+                const data = await resFicha.json();
+                fichaPath = data.path;
+            }
+        }
+
+        const producto = {
             nombre: nombreInput.value.trim(),
-            cantidad: Number(cantidadInput.value),
             descripcion: descInput.value.trim(),
-            gramajeMin: Number(gramMinInput.value),
-            gramajeMax: Number(gramMaxInput.value),
             precio: parseFloat(precioInput.value),
-            imagenURL: productos[editingIndex]?.imagenURL || '',
-            fichaURL: productos[editingIndex]?.fichaURL || ''
+            stock: parseInt(cantidadInput.value, 10),
+            urlImagen: imagenPath,
+            urlFichaTecnica: fichaPath,
+            categoriaId: parseInt(categoriaSelect.value, 10)
         };
 
-        // Si sube imagen, la leemos
-        if (imgInput.files.length > 0) {
-            const fr = new FileReader();
-            fr.onload = () => {
-                base.imagenURL = fr.result;
-                // Si sube ficha técnica además
-                if (fichaInput.files.length > 0) {
-                    const fr2 = new FileReader();
-                    fr2.onload = () => {
-                        base.fichaURL = fr2.result;
-                        finishSave(base);
-                    };
-                    fr2.readAsArrayBuffer(fichaInput.files[0]);
-                } else finishSave(base);
-            };
-            fr.readAsDataURL(imgInput.files[0]);
-        }
-        // Si sólo sube ficha
-        else if (fichaInput.files.length > 0) {
-            const fr2 = new FileReader();
-            fr2.onload = () => {
-                base.fichaURL = fr2.result;
-                finishSave(base);
-            };
-            fr2.readAsArrayBuffer(fichaInput.files[0]);
-        }
-        // Ningún archivo nuevo
-        else {
-            finishSave(base);
+        const url = idParam ?
+            `${API_BASE_URL}/api/productos/${idParam}` :
+            `${API_BASE_URL}/api/productos`;
+        const method = idParam ? 'PUT' : 'POST';
+
+        const res = await fetch(url, {
+            method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(producto)
+        });
+
+        if (res.ok) {
+            const saved = await res.json();
+            currentProducto = saved;
+            currentImg.src = '../' + saved.urlImagen;
+            categoriaSelect.value = saved.categoriaId;
+            imagenInput.value = '';
+            previewImg.style.display = 'none';
+            if (saved.urlFichaTecnica) {
+                currentFicha.textContent = saved.urlFichaTecnica;
+                currentFicha.href = '../' + saved.urlFichaTecnica;
+            } else {
+                currentFicha.textContent = 'Sin ficha técnica';
+                currentFicha.removeAttribute('href');
+            }
+        } else {
+            alert('Error al guardar');
         }
     });
 
-    // ELIMINAR (solo en edición)
     btnEliminar.addEventListener('click', () => {
-        if (editingIndex < 0) return;
-        if (confirm(`¿Eliminar "${productos[editingIndex].nombre}"?`)) {
-            productos.splice(editingIndex, 1);
-            localStorage.setItem('items', JSON.stringify(productos));
-            window.location.href = 'productos.html';
+        if (!idParam || isEditor) return;
+        if (confirm('¿Eliminar este producto?')) {
+            fetch(`${API_BASE_URL}/api/productos/${idParam}`, { method: 'DELETE' })
+                .then(() => window.location.href = '/html/adminManagement.html');
         }
     });
 });

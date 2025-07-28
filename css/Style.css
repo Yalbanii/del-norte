@@ -3,6 +3,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* evita desbordamiento horizontal */
 }
 
 /* =================== PORTADA =================== */
@@ -189,10 +190,52 @@ max-height: 800px;
   color: #682A2F;
 }
 
-.modal-content {
-  background-color: transparent;
-  box-shadow: none;
+.ficha-btn {
+  background-color: #87916F;
+  color: #fff;
   border: none;
+}
+
+.ficha-btn:hover {
+  background-color: #682A2F;
+  color: #fff;
+}
+
+
+/* Estilos globales de modal
+   El diseño original volvía todas las modales transparentes lo que
+   causaba que la ventana para agregar productos no fuera visible.   */
+#modal-agregar-producto .modal-content {
+  background-color: #fff;
+  box-shadow: var(--bs-box-shadow, 0 0.5rem 1rem rgba(0,0,0,.15));
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+}
+#modal-cantidad-producto .modal-content {
+  background-color: #fff;
+  box-shadow: var(--bs-box-shadow, 0 0.5rem 1rem rgba(0,0,0,.15));
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+}
+
+#modal-agregar-producto .modal-header,
+#modal-cantidad-producto .modal-header {
+  background-color: var(--var--carmin);
+  color: #fff;
+}
+
+#modal-agregar-producto .btn-close,
+#modal-cantidad-producto .btn-close {
+  filter: invert(1);
+}
+
+#modal-agregar-producto .modal-footer .btn-primary,
+#modal-cantidad-producto .modal-footer .btn-primary {
+  background-color: var(--var--rojo);
+  border: none;
+}
+
+#modal-agregar-producto .modal-footer .btn-primary:hover,
+#modal-cantidad-producto .modal-footer .btn-primary:hover {
+  background-color: var(--var--carmin);
 }
 
 @media (max-width: 768px) {
@@ -374,4 +417,15 @@ max-height: 800px;
 }
 .flip-card-back a:hover {
   color: var(--crema);
+}
+
+/* Estado cuando un producto está agotado */
+.product-card.sold-out,
+.cart-item-card.sold-out {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.stock-msg {
+  font-size: 0.9rem;
 }

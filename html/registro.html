@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Del Norte | Registro</title>
 	<link rel="icon" sizes="64x64" href="../assets/img/2.png" />
-	<script defer src="../js/registro.js"></script>
+        <script src="../js/apiConfig.js"></script>
+        <script defer src="../js/registro.js"></script>
 
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,31 +20,32 @@
 	<!-- Estilos personalizados -->
 	<link rel="stylesheet" href="../css/registro.css" />
 	<link rel="stylesheet" href="../css/components.css">
-	
+
 	<!-- ?Font awesome 6.6.0 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- ?AOS Animate -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- ? Animate CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	 <script src="../js/components.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- ?AOS Animate -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- ? Animate CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<script src="../js/components.js"></script>
 </head>
 
 <body class="bg-light text-dark d-flex flex-column min-vh-100">
 
-	<!-- Navbar -->
-	<section class="image-background">
-		<section id="navbar">
-			
+        <section class="image-background" style="--bg-url: url('../assets/img/imagenRegistro.png')">
+                <!-- Navbar -->
+                <section id="navbar">
+
 		</section>
 
-		<!-- Registro -->
-		<main class="container my-5 flex-grow-1">
-			<div class="row justify-content-center my-5">
-				<div class="col-12 text-center mb-4">
-					<h1 class="fw-bold login-title">Registro</h1>
-				</div>
-				<form class="formulario-registro" id="form-registro">
+                <!-- Registro -->
+                <main class="container py-5 flex-grow-1">
+                        <div class="row justify-content-center my-5">
+                                <div class="col-md-8">
+                                        <div class="form-card">
+                                                <div class="form-header">Registro</div>
+                                                <form class="formulario-registro custom-form" id="form-registro">
 					<!-- Datos de contacto -->
 					<!-- Datos de contacto -->
 					<section class="form-section">
@@ -169,7 +171,7 @@
 
 
 					<div class="btn-container">
-						<a href="politicas-envio.html" class="btn-link">Ver políticas de envío</a>
+						<a href="info.html#envio" class="btn-link">Ver políticas de envío</a>
 					</div>
 
 
@@ -177,9 +179,12 @@
 					<div class="form-check d-flex align-items-center gap-2 mb-2 text-white">
 						<input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
 						<label class="form-check-label" for="terminos">
-							Acepto <a class="text-terminos" href="info.html">Términos y condiciones</a>
+							Acepto <a href="info.html#terminos" class="text-terminos">Términos y condiciones</a>
 						</label>
 					</div>
+
+					<!-- Alerta -->
+					<div id="mensaje" style="color: red; margin-bottom: 1rem;"></div>
 
 					<button type="submit" class="btn btn-lg btn-primary w-100 mt-3">
 						<i class="fas fa-user-plus me-2"></i> Registrarme
@@ -193,19 +198,17 @@
 
 		<!-- Footer -->
 		<section id="footer">
-			
+
 		</section>
 	</section>
 
 	<!-- Bootstrap JS -->
-	<script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-      crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+		integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>

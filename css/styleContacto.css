@@ -1,46 +1,17 @@
-/* ======== General Layout ======== */
+/* ======= Tipografía y fondo general ======= */
 body {
 	font-family: 'Inter', sans-serif;
-	background-color: #F3F3F3;
+	background-color: #f3f3f3;
 	color: #333;
-	
 }
 
 main {
 	flex: 1;
+	/* para empujar el footer abajo */
 }
 
-
-/* ======== Sección del encabezado ======== */
-.header-banner {
-	background: url('/assets/img/imagenAjustesUsuario.PNG') no-repeat center center/cover;
-	height: 300px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	text-shadow: 1px 1px 3px black;
-}
-
-.header-banner h1 {
-	font-size: 60px;
-	font-weight: bold;
-}
-
-/* ======== Formulario de contacto ======== */
-form {
-	background-color: rgba(234, 206, 156, 0.85);
-	opacity: 80%;
-	padding: 30px;
-	border-radius: 12px;
-	font-family: 'Inter', sans-serif;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para los mensajes de error  */
-.error-message {
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 5px;
-  display: block;
+/* ======= Navbar por encima ======= */
+#navbar {
+	position: relative;
+	z-index: 3;
 }

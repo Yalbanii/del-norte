@@ -1,3 +1,14 @@
+:root {
+  --var--negro: #050505;
+  --var--negro2: #242125;
+  --var--rojo: #682A2F;
+  --var--carmin: #951E1A;
+  --var--verde: #87916F;
+  --var--crema: #EACE9C;
+  --var--blanco: #F3F3F3;
+  --bg-url: url('/assets/img/fondo.jpg');
+}
+
 /* *Color de fondo navbar y footer */
 .navbar_background, .footer_background {
     background-color: #1E1E1E !important;
@@ -175,4 +186,107 @@
 
 .footer-inline-link:hover::after {
   width: 100%;
+}
+
+/* Color para el enlace de inicio/cierre de sesión */
+.footer-links a.login-link {
+  color: #28a745;
+}
+
+.footer-links a.logout-link {
+  color: #dc3545;
+}
+
+/* ================= FORMULARIOS GENERALES ================= */
+/* Imagen de fondo con variable para la URL */
+.image-background {
+  position: relative;
+  min-height: 100vh;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), var(--bg-url);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+}
+
+.image-background .container {
+  position: relative;
+}
+
+/* Tarjeta con borde dorado para formularios */
+.form-card {
+  background: #111;
+  border: 2px solid #EACE9C;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: #EACE9C;
+}
+
+/* Cabecera estilo píldora */
+.form-header {
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #EACE9C;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #EACE9C;
+  border-radius: 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  z-index: 20;
+}
+
+/* Estilo base del formulario */
+.custom-form .form-label {
+  color: #EACE9C;
+  font-weight: 500;
+}
+
+.custom-form .form-control {
+  background: #fff;
+  color: #333;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.custom-form .btn-danger {
+  background: #8b1919;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+
+.custom-form .error-message {
+  display: block;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Tarjeta de lista reutilizada en administración y carrito */
+.cart-item-card {
+  background: #111;
+  border: 2px solid #EACE9C;
+  border-radius: 16px;
+  color: #EACE9C;
+}
+
+.cart-item-card h6,
+.cart-item-card p {
+  color: #EACE9C;
+}
+
+.cart-item-card .text-muted {
+  color: #EACE9C !important;
+}
+
+.cart-item-card.sold-out {
+  filter: grayscale(1);
+  opacity: 0.6;
 }

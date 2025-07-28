@@ -1,3 +1,4 @@
+'use strict';
 //Es para hacer nuevas cards con los productos//
 //Se tiene que ligar con el inicio//
 //Se liga al localStorage//

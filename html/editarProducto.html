@@ -7,6 +7,7 @@
   <title>Crear / Editar Producto</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="icon" sizes="64x64" href="/assets/img/2.png" />
   <!-- Tus estilos -->
   <link rel="stylesheet" href="../css/editProduct.css" />
@@ -39,16 +40,28 @@
           <textarea id="newDescripcion" class="form-control" rows="3" required></textarea>
           <div class="invalid-feedback">La descripción es obligatoria.</div>
         </div>
+
+        <!-- Tipo de producto -->
+        <div class="mb-3">
+          <label for="newCategoria" class="form-label">Tipo de producto</label>
+          <select id="newCategoria" class="form-select" required>
+            <option value="" selected disabled>Selecciona una categoría</option>
+            <option value="1">Cordero</option>
+            <option value="2">Res</option>
+            <option value="3">Procesados</option>
+          </select>
+          <div class="invalid-feedback">Selecciona la categoría del producto.</div>
+        </div>
         <!-- Gramaje y precio -->
         <div class="row g-3 mb-4">
           <div class="col-md-4">
             <label for="newGramajeMin" class="form-label">Gramaje mínimo (g)</label>
-            <input type="number" id="newGramajeMin" class="form-control" min="1" required>
+            <input type="number" id="newGramajeMin" class="form-control" min="1">
             <div class="invalid-feedback">Mínimo 1 g.</div>
           </div>
           <div class="col-md-4">
             <label for="newGramajeMax" class="form-label">Gramaje máximo (g)</label>
-            <input type="number" id="newGramajeMax" class="form-control" min="1" required>
+            <input type="number" id="newGramajeMax" class="form-control" min="1">
             <div class="invalid-feedback">Mínimo 1 g.</div>
           </div>
           <div class="col-md-4">
@@ -57,24 +70,39 @@
             <div class="invalid-feedback">Precio mínimo $0.01.</div>
           </div>
         </div>
+        <!-- Vista previa de archivos actuales -->
+        <div class="mb-3">
+          <label class="form-label">Imagen actual</label>
+          <div>
+            <img id="currentImagen" class="img-thumbnail mb-2" style="max-height: 200px;" alt="Imagen actual" />
+          </div>
+          <label class="form-label">Ficha técnica actual</label>
+          <div>
+            <a id="currentFicha" href="#" target="_blank">Sin ficha técnica</a>
+          </div>
+        </div>
+
         <!-- Imagen opcional -->
         <div class="mb-3">
           <label for="newImagen" class="form-label">Imagen (opcional)</label>
           <input type="file" id="newImagen" class="form-control" accept="image/*">
+          <div class="mt-2">
+            <img id="previewImagen" class="img-thumbnail" style="max-height: 200px; display: none;" alt="Vista previa">
+          </div>
         </div>
         <!-- Ficha técnica opcional -->
         <div class="mb-3">
           <label for="newFicha" class="form-label">Ficha técnica (opcional)</label>
           <input type="file" id="newFicha" class="form-control" accept=".pdf,.doc,.docx">
+          <div class="form-text" id="previewFicha"></div>
         </div>
 
         <!-- Botones Guardar y Eliminar -->
         <div class="d-flex justify-content-between ">
           <button type="submit" class="btn btn-primary ">Guardar</button>
-          <!-- Este botón debe existir para que deleteBtn no sea null -->
-          <!----<button type="button" id="btnEliminar" class="btn btn-danger">
+          <button type="button" id="btnEliminar" class="btn btn-danger">
             Eliminar producto
-          </button>-->
+          </button>
         </div>
       </form>
     </div>
@@ -82,12 +110,13 @@
 
   <!-- Footer dinámico -->
   <section id="footer"></section>
+  <script src="../js/apiConfig.js"></script>
   <script src="app.js"></script>
-  <script src="/js/components.js"></script>
+  <script src="../js/components.js"></script>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Tu script de edición (nombre EXACTO) -->
-  <script src="/js/editproduct.js"></script>
+  <script src="../js/editproduct.js"></script>
 </body>
 
 </html>
