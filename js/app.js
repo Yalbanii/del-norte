@@ -3,6 +3,7 @@
 
 window.addEventListener('scroll', function () {
   const navbar = document.getElementById('navbar');
+  if (!navbar) return;
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
   } else {
@@ -13,6 +14,7 @@ window.addEventListener('scroll', function () {
 // app.js
 document.addEventListener('DOMContentLoaded', () => {
   const catalogo = document.querySelector('.catalogo');
+  if (!catalogo) return;
 
   function render(items) {
     catalogo.innerHTML = items.map(item => `

@@ -1,6 +1,7 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('productsContainer');
+    if(!container) return;
     const searchInput = document.getElementById('searchInput');
     const searchBtn = document.getElementById('btnSearch');
     const categoryItems = document.querySelectorAll('#categoryDropdown .dropdown-item');
@@ -196,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (imagenInput.files[0]) {
             const fd = new FormData();
             fd.append('file', imagenInput.files[0]);
-            const resImg = await fetch(`${API_BASE_URL}/api/uploads/productos`, {
+            const resImg = await fetch(`${API_BASE_URL}/api/uploads/products`, {
                 method: 'POST',
                 body: fd
             });
@@ -209,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (fichaInput.files[0]) {
             const fdFicha = new FormData();
             fdFicha.append('file', fichaInput.files[0]);
-            const resFicha = await fetch(`${API_BASE_URL}/api/uploads/fichas`, {
+            const resFicha = await fetch(`${API_BASE_URL}/api/uploads/sheets`, {
                 method: 'POST',
                 body: fdFicha
             });
