@@ -241,6 +241,7 @@
   font-size: 1.25rem;
   font-weight: 500;
   z-index: 20;
+  white-space: nowrap;
 }
 
 /* Estilo base del formulario */
@@ -290,15 +291,6 @@
 .cart-item-card.sold-out {
   filter: grayscale(1);
   opacity: 0.6;
-=======
-:root {
-  --var--negro: #050505;
-  --var--negro2: #242125;
-  --var--rojo: #682A2F;
-  --var--carmin: #951E1A;
-  --var--verde: #87916F;
-  --var--crema: #EACE9C;
-  --var--blanco: #F3F3F3;
 }
 
 /* *Color de fondo navbar y footer */

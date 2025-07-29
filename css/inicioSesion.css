@@ -62,7 +62,7 @@ body {
 
 /* Posicionamiento del icono de usuario en el login */
 .icon-wrapper {
-  top: 2rem;
+  top: 2.2rem;
   transform: translateX(-50%);
   z-index: 10;
 }
