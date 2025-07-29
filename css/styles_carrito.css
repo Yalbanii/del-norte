@@ -125,7 +125,6 @@ h2.text-center::after {
 #resultado-estimacion {
   color: var(--var--crema);
 }
-=======
 .container-custom {
   width: 80%;
   margin: 0 auto;
@@ -215,3 +214,12 @@ h2.text-center::after {
   box-shadow: 0 0 0 0.25rem rgba(149, 30, 26, 0.25);
 }
 
+#form-header-carrito{
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #form-header-carrito{
+    margin-top: 80px;
+  }
+}

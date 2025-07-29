@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="col-4 col-md-2">
           <img src="${p.urlImagen ? '../' + p.urlImagen : '/assets_admin_management/pierna.png'}"
                alt="${p.nombre}"
-               class="img-fluid border rounded">
+               class="productListImgs img-fluid border rounded">
         </div>
         <div class="col-8 col-md-7">
           <h2 class="fs-5 fw-bold">${p.nombre}</h2>
