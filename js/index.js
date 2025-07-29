@@ -26,7 +26,7 @@ newItemForm.addEventListener('submit', async (event) => {
     if (newFicha.files[0]) {
         const fdFicha = new FormData();
         fdFicha.append('file', newFicha.files[0]);
-        const resFicha = await fetch(`${API_BASE_URL}/api/uploads/fichas`, {
+        const resFicha = await fetch(`${API_BASE_URL}/api/uploads/sheets`, {
             method: 'POST',
             body: fdFicha
         });
@@ -40,7 +40,7 @@ newItemForm.addEventListener('submit', async (event) => {
     if (newImagen.files[0]) {
         const formData = new FormData();
         formData.append('file', newImagen.files[0]);
-        const res = await fetch(`${API_BASE_URL}/api/uploads/productos`, {
+        const res = await fetch(`${API_BASE_URL}/api/uploads/products`, {
             method: 'POST',
             body: formData
         });
