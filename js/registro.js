@@ -65,21 +65,41 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // 6. Correo ya registrado
-  if (localStorage.getItem(formData.email)) {
-    mostrarError("Ya existe una cuenta con ese correo.");
-    return;
-  }
+  // 6. Guardar en base de datos y redirigir
+  const payload = {
+    nombre: formData.nombre,
+    apellido: formData.apellido,
+    email: formData.email,
+    password: formData.password,
+    rolId: 1,
+  };
 
-  // 7. Guardar y redirigir
-  localStorage.setItem(formData.email, JSON.stringify(formData));
-
-  mensaje.style.color = "green";
-  mensaje.textContent = `Bienvenid@ ${formData.nombre}. Redirigiendo...`;
-
-  setTimeout(() => {
-    window.location.href = "../html/ajustesUsuario.html";
-  }, 2000);
+  // Utiliza la URL absoluta del backend para evitar que el
+  // navegador envíe la solicitud al servidor estático donde se
+  // aloja el frontend.
+  fetch(`${API_BASE_URL}/api/usuarios`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+    .then(res => {
+      if (!res.ok) throw new Error('error');
+      return res.json();
+    })
+    .then(user => {
+      const roles = {1: 'usuario', 2: 'editor', 3: 'admin'};
+      user.rol = roles[user.rolId] || 'usuario';
+      user.activo = user.activo !== false;
+      mensaje.style.color = 'green';
+      mensaje.textContent = `Bienvenid@ ${user.nombre}. Redirigiendo...`;
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      setTimeout(() => {
+        window.location.href = "../html/ajustesUsuario.html";
+      }, 2000);
+    })
+    .catch(() => {
+      mostrarError('No se pudo registrar el usuario.');
+    });
 });
 
 // Mostrar errores

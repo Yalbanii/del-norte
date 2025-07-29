@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/Style.css">
+  <link rel="stylesheet" href="../css/styles_carrito.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script src="https://openpay.s3.amazonaws.com/openpay.v1.min.js"></script>
+  <script src="https://openpay.s3.amazonaws.com/openpay-data.v1.min.js"></script>
+  <script src="../js/cartUtils.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/apiConfig.js"></script>
+  <script defer src="../js/pago.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <section class="image-background" style="--bg-url: url('../assets/img/imagenDesarrolladoresWeb.PNG')">
+    <section id="navbar"></section>
+    <main class="container py-5 flex-grow-1">
+      <h2 class="text-center mb-4">Información de Pago</h2>
+      <div class="container-custom">
+        <div class="form-card position-relative">
+          <select id="pago-select" class="form-select mb-3 d-none"></select>
+          <form id="payment-form" class="custom-form mb-4">
+            <div id="resumen-compra" class="text-center mb-3">
+              <p>Subtotal: <span id="pago-subtotal" class="fw-bold">$0.00</span></p>
+              <p>Envío: <span id="pago-envio" class="fw-bold">$0.00</span></p>
+              <p>Descuento: <span id="pago-descuento" class="fw-bold">$0.00</span></p>
+              <p>Total: <span id="pago-total" class="fw-bold">$0.00</span></p>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="cupon">Cupón</label>
+              <div class="input-group">
+                <input type="text" id="cupon" class="form-control" placeholder="Ingresa tu cupón">
+                <button type="button" id="aplicar-cupon" class="btn btn-outline-secondary">Aplicar</button>
+              </div>
+              <div id="cupon-msg" class="text-danger mt-1"></div>
+            </div>
+            <input type="hidden" name="deviceSessionId" id="deviceSessionId" />
+            <div class="mb-3">
+              <label class="form-label" for="tarjeta">Número de tarjeta</label>
+              <input type="text" id="tarjeta" class="form-control" name="tarjeta" required maxlength="16" inputmode="numeric" pattern="\d{16}" placeholder="Ingresa los 16 dígitos de tu tarjeta">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="titular">Nombre del titular</label>
+              <input type="text" id="titular" class="form-control" name="titular" required placeholder="Ingresa el nombre del titular exactamente como viene en la tarjeta">
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="expiracion">Fecha de vencimiento</label>
+                <input type="month" id="expiracion" class="form-control" name="expiracion" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="cvv">CVV</label>
+                <input type="text" id="cvv" class="form-control" name="cvv" maxlength="4" required placeholder="El CVV debe tener entre 3 y 4 dígitos">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-confirmar d-block mx-auto mt-3">Confirmar pago</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </section>
+  <section id="footer"></section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

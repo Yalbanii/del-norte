@@ -24,8 +24,8 @@
     </a>
 
     <!-- Menú visible solo en pantallas grandes -->
-    <div class="collapse navbar-collapse d-none d-lg-flex ms-5">
-      <ul class="navbar-nav gap-3 links">
+    <div class="collapse navbar-collapse d-none d-lg-flex w-100">
+      <ul class="navbar-nav gap-3 links w-100">
         <li class="nav-item">
           <a class="nav-link text-light" aria-current="page" href="/index.html">
             <i class="fa-solid fa-house me-2"></i>Inicio
@@ -41,32 +41,32 @@
             <i class="fa-solid fa-envelope me-2"></i>Contacto
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="/html/inicioSesion.html">
-            <i class="fa-solid fa-user me-2"></i>Iniciar sesión
-          </a>
-        </li>
-        <li class="nav-item position-relative">
+        <li class="nav-item position-relative" id="nav-cart-item">
           <a href="/html/carrito.html" class="nav-link text-light">
             <i class="fa-solid fa-cart-shopping me-2"></i>Carrito
-            <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger"
+            <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger cart-count"
                   style="transform: translate(-45%, -20%) scale(0.9);">
-              3
+              0
               <span class="visually-hidden">productos en el carrito</span>
             </span>
           </a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item ms-auto" id="nav-login-item">
+          <a class="nav-link text-light" id="navLogin" href="/html/inicioSesion.html">
+            <i class="fa-solid fa-user me-2"></i>Iniciar sesión
+          </a>
+        </li>
+        <li class="nav-item dropdown d-none ms-auto me-3" id="nav-user-menu">
           <a class="nav-link text-light dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-user me-2"></i>Usuario
+            <i class="fa-solid fa-user me-2"></i><span id="nav-user-name">Usuario</span>
              <i class="fa-solid fa-caret-down ms-1"></i>
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="/html/ajustesUsuario.html">Perfil de usuario</a></li>
             <li><a class="dropdown-item" href="/mi_cuenta/mi_cuenta.html">Mi cuenta</a></li>
-            <li><a class="dropdown-item" href="/html/adminManagement.html">Cuenta Administrador</a></li>
+            <li><a class="dropdown-item d-none" id="nav-admin-link" href="/html/adminManagement.html">Cuenta Administrador</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/index.html">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" id="navLogout" href="#">Cerrar Sesión</a></li>
           </ul>
         </li>
       </ul>
@@ -106,20 +106,32 @@
               <i class="fa-solid fa-envelope me-2"></i>Contacto
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/inicioSesion.html">
-              <i class="fa-solid fa-user me-2"></i>Iniciar sesión
-            </a>
-          </li>
-          <li class="nav-item position-relative w-auto">
-            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center m-auto" href="/html/carrito.html">
+          <li class="nav-item position-relative" id="nav-cart-item-m">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" href="/html/carrito.html">
               <i class="fa-solid fa-cart-shopping me-2"></i>Carrito
-              <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger"
+              <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger cart-count"
                     style="transform: translate(-45%, -20%) scale(0.9);">
-                3
+                0
                 <span class="visually-hidden">productos en el carrito</span>
               </span>
             </a>
+          </li>
+          <li class="nav-item" id="nav-login-item-m">
+            <a class="nav-link text-light ms-3 w-auto d-inline-flex align-items-center" id="navLoginM" href="/html/inicioSesion.html">
+              <i class="fa-solid fa-user me-2"></i>Iniciar sesión
+            </a>
+          </li>
+          <li class="nav-item dropdown d-none" id="nav-user-menu-m">
+            <a class="nav-link text-light dropdown-toggle ms-3 d-inline-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user me-2"></i><span id="nav-user-name-m">Usuario</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="/html/ajustesUsuario.html">Perfil de usuario</a></li>
+              <li><a class="dropdown-item" href="/mi_cuenta/mi_cuenta.html">Mi cuenta</a></li>
+              <li><a class="dropdown-item d-none" id="nav-admin-link-m" href="/html/adminManagement.html">Cuenta Administrador</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" id="navLogoutM" href="#">Cerrar Sesión</a></li>
+            </ul>
           </li>
         </ul>
       </div>

@@ -11,11 +11,13 @@
   <link rel="stylesheet" href="../css/Style.css">
   <link rel="stylesheet" href="../css/styles_carrito.css">
   <link rel="stylesheet" href="../css/components.css">
+  <script src="../js/cartUtils.js"></script>
   <script src="../js/components.js"></script>
+  <script src="../js/apiConfig.js"></script>
   <!-- ?Font awesome 6.6.0 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- ?AOS Animate -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ?AOS Animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- ? Animate CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
@@ -23,14 +25,13 @@
   <script defer src="../js/carrito.js"></script>
      
 </head>
-<body>
-<!--! este es el navbar -->
-   <!-- ? Sección del navbar -->
-
+<body class="d-flex flex-column min-vh-100">
+  <section class="image-background" style="--bg-url: url('../assets/img/imagenDesarrolladoresWeb.PNG')">
+    <!-- ? Sección del navbar -->
     <section id="navbar"> </section>
 
-    
-  <main class="container my-5">
+
+    <main class="container py-5 flex-grow-1">
 
     <!--! termina el navbar-->
 
@@ -38,20 +39,19 @@
      
     <!--* boton provisional para la exposicion -->
 
-<!-- Botón para agregar producto aleatorio -->
+<!-- Botón para agregar productos -->
 <div class="text-end mb-3">
-  <button id="agregar-random" class="btn btn-success">Agrega producto al azar</button>
+  <button id="agregar-producto" class="btn btn-success">Agregar productos</button>
 </div>
-<!-- * aqui termina el boton provisional -->
 
     <!--!Carrito de compras  -->
     
 <div class="container-custom">
 <section class="mb-5">
-  <h2 class="text-center mb-4">Carrito</h2>
+  <h2 class="text-center mb-4 cart-title">Carrito</h2>
 <hr>
   <!-- Encabezado del carrito, que ahora es responsive (desaparece en pantallas pequeñas) gracias a d-non y d-md-block -->
-<div class="card p-3 mb-3 bg-light fw-bold d-none d-md-block">
+<div class="card p-3 mb-3 fw-bold d-none d-md-block cart-item-card form-card">
   <div class="row text-center align-items-center">
 
     <!-- Producto -->
@@ -81,12 +81,12 @@
  
   <div id="cart-items" class="d-flex flex-column gap-4">
     <!-- Tarjeta de producto de ejemplo -->
-    <div class="card p-3">
+    <div class="card p-3 cart-item-card form-card">
       <div class="row align-items-center">
 
         <!-- Imagen del producto -->
         <div class="col-12 col-md-2 text-center">
-          <img src="../assets/productos/Birria.avif" alt="Birria" class="img-fluid rounded" style="max-height: 100px;">
+          <img src="assets/productos/Birria.avif" alt="Birria" class="img-fluid rounded" style="max-height: 100px;">
         </div>
 
         <!-- Descripcion-->
@@ -116,9 +116,11 @@
 
   </div>
 
-  <!-- Total general -->
-  <div class="text-end mt-4">
-    <h5>Subtotal: <span id="cart-total" class="fw-bold">$150.00</span></h5>
+  <!-- Totales -->
+  <div class="text-end mt-4 cart-totals">
+    <h5>Subtotal: <span id="cart-subtotal" class="fw-bold">$0.00</span></h5>
+    <h5>Envío: <span id="cart-envio" class="fw-bold">$0.00</span></h5>
+    <h5>Total: <span id="cart-total" class="fw-bold">$0.00</span></h5>
   </div>
 </section>
 </div>
@@ -126,32 +128,14 @@
 <!--! Gasto estimado de envío -->
 <div class="container-custom">
 <section class="mb-5">
-  <h2 class="text-center">Gasto estimado de envío</h2>
-  <hr>
-  <br>
-  
-  <form id="estimacion-envio-form" class="formulario-con-color">
+  <div class="form-card position-relative">
+    <div class="form-header">Gasto estimado de envío</div>
+    <form id="estimacion-envio-form" class="custom-form">
   <div class="row align-items-end">
-    <div class="col-md-3 mb-3">
-      <label for="estado-estimado" class="form-label">Estado</label>
-      <select id="estado-estimado" class="form-select">
-        <option value="">Selecciona un estado</option>
-        <!-- Opciones -->
-      </select>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="ciudad-estimada" class="form-label">Ciudad</label>
-      <select id="ciudad-estimada" class="form-select">
-        <option value="">Selecciona una ciudad</option>
-        <!-- Opciones -->
-      </select>
-    </div>
-    <div class="col-md-3 mb-3">
+    <div class="col-md-9 mb-3 position-relative">
       <label for="cp-estimado" class="form-label">Código Postal</label>
-      <select id="cp-estimado" class="form-select">
-        <option value="">Selecciona un CP</option>
-        <!-- Opciones -->
-      </select>
+      <input id="cp-estimado" type="text" class="form-control" placeholder="Ingresa tu código postal" autocomplete="off">
+      <div id="cp-suggestions" class="list-group position-absolute w-100" style="z-index:1000;"></div>
     </div>
     <div class="col-md-3 text-end mb-3">
       <button type="submit" class="btn btn-confirmar w-100">Obtener estimación</button>
@@ -160,147 +144,63 @@
   <hr />
   <p class="text-center fw-bold" id="resultado-estimacion">Costo estimado: $0.00</p>
 </form>
-
+</div>
 </section>
 </div>
 
-<!--! Información de entrega -->
-<div class="container-custom">
-  <section class="mb-5">
-    <h2 class="text text-center">Información de Entrega</h2>
-    <br>
-    <hr>
-    <form id="shipping-form" class="formulario-con-color">
-
-      <div class="mb-3">
-        <label class="form-label">Nombre(s)</label>
-        <input type="text" class="form-control" name="nombre" required placeholder="Ingresa uno o más nombres">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Apellido(s)</label>
-        <input type="text" class="form-control" name="apellidos" required placeholder="Ingresa tu apellido o apellidos">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Calle y número (exterior e interior, si aplica)</label>
-        <input type="text" class="form-control" name="direccion" required placeholder="Ingresa el nombre de la calle y el número ext/int">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Casa, apartamento, etc. (opcional)</label>
-        <input type="text" class="form-control" name="complemento" placeholder="Ej: Departamento 3B, Casa azul, Piso 2">
-      </div>
-
-      <!-- Fila con Código Postal, Ciudad y Estado -->
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Código postal</label>
-          <input type="text" class="form-control" name="codigo_postal" required placeholder="Ej: 44100">
-        </div>
-
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Ciudad</label>
-          <select class="form-select" name="ciudad" required>
-            <option value="">Selecciona una Ciudad</option>
-            <!-- Opciones que agregaremos después -->
-          </select>
-        </div>
-
-        <div class="col-md-4 mb-3">
-          <label class="form-label">Estado</label>
-          <select class="form-select" name="estado" required>
-            <option value="">Selecciona un Estado</option>
-            <!-- Opciones que agregar después -->
-          </select>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-3">
-        <label class="form-label">Teléfono</label>
-        <input type="text" class="form-control" name="telefono" required placeholder="Debe tener 10 digitos">
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label">Instrucciones adicionales para la entrega</label>
-        <input type="text" class="form-control" name="instruciones-adicionales" placeholder="Ingresa detalles adicionales para ayudar con tu entrega">
-      </div>
-</form>
-  </section>
+<!-- Botón para continuar a dirección de envío -->
+<div class="text-end mb-5">
+  <button id="btn-comprar" class="btn btn-confirmar">Comprar</button>
 </div>
 
 
-<!--! Información de pago -->
-<div class="container-custom">
-  <section class="mb-5">
-    <h2 class="text-center">Información de Pago</h2>
-    <hr>
-    <br>
-    <form id="payment-form" class="formulario-con-color mb-4">
-
-      <div class="mb-3">
-        <label class="form-label" for="tarjeta">Número de tarjeta</label>
-        <input type="text" 
-               id="tarjeta" 
-               class="form-control" 
-               name="tarjeta" 
-               required 
-               maxlength="16" 
-               inputmode="numeric" 
-               pattern="\d{16}" 
-               placeholder="Ingresa los 16 dígitos de tu tarjeta">
+<!-- Modal Agregar Productos -->
+<div class="modal fade" id="modal-agregar-producto" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Agregar productos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-
-      <div class="mb-3">
-        <label class="form-label" for="titular">Nombre del titular</label>
-        <input type="text" 
-               id="titular" 
-               class="form-control" 
-               name="titular" 
-               required
-               placeholder="Ingresa el nombre del titular exactamente como viene en la tarjeta">
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label class="form-label" for="expiracion">Fecha de vencimiento</label>
-          <input type="month" 
-                 id="expiracion" 
-                 class="form-control" 
-                 name="expiracion" 
-                 required>
+      <div class="modal-body">
+        <div class="d-flex mb-3 gap-2">
+          <input type="search" id="buscar-producto" class="form-control" placeholder="Buscar">
+          <select id="filtrar-categoria" class="form-select" style="max-width:150px;">
+            <option value="">Todos</option>
+            <option value="1">Cordero</option>
+            <option value="2">Res</option>
+            <option value="3">Procesados</option>
+          </select>
         </div>
-        <div class="col-md-6 mb-3">
-          <label class="form-label" for="cvv">CVV</label>
-          <input type="text" 
-                 id="cvv" 
-                 class="form-control" 
-                 name="cvv" 
-                 maxlength="4" 
-                 required
-                 placeholder="El CVV debe tener entre 3 y 4 dígitos">
+        <div id="lista-productos" class="row row-cols-1 row-cols-md-2 g-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Seleccionar Cantidad -->
+<div class="modal fade" id="modal-cantidad-producto" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Seleccionar cantidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <h6 id="cantidad-producto-nombre" class="mb-3"></h6>
+        <div class="mb-3">
+          <input type="number" id="cantidad-producto-input" class="form-control" min="1" value="1">
+          <div id="cantidad-producto-stock" class="form-text"></div>
         </div>
       </div>
-
-      <div class="mb-3">
-        <label class="form-label" for="cupon">Cupón de descuento</label>
-        <div class="input-group">
-          <input type="text" 
-                 id="cupon" 
-                 class="form-control" 
-                 name="cupon" 
-                 placeholder="Ingresa tu cupón">
-          <button class="btn btn-outline-secondary" type="button" id="btn-aplicar-cupon">Aplicar</button>
-        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="cantidad-producto-confirmar">Agregar</button>
       </div>
-    </form>
-
-    <!--! Botón de confirmar pago -->
-    <button type="submit" form="payment-form" class="btn btn-confirmar d-block mx-auto mt-3">
-
-      Confirmar pago
-    </button>
-  </section>
+    </div>
+  </div>
 </div>
 <br>
 </main>
+  </section>
 <!-- ! Sección del footer -->
     <section id="footer"> </section>
 
@@ -314,5 +214,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
       integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
       crossorigin="anonymous"></script>
+    <script src="../js/agregarProductos.js"></script>
   </body>
 </html>

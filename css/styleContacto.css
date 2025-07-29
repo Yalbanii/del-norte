@@ -1,3 +1,22 @@
+
+/* ======= Tipografía y fondo general ======= */
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: #f3f3f3;
+	color: #333;
+}
+
+main {
+	flex: 1;
+	/* para empujar el footer abajo */
+}
+
+/* ======= Navbar por encima ======= */
+#navbar {
+	position: relative;
+	z-index: 3;
+}
+=======
 /* ======= Tipografía y fondo general ======= */
 body {
 	font-family: 'Inter', sans-serif;
@@ -87,3 +106,4 @@ main {
 	font-size: 0.9rem;
 	margin-top: 0.25rem;
 }
+

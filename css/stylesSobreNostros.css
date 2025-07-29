@@ -4,6 +4,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 1rem; /* Tamaño base del texto */
   line-height: 1.6;
+  overflow-x: hidden; /* evita espacio lateral */
 }
 
 /* Estilo para encabezados */

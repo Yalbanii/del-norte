@@ -1,3 +1,4 @@
+'use strict';
 // Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
   // Selecciona todos los elementos con la clase .animate-on-scroll

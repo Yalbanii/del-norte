@@ -1,4 +1,6 @@
 
+'use strict';
+
 window.addEventListener('scroll', function () {
   const navbar = document.getElementById('navbar');
   if (window.scrollY > 50) {
@@ -10,20 +12,20 @@ window.addEventListener('scroll', function () {
 
 // app.js
 document.addEventListener('DOMContentLoaded', () => {
-  const items = JSON.parse(localStorage.getItem('items') || '[]');
   const catalogo = document.querySelector('.catalogo');
 
-  catalogo.innerHTML = items.map(item => `
-    <div class="producto-card row align-items-center border rounded mb-3 p-3">
-      <div class="col-4 col-md-2">
-        <img src="${item.imagen?.name || '/assets/default.png'}"
+  function render(items) {
+    catalogo.innerHTML = items.map(item => `
+      <div class="producto-card row align-items-center border rounded mb-3 p-3">
+        <div class="col-4 col-md-2">
+        <img src="${item.urlImagen || '/assets/default.png'}"
              class="img-fluid border rounded"
              alt="${item.nombre}">
-      </div>
-      <div class="col-8 col-md-7 text-start">
-        <h2 class="fs-5 fw-bold">${item.nombre}</h2>
-        <p class="mb-2 d-none d-md-block">${item.descripcion}</p>
-      </div>
+        </div>
+        <div class="col-8 col-md-7 text-start">
+          <h2 class="fs-5 fw-bold">${item.nombre}</h2>
+          <p class="mb-2 d-none d-md-block">${item.descripcion}</p>
+        </div>
       <div class="col-12 col-md-3 text-md-end mt-2 mt-md-0">
         <div class="btn-group" role="group">
           <button class="btn btn-ver"><i class="fa fa-eye"></i></button>
@@ -39,13 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   `).join('');
+  }
+
+  function load() {
+    fetch(`${API_BASE_URL}/api/productos`)
+      .then(r => r.json())
+      .then(render)
+      .catch(() => {
+        catalogo.innerHTML = '<p>Error cargando productos.</p>';
+      });
+  }
 
   window.removeItem = id => {
     if (!confirm('¿Eliminar este producto?')) return;
-    const nuevos = items.filter(i => i.id !== id);
-    localStorage.setItem('items', JSON.stringify(nuevos));
-    location.reload();
+    fetch(`${API_BASE_URL}/api/productos/${id}`, { method: 'DELETE' })
+      .then(load);
   };
+
+  load();
 });
 
 

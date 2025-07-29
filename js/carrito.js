@@ -1,244 +1,177 @@
+'use strict';
 
-//! Carrito: agregar items, subtotal y localStorage
+document.addEventListener('DOMContentLoaded', () => {
+  const cartItems = document.getElementById('cart-items');
+  const subtotalEl = document.getElementById('cart-subtotal');
+  const envioEl = document.getElementById('cart-envio');
+  const totalEl = document.getElementById('cart-total');
+  const btnAgregar = document.getElementById('agregar-producto');
+  const btnComprar = document.getElementById('btn-comprar');
+  const cpInput = document.getElementById('cp-estimado');
+  const cpSuggestions = document.getElementById('cp-suggestions');
+  const formEstimacion = document.getElementById('estimacion-envio-form');
+  const resultadoEstimacion = document.getElementById('resultado-estimacion');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cartItems = document.getElementById("cart-items");
-  const subtotalElement = document.getElementById("cart-total");
-  //esto es para el botón de muestra
-  const botonRandom = document.getElementById("agregar-random");
+  let costoEnvio = 0;
+  let carrito = CartUtils.getCart();
 
-  // Lista de productos 
-  const productosEjemplo = [
-    { id: 1, nombre: "Birria de Res", precio: 150.00, imagen: "/Birria.avif", descripcion: "Deliciosa birria tradicional." },
-    { id: 2, nombre: "Carne Seca", precio: 120.00, imagen: "CarneSeca.png", descripcion: "Obtenido de carne premium. Producto deshidratado al 50% de lo original." },
-    { id: 3, nombre: "Rack Francés", precio: 180.00, imagen: "RackFrances.avif", descripcion: "El Rack se obtiene del corte de 8-9 costillas adheridas al semiespinazo, contiene lomo, el músculo intercostal y la grasa han sido retiradas." }
-  ];
+  async function fetchCPSuggestions(query){
+    if(!cpSuggestions) return [];
+    const resp = await fetch(`${API_BASE_URL}/api/codigos-postales/buscar?q=${encodeURIComponent(query)}`);
+    if(!resp.ok) return [];
+    return resp.json();
+  }
 
-  // Recuperar carrito desde localStorage
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  async function renderCPSuggestions(query){
+    if(!cpSuggestions) return;
+    cpSuggestions.innerHTML = '';
+    const cps = await fetchCPSuggestions(query);
+    cps.forEach(cp => {
+      const item = document.createElement('button');
+      item.type = 'button';
+      item.className = 'list-group-item list-group-item-action';
+      item.textContent = `${cp.cp} - ${cp.colonia}, ${cp.municipio}`;
+      item.dataset.cp = cp.cp;
+      cpSuggestions.appendChild(item);
+    });
+    cpSuggestions.style.display = cpSuggestions.children.length ? 'block' : 'none';
+  }
 
-  // Agrega producto al carrito
-  function agregarAlCarrito(producto) {
-    // Verificar si ya existe
-    const existente = carrito.find(p => p.id === producto.id);
-    if (existente) {
-      existente.cantidad++;
-    } else {
-      carrito.push({ ...producto, cantidad: 1 });
+  cpInput?.addEventListener('input', () => {
+    renderCPSuggestions(cpInput.value.trim());
+  });
+
+  renderCPSuggestions('');
+
+  cpSuggestions?.addEventListener('click', e => {
+    if(e.target.matches('button[data-cp]')){
+      cpInput.value = e.target.dataset.cp;
+      cpSuggestions.style.display = 'none';
     }
-    guardarCarrito();
-    renderizarCarrito();
+  });
+
+  document.addEventListener('click', e => {
+    if(e.target !== cpInput && !cpSuggestions.contains(e.target)){
+      cpSuggestions.style.display = 'none';
+    }
+  });
+
+  function actualizarSubtotal(){
+    let subtotal = 0;
+    carrito.forEach(p => subtotal += p.precio * p.cantidad);
+    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    envioEl.textContent = `$${costoEnvio.toFixed(2)}`;
+    totalEl.textContent = `$${(subtotal + costoEnvio).toFixed(2)}`;
   }
 
-  // se guarda en localStorage
-  function guardarCarrito() {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-  }
-
-  // renderizar el carrito en HTML 
-  function renderizarCarrito() {
-    cartItems.innerHTML = "";
-    carrito.forEach(producto => {
-      const card = document.createElement("div");
-      card.className = "card p-3";
-      card.setAttribute("data-precio", producto.precio);
-
+  function renderCarrito(){
+    // Obtener la versión más reciente del carrito almacenado
+    carrito = CartUtils.getCart();
+    cartItems.innerHTML = '';
+    carrito.forEach(prod => {
+      const card = document.createElement('div');
+      const lowStock = prod.stock <= 10 && prod.stock > 0;
+      const soldOut = prod.stock <= 0;
+      const stockMsg = soldOut
+        ? '<p class="stock-msg text-danger fw-bold">Producto agotado</p>'
+        : lowStock
+          ? '<p class="stock-msg text-warning fw-bold">\u00A1Quedan pocas unidades!</p>'
+          : '';
+      card.className = 'card p-3 cart-item-card form-card' + (soldOut ? ' sold-out' : '');
       card.innerHTML = `
         <div class="row align-items-center">
           <div class="col-12 col-md-2 text-center">
-            <img src="../assets/productos/${producto.imagen}" alt="${producto.nombre}" class="img-fluid rounded" style="max-height: 100px;">
+            <img src="../${prod.imagen}" alt="${prod.nombre}" class="img-fluid rounded" style="max-height:100px;">
           </div>
           <div class="col-12 col-md-5 mt-3 mt-md-0">
-            <h6 class="mb-1">${producto.nombre}</h6>
-            <p class="mb-1 text-muted">${producto.descripcion}</p>
+            <h6 class="mb-1">${prod.nombre}</h6>
+            <p class="mb-1 text-muted">${prod.descripcion}</p>
+            <p class="mb-1 text-muted">Peso: ${prod.pesoMinimo} - ${prod.pesoMaximo} kg</p>
+            ${stockMsg}
           </div>
           <div class="col-12 col-md-3 text-center mt-3 mt-md-0">
             <div class="input-group justify-content-center">
               <button class="btn btn-outline-secondary">-</button>
-              <input type="text" class="form-control text-center" value="${producto.cantidad}" style="max-width: 60px;" inputmode="numeric" pattern="\\d*" maxlength="2">
+              <input type="text" class="form-control text-center" value="${prod.cantidad}" style="max-width:60px;" inputmode="numeric" pattern="\\d*" maxlength="2">
               <button class="btn btn-outline-secondary">+</button>
             </div>
             <button class="btn btn-link text-danger mt-2">Quitar</button>
           </div>
           <div class="col-12 col-md-2 text-center mt-3 mt-md-0">
-            <p class="fw-bold">$${(producto.precio * producto.cantidad).toFixed(2)}</p>
+            <p class="fw-bold">$${(prod.precio * prod.cantidad).toFixed(2)}</p>
           </div>
-        </div>
-      `;
+        </div>`;
       cartItems.appendChild(card);
     });
-
     actualizarSubtotal();
+    updateCartBadge();
   }
 
-  // aquí se actualiza el subtotal "total" (antes de gastos de envio y cupon)
-  function actualizarSubtotal() {
-    let total = 0;
-    carrito.forEach(p => {
-      total += p.precio * p.cantidad;
-    });
-    subtotalElement.textContent = `$${total.toFixed(2)}`;
-  }
-
-  // agregar y quitar productos
-  cartItems.addEventListener("click", e => {
-    if (e.target.tagName === "BUTTON") {
-      const card = e.target.closest(".card");
-      const nombre = card.querySelector("h6").textContent;
-      const producto = carrito.find(p => p.nombre === nombre);
-
-      if (!producto) return;
-
-      if (e.target.textContent === "+") {
-        producto.cantidad++;
-      } else if (e.target.textContent === "-" && producto.cantidad > 1) {
-        producto.cantidad--;
-      } else if (e.target.textContent === "Quitar") {
-        carrito = carrito.filter(p => p.nombre !== nombre);
+  cartItems.addEventListener('click', e => {
+    if(e.target.tagName !== 'BUTTON') return;
+    const card = e.target.closest('.card');
+    const nombre = card.querySelector('h6').textContent;
+    const prod = carrito.find(p => p.nombre === nombre);
+    if(!prod) return;
+    if(e.target.textContent === '+'){
+      if(!prod.stock || prod.cantidad < prod.stock){
+        prod.cantidad++;
       }
+    }else if(e.target.textContent === '-' && prod.cantidad > 1){
+      prod.cantidad--;
+    }else if(e.target.textContent === 'Quitar'){
+      carrito = carrito.filter(p => p.nombre !== nombre);
+    }
+    CartUtils.saveCart(carrito);
+    renderCarrito();
+  });
 
-      guardarCarrito();
-      renderizarCarrito();
+  btnAgregar?.addEventListener('click', () => {
+    const modal = new bootstrap.Modal(document.getElementById('modal-agregar-producto'));
+    modal.show();
+  });
+
+  // Exponer la función para que otros scripts puedan actualizar el carrito en
+  // tiempo real cuando se agreguen productos.
+  window.renderCarrito = renderCarrito;
+
+  renderCarrito();
+
+  // Actualizar el carrito si otro script modifica el localStorage
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'carrito') {
+      renderCarrito();
     }
   });
 
-  //* Botón provisional para nuestra presentación para agregar producto aleatorio
-  botonRandom.addEventListener("click", () => {
-    const random = productosEjemplo[Math.floor(Math.random() * productosEjemplo.length)];
-    agregarAlCarrito(random);
-  });
-
-  // Inicialización de carrito desde localStorage
-  renderizarCarrito();
-});
-
-//! GASTO ESTIMADO DE ENVIO 
-// Lista de los estados
-  const estados = {
-    "Jalisco": {
-      "Guadalajara": ["44100", "44130", "44150"],
-      "Zapopan": ["45010", "45138", "45019"]
-    },
-    "CDMX": {
-      "Coyoacán": ["04000", "04100"],
-      "Benito Juárez": ["03000", "03100"]
-    }
-  };
-
-  const estadoSelect = document.getElementById("estado-estimado");
-  const ciudadSelect = document.getElementById("ciudad-estimada");
-  const cpSelect = document.getElementById("cp-estimado");
-
-  // aqui se consiguen los estados
-  Object.keys(estados).forEach(estado => {
-    const option = document.createElement("option");
-    option.value = estado;
-    option.textContent = estado;
-    estadoSelect.appendChild(option);
-  });
-
-  // para cambiar la ciudad dependiendo del estado seleccionado
-  estadoSelect.addEventListener("change", () => {
-    const estado = estadoSelect.value;
-    ciudadSelect.innerHTML = '<option value="">Selecciona una ciudad</option>';
-    cpSelect.innerHTML = '<option value="">Selecciona un CP</option>';
-
-    if (estado && estados[estado]) {
-      Object.keys(estados[estado]).forEach(ciudad => {
-        const option = document.createElement("option");
-        option.value = ciudad;
-        option.textContent = ciudad;
-        ciudadSelect.appendChild(option);
+  function actualizarEnvio(cp){
+    if(!cp) return;
+    fetch(`${API_BASE_URL}/api/codigos-postales/${cp}`)
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => {
+        costoEnvio = parseFloat(data.costoEnvio);
+        resultadoEstimacion.textContent = `Costo estimado: $${costoEnvio.toFixed(2)}`;
+        actualizarSubtotal();
+      })
+      .catch(() => {
+        costoEnvio = 0;
+        resultadoEstimacion.textContent = 'Costo estimado no disponible';
+        actualizarSubtotal();
       });
-    }
+  }
+
+  formEstimacion?.addEventListener('submit', e => {
+    e.preventDefault();
+    actualizarEnvio(cpInput.value.trim());
   });
 
-  // cambiar el codigo postal segun la ciudad seleccionada
-  ciudadSelect.addEventListener("change", () => {
-    const estado = estadoSelect.value; 
-    const ciudad = ciudadSelect.value;
-    cpSelect.innerHTML = '<option value="">Selecciona un CP</option>';
-
-    if (estado && ciudad && estados[estado][ciudad]) {
-      estados[estado][ciudad].forEach(cp => {
-        const option = document.createElement("option");
-        option.value = cp;
-        option.textContent = cp;
-        cpSelect.appendChild(option);
-      });
+  btnComprar?.addEventListener('click', () => {
+    if(carrito.length === 0){
+      alert('El carrito está vacío');
+      return;
     }
+    const info = { envio: costoEnvio };
+    localStorage.setItem('checkoutInfo', JSON.stringify(info));
+    window.location.href = '/html/direccion.html';
   });
-
-// ! Validación de información de pago 
-//conseguimos el elemento por id
-document.getElementById('payment-form').addEventListener('submit', function (e) {
-  e.preventDefault(); // impedir envio si es que hay errores en el formulario de pago
-
-  const tarjeta = this.elements['tarjeta'].value.trim();
-  const titular = this.elements['titular'].value.trim();
-  const expiracion = this.elements['expiracion'].value;
-  const cvv = this.elements['cvv'].value.trim();
-
-  //a este array se agregan los errores:
-
-  const errores = [];
-
-  // esta es una funcion para validar número de tarjeta usando algoritmo de Luhn
-  function validarTarjetaLuhn(numero) {
-    let suma = 0;
-    let alternar = false;
-
-    for (let i = numero.length - 1; i >= 0; i--) {
-      let n = parseInt(numero[i]);
-
-      if (alternar) {
-        n *= 2;
-        if (n > 9) n -= 9;
-      }
-
-      suma += n;
-      alternar = !alternar;
-    }
-
-    return suma % 10 === 0;
-  }
-
-  // validar num de tarjeta de número de tarjeta
-  if (!/^\d{16}$/.test(tarjeta) || !validarTarjetaLuhn(tarjeta)) {
-    errores.push('El número de tarjeta no es válido.');
-  }
-
-  // aqui validamos el nombre del titular, que no esté vacío
-  if (titular === '') {
-    errores.push('El nombre del titular es obligatorio.');
-  }
-
-  // validamos la fecha de expiración, que no esté vacía y usamos la clase predefinida Date para validar
-  if (!expiracion) {
-    errores.push('La fecha de vencimiento es obligatoria.');
-  } else {
-    const [año, mes] = expiracion.split('-').map(Number);
-    const fechaExp = new Date(año, mes - 1);
-    const hoy = new Date();
-    hoy.setHours(0, 0, 0, 0);
-
-    if (fechaExp < hoy) {
-      errores.push('La tarjeta está vencida.');
-    }
-  }
-
-  // Validación de CVV
-  if (!/^\d{3,4}$/.test(cvv)) {
-    errores.push('El CVV debe tener 3 o 4 dígitos.');
-  }
-
-  if (errores.length > 0) {
-    alert('Errores en el formulario de pago:\n- ' + errores.join('\n- '));
-    return;
-  }
-// pago exitoso yesmón bro
-  alert('¡Pago procesado con éxito!');
-  // aqui deberiamos agregar algo para redirigir a una pagina con exito
 });
-
-//! fin de validación de información de pago 

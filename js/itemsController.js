@@ -1,3 +1,4 @@
+'use strict';
 // itemsController.js
 class ItemsController {
   constructor(currentId = 0) {

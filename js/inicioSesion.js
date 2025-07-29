@@ -14,24 +14,28 @@ formElement.addEventListener("submit", (event) => {
     return;
   }
 
-  // Obtener datos almacenados localmente para ese correo
-  const localData = JSON.parse(localStorage.getItem(loginData.email));
-
-  // Validar credenciales
-  if (
-    localData &&
-    loginData.email === localData.email &&
-    loginData.password === localData.password
-  ) {
-    mensaje.style.color = "green";
-    mensaje.textContent = `Bienvenid@ ${localData.nombre}. Redirigiendo...`;
-
-    // Redirigir tras 2 segundos
-    setTimeout(() => {
-      window.location.href = "../html/ajustesUsuario.html";
-    }, 2000);
-  } else {
-    mensaje.style.color = "red";
-    mensaje.textContent = "Correo o contraseña incorrectos.";
-  }
+  fetch(`${API_BASE_URL}/api/usuarios/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(loginData)
+  })
+    .then(res => {
+      if (!res.ok) throw new Error('Unauthorized');
+      return res.json();
+    })
+    .then(user => {
+      const roles = {1: 'usuario', 2: 'editor', 3: 'admin'};
+      user.rol = roles[user.rolId] || 'usuario';
+      user.activo = user.activo !== false;
+      mensaje.style.color = 'green';
+      mensaje.textContent = `Bienvenid@ ${user.nombre}. Redirigiendo...`;
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      setTimeout(() => {
+        window.location.href = "../html/ajustesUsuario.html";
+      }, 2000);
+    })
+    .catch(() => {
+      mensaje.style.color = 'red';
+      mensaje.textContent = 'Correo o contraseña incorrectos.';
+    });
 });
